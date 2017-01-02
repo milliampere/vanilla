@@ -1,0 +1,143 @@
+@import "responsive";
+@import "mixins";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; 
+}
+$heading-font: "Bebas Neue", Georgia;
+$paragraf-font: "Source Sans Pro", Georgia;
+
+/*Colors*/
+$primary-color: #827191;
+$secondary-color: #BEE3DB;
+$third-color: hsl(38, 52%, 83%);
+
+
+/* ONLY FOR TESTING */
+/*
+header, main, footer {
+	border: 3px solid #9a9a9a;
+	background: #c0c0c0;
+	box-sizing: border-box;
+}
+
+* div, nav, article {
+	border: 1px solid red;
+}
+*/
+
+/*General*/
+html, body {
+	font: 18px/24px $paragraf-font;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	letter-spacing: 0.1rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+
+
+.text-center {
+	text-align: center;
+}
+
+/******************************************************************
+/* NAVIGATION */
+
+/* Remove margins and padding from the list, and add background color */
+ul.bottom-nav {
+    list-style-type: none;
+    padding: 1rem 0;
+    margin: 0;
+    overflow: hidden;
+
+	/* Link style */
+	li a {color: #000; text-decoration: none;}
+	/* Change color of links on hover */
+    li a:hover {color: #555;}
+
+	/* Side by side */
+    li { display: inline;}
+    li {padding: 1rem;}
+}
+
+
+
+/* Hide menu-list */
+ul.top-nav {
+	display: none;
+}
+
+nav {
+	font-family: $heading-font;
+	font-size: 1.5rem;
+	letter-spacing: 0.02rem;
+}
+
+.ham-menu {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+/******************************************************************/
+/* BOXES */
+
+.box-wrapper {
+	width: 100%;
+	max-width: 940px;
+	display: flex;
+	flex-flow: row wrap;  /* flex-direction |  flex-wrap */ 
+	justify-content: center;
+	align-items: stretch;
+	align-content: flex-start;
+	margin: auto; /* center */
+}
+
+.box {
+	flex: 1 1 0;   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
+	min-width: 375px;
+	min-height: 275px;
+	background: $secondary-color;
+	justify-content: center;
+	align-items: center;
+	order: 1;
+}
+
+
+
+/******************************************************************/
+/* OM OSS */
+.person {
+	position: relative;
+}
+.tag {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+
+}
+
+	
+/******************************************************************/
+/* FOOTER */
+.contact-info p {
+	margin: 0;
+	padding: 0;
+}
+
+.contact-icones span {
+	padding: 0.5rem;
+}
