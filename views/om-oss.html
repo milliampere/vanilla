@@ -11,18 +11,20 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 
 	<!-- ICONS -->
-	<script src="https://use.fontawesome.com/aa9919c7e7.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 	
-	<header>
+	<header class="top-header">
 		<div class="logo">
 			<a href="../index.html"><img src="../images/vanilla-logo.png" class="logo"></a>
 		</div>
 		<nav class="top-nav">
-			<span class="fa fa-bars fa-2x ham-menu" aria-hidden="true"></span>
-			<ul class="top-nav">
+			<div class="ham-menu">Meny
+			<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span>
+			</div>
+			<ul class="top-nav-ul">
 				<li><a href="../index.html">Hem</a></li>
 				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
 				<li><a href="projekt.html">Projekt</a></li>
@@ -33,7 +35,7 @@
 	</header>
 
 	<main>
-		<header>
+		<header class="main-header">
 			<h1 class="text-center">Om oss</h1>
 		</header>
 		<section class="box-wrapper">
@@ -64,13 +66,14 @@
 					<h3>Molly</h3>
 					<p>VD</p>
 				</div>
+				<span class="fa fa-angle-double-right fa-2x arrow" aria-hidden="true"></span>
 			</article>
 		</section>
 	</main>
 
 	<footer>
 		<nav class="bottom-nav">
-			<ul class="bottom-nav">
+			<ul class="bottom-nav-ul">
 				<li><a href="../index.html">Hem</a></li>
 				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
 				<li><a href="projekt.html">Projekt</a></li>
@@ -79,7 +82,7 @@
 			</ul>
 		</nav>
 		<section class="contact-info text-center">
-			<p>Vanilla</p>
+			<p>Vanilla Webdesign</p>
 			<p>Skånegatan, Stockholm</p>
 			<p>tel: 070 000 000</p>
 			<p>info@vanillaweb.se</p>

@@ -1,37 +1,4 @@
 @charset "UTF-8";
-/*@media screen and (min-width: 700px){
-
-	.ham-menu{
-		opacity: 0;
-	}
-
-	.head-nav{
-		height: auto;
-		opacity: 1;
-	}
-
-	.head-nav > ul > li {
-	display: inline;
-	padding-right: 1rem;
-	}
-
-	h1{
-		font-size: 4rem;
-		letter-spacing: 4px;
-	}
-
-	h2{
-		font-size: 3rem;
-		letter-spacing: 4px;
-	}
-
-	nav{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
-}
-*/
 /* Transitions */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
@@ -61,7 +28,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bebas Neue", Georgia;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.2rem; }
 
 h1 {
   font-size: 2rem; }
@@ -70,45 +37,68 @@ h1 {
   text-align: center; }
 
 /******************************************************************
-/* NAVIGATION */
+/* HEADER / NAVIGATION */
+.logo {
+  width: 250px; }
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; }
+
+.top-nav ul, .bottom-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.top-nav {
+  flex-grow: 2; }
+
+.top-nav ul li, .bottom-nav ul li {
+  text-align: center;
+  flex-grow: 1; }
+
+.bottom-nav {
+  background: #BEE3DB;
+  padding: 1rem 0; }
+
 /* Remove margins and padding from the list, and add background color */
-ul.bottom-nav {
+ul.bottom-nav-ul, ul.top-nav-ul {
   list-style-type: none;
-  padding: 1rem 0;
+  padding: 0;
   margin: 0;
   overflow: hidden;
   /* Link style */
   /* Change color of links on hover */
   /* Side by side */ }
-  ul.bottom-nav li a {
+  ul.bottom-nav-ul li a, ul.top-nav-ul li a {
     color: #000;
     text-decoration: none; }
-  ul.bottom-nav li a:hover {
+  ul.bottom-nav-ul li a:hover, ul.top-nav-ul li a:hover {
     color: #555; }
-  ul.bottom-nav li {
+  ul.bottom-nav-ul li, ul.top-nav-ul li {
     display: inline; }
-  ul.bottom-nav li {
-    padding: 1rem; }
-
-/* Hide menu-list */
-ul.top-nav {
-  display: none; }
 
 nav {
   font-family: "Bebas Neue", Georgia;
   font-size: 1.5rem;
-  letter-spacing: 0.02rem; }
+  letter-spacing: 0.05rem; }
+
+/* Hide menu-list */
+ul.top-nav-ul {
+  display: none; }
 
 .ham-menu {
   position: absolute;
-  top: 2rem;
-  right: 2rem; }
+  top: 1rem;
+  right: 1rem; }
 
 /******************************************************************/
 /* BOXES */
 .box-wrapper {
   width: 100%;
-  max-width: 940px;
   display: flex;
   flex-flow: row wrap;
   /* flex-direction |  flex-wrap */
@@ -121,12 +111,17 @@ nav {
 .box {
   flex: 1 1 0;
   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-  min-width: 375px;
-  min-height: 275px;
-  background: #BEE3DB;
+  min-width: 100%;
+  min-height: 200px;
+  background: #827191;
   justify-content: center;
   align-items: center;
   order: 1; }
+
+.box img {
+  max-width: 100%;
+  max-height: 275px;
+  overflow: hidden; }
 
 /******************************************************************/
 /* OM OSS */
@@ -135,16 +130,41 @@ nav {
 
 .tag {
   position: absolute;
-  left: 20px;
-  bottom: 20px; }
+  bottom: 2rem;
+  left: 2rem; }
+
+.arrow {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem; }
 
 /******************************************************************/
 /* FOOTER */
-.contact-info p {
-  margin: 0;
-  padding: 0; }
+.contact-info {
+  margin: 1rem; }
+  .contact-info p {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", Georgia;
+    letter-spacing: 0.05rem; }
 
 .contact-icones span {
-  padding: 0.5rem; }
+  padding: 0.7rem; }
+
+@media screen and (min-width: 700px) {
+  ul.top-nav-ul {
+    display: flex; }
+
+  .main-header {
+    display: none; }
+
+  .ham-menu {
+    opacity: 0; }
+
+  .box-wrapper {
+    width: 80%; }
+
+  .box {
+    min-width: calc(100% / 2); } }
 
 /*# sourceMappingURL=main.css.map */
