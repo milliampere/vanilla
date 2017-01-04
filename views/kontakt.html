@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Om oss</title>
+	<title>Kontakt</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -36,37 +36,45 @@
 
 	<main>
 		<header class="main-header">
-			<h1 class="text-center">Om oss</h1>
+			<h1 class="text-center">Kontakt</h1>
 		</header>
-		<section class="box-wrapper">
-			<article class="box person">
-				<img src="../images/nina.jpg" alt="Nina">
-				<div class="tag">
-					<h3>Nina</h3>
-					<p>Javascript</p>
+		<section class="box-wrapper-kontakt">
+			<article class="box2">
+				<h1>hör av er till oss!</h1>
+ 					<form>
+						<label for="namn"> Fyll i ditt namn:</label>
+						<br>
+						<input type="text" name="namn">
+
+						<label for="epost">E-postadress:</label>
+						<br>
+						<input type="email" name="email" required="required">
+
+						<br>
+						<br>
+
+						<label for="vadkanvi">Vad kan vi stå till tjänst med?</label>
+						<br>
+
+						<textarea name="textarea" placeholder="Kära Vanilla Web Design..."></textarea>
+						<input type="submit" class="skicka" value="Skicka!"> 
+					</form>
+
+				<h1>Hitta hit</h1><br>
+			<article class="hitta-wrapper">
+				<div class="hitta-box">
+	 				<img src="../images/karta2.jpg" alt="karta"> 
 				</div>
-			</article>
-			<article class="box person">
-				<img src="../images/cilla.jpg" alt="Cilla">
-				<div class="tag">
-					<h3>Cilla</h3>
-					<p>UX Javascript</p>
-				</div>
-			</article>
-			<article class="box person">
-				<img src="../images/camilla.jpg" alt="Camilla">
-				<div class="tag">
-					<h3>Camilla</h3>
-					<p>Javascript</p>
-				</div>
-			</article>
-			<article class="box person">
-				<img src="../images/molly.jpg" alt="Molly">
-				<div class="tag">
-					<h3>Molly</h3>
-					<p>VD</p>
-				</div>
-				<span class="fa fa-angle-double-right fa-2x arrow" aria-hidden="true"></span>
+				<div class="hitta-box2">
+					<p>Vanilla Webdesign<br>
+					Skånegatan, Stockholm<br>
+					
+					<br>
+					Tunnelbana: Medborgarplatsen<br>
+					Buss: 66, 3, 53, 76<br>
+					Bil: Från Nytorgsgatan sväng höger in mot Skånegatan
+					</p>
+				</div>	 
 			</article>
 		</section>
 	</main>

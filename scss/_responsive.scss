@@ -18,4 +18,40 @@
 	.box {
 		min-width: calc(100% / 2);
 	}
+
+/******************************************************************/
+/* stuff for KONTAKT */
+
+	.box-wrapper-kontakt {
+		width: 80%;
+	    
+	}
+	.box2{
+		min-width: 600px;
+		max-width: 600px;
+		margin-bottom: 2rem;
+	}
+	.skicka{
+		width:40%;
+			
+	}
+
+	.hitta-wrapper {
+		display:flex;
+		flex-flow: row wrap; 
+	}
+
+	.hitta-box {
+		width:90%;
+		flex:1;
+
+	}
+	.hitta-box img{
+		padding:0 0.5rem 0.5rem 0;
+	}
+	.hitta-box2{
+		width:90%;
+		flex:1;
+		padding:0 0 0 0.5rem;
+	}
 }
