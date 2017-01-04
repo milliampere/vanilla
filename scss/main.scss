@@ -2,6 +2,8 @@
 @import "mixins";
 
 /* Fonts */
+
+/*nedan import funkar inte för mig /nina*/
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @font-face {
   font-family: "Bebas Neue";
@@ -9,8 +11,18 @@
   font-weight: normal;
   font-style: normal; 
 }
+/*la in denna för att ovan import inte funkar för mig /nina*/
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 $heading-font: "Bebas Neue", Georgia;
-$paragraf-font: "Source Sans Pro", Georgia;
+$paragraf-font: "source_sans_proregular", Georgia;
 
 /*Colors*/
 $primary-color: #827191;
@@ -85,7 +97,8 @@ h1 {
 
 .bottom-nav {
 	background: $secondary-color;
-	padding: 1rem 0;
+	padding: 2rem 0;
+	margin: 4rem 0 3rem 0; /*för att skapa avstånd ovan och under/nina*/
 }
 
 
@@ -139,6 +152,7 @@ ul.top-nav-ul {
 	margin: auto; /* center */
 }
 
+
 .box {
 	flex: 1 1 0;   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
 	min-width: 100%;
@@ -149,11 +163,14 @@ ul.top-nav-ul {
 	order: 1;
 }
 
+/* Denna stör projektsidans bilder*/
+/*
 .box img {
 	max-width: 100%;
 	max-height: 275px;
-	overflow: hidden;
+	overflow: hidden; 
 }
+*/
 
 /******************************************************************/
 /* OM OSS */
@@ -189,6 +206,41 @@ ul.top-nav-ul {
 	padding: 0.7rem;
 }
 
+/*******************************************************/
+/*css specifikt för projektsidan*/
+.project{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	box-sizing: border-box;
+}
 
+.left{
+	background: $secondary-color; /*Skriver över ovan bakgrund!*/
+}
+
+.right{
+	background: none; /*Skriver över ovan bakgrund!*/
+}
+
+.project-img { /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
+	max-width: 100%; /*skriver över ovan bildstorlek*/
+}
+
+.project-text{
+	margin: 0.5rem 2rem 1rem;
+}
+
+.arrow-down{
+	display: flex;
+	margin: 0.5rem 0;
+}
+
+.arrow-side{
+	display: none;
+}
+
+
+/********************************************************/
 
 @import "responsive";
