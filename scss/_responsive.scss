@@ -15,7 +15,51 @@
 	.box-wrapper {
 		width: 80%;
 	}
+	
+	/* denna stör projektsidan, sätt den istället till en specifik klass?*/
+	/* 
 	.box {
 		min-width: calc(100% / 2);
 	}
+	*/
+
+
+/************************************************************/
+/*specifikt för projektsidan*/
+	.project-text{
+		font-size: 1.2rem;
+	}
+
+	.project{
+		display:flex;
+		flex-direction: row;
+		padding: 0;
+		border: 0.5px solid $secondary-color;
+	}
+
+	.right{
+		flex-direction: row-reverse;
+	}
+
+	.project-img{
+		width: 50%;
+		max-width: 60%;
+	}
+
+	.arrow-side{
+		display: flex;
+		align-self: flex-start;
+		margin: 0 0.5rem;
+	}
+
+	.arrow-down{
+		display: none;
+	}
+/***************************************************************/
+
 }
+
+
+
+
+
