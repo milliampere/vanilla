@@ -115,14 +115,15 @@ ul.top-nav-ul {
   align-items: stretch;
   align-content: flex-start;
   margin: auto;
-  /* center */ }
+  /* center */
+  border: 1px solid black; }
 
 .box {
   flex: 1 1 0;
   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
   min-width: 100%;
   min-height: 200px;
-  background: #827191;
+  /*	background: $primary-color;*/
   justify-content: center;
   align-items: center;
   order: 1; }
@@ -149,6 +150,63 @@ ul.top-nav-ul {
   position: absolute;
   bottom: 2rem;
   right: 2rem; }
+
+/******************************************************************/
+/* KONTAKT mayhem for y'all.. */
+.box-wrapper-kontakt {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  /* center */ }
+
+.box2 {
+  margin-bottom: 2rem; }
+
+.hitta-wrapper p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto; }
+
+.hitta-box img {
+  width: 99%;
+  padding: 0 0.1rem 0.5rem 0.1rem; }
+
+.hitta-box2 p {
+  padding: 0 0.1rem 0 0.1rem; }
+
+/* KONTAKT form */
+input {
+  width: 100%;
+  padding: 0.8em 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-sizing: border-box; }
+
+.skicka {
+  width: 40%;
+  background-color: #BEE3DB;
+  color: black;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 1rem;
+  /*    box-shadow: 3px 3px #827191;*/ }
+
+textarea {
+  width: 100%;
+  height: 12em;
+  padding: 0.8em 0.5em;
+  margin: 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  color: grey;
+  border-radius: 0.25em;
+  resize: none; }
 
 /******************************************************************/
 /* FOOTER */
@@ -211,6 +269,38 @@ ul.top-nav-ul {
   /* denna stör projektsidan, sätt den istället till en specifik klass?*/
   /* 
   .box {
+
+    min-width: calc(100% / 2); }
+
+  /******************************************************************/
+  /* stuff for KONTAKT */
+  .box-wrapper-kontakt {
+    width: 80%; }
+
+  .box2 {
+    min-width: 600px;
+    max-width: 600px;
+    margin-bottom: 2rem; }
+
+  .skicka {
+    width: 40%; }
+
+  .hitta-wrapper {
+    display: flex;
+    flex-flow: row wrap; }
+
+  .hitta-box {
+    width: 90%;
+    flex: 1; }
+
+  .hitta-box img {
+    padding: 0 0.5rem 0.5rem 0; }
+
+  .hitta-box2 {
+    width: 90%;
+    flex: 1;
+    padding: 0 0 0 0.5rem; } }
+
   	min-width: calc(100% / 2);
   }
   */
@@ -241,5 +331,6 @@ ul.top-nav-ul {
     display: none; }
 
   /***************************************************************/ }
+
 
 /*# sourceMappingURL=main.css.map */
