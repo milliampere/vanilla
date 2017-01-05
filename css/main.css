@@ -1,37 +1,21 @@
 @charset "UTF-8";
 /* Transitions */
 /* Fonts */
-/*nedan import funkar inte för mig /nina*/
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-/*la in denna för att ovan import inte funkar för mig /nina*/
-@font-face {
-  font-family: 'source_sans_proregular';
-  src: url("sourcesanspro-regular-webfont.woff2") format("woff2"), url("sourcesanspro-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-/*Colors*/
-/* ONLY FOR TESTING */
-/*
-header, main, footer {
-	border: 3px solid #9a9a9a;
-	background: #c0c0c0;
-	box-sizing: border-box;
-}
-
-* div, nav, article {
-	border: 1px solid red;
-}
-*/
-/*General*/
+/* Colors */
+/* General */
 html, body {
-  font: 18px/24px "source_sans_proregular", Georgia;
+  font: 18px/24px "Source Sans Pro", Georgia;
   margin: 0;
   padding: 0; }
+
+* {
+  box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bebas Neue", Georgia;
@@ -46,7 +30,8 @@ h1 {
 /******************************************************************
 /* HEADER / NAVIGATION */
 .logo {
-  width: 250px; }
+  width: 250px;
+  margin-right: 8rem; }
 
 .top-header {
   display: flex;
@@ -109,47 +94,95 @@ ul.top-nav-ul {
 .box-wrapper {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  /* flex-direction |  flex-wrap */
-  justify-content: center;
-  align-items: stretch;
-  align-content: flex-start;
+  flex-direction: column;
   margin: auto;
   /* center */
-  border: 1px solid black; }
+  box-sizing: border-box; }
 
 .box {
   flex: 1 1 0;
   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-  min-width: 100%;
-  min-height: 200px;
-  /*	background: $primary-color;*/
+  height: 100%;
   justify-content: center;
   align-items: center;
-  order: 1; }
+  box-sizing: border-box; }
 
-/* Denna stör projektsidans bilder*/
-/*
-.box img {
-	max-width: 100%;
-	max-height: 275px;
-	overflow: hidden; 
-}
-*/
+/******************************************************************/
+/* FOOTER */
+.contact-info {
+  margin: 1rem; }
+  .contact-info p {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", Georgia;
+    letter-spacing: 0.05rem; }
+
+.contact-icones span {
+  padding: 0.7rem; }
+
+/*******************************************************/
+/* PROJEKT */
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box; }
+
+.left {
+  background: #BEE3DB;
+  /*Skriver över ovan bakgrund!*/ }
+
+.right {
+  background: none;
+  /*Skriver över ovan bakgrund!*/ }
+
+.project-img {
+  /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
+  max-width: 100%;
+  /*skriver över ovan bildstorlek*/ }
+
+.project-text {
+  margin: 0.5rem 2rem 1rem; }
+
+.arrow-down {
+  display: flex;
+  margin: 0.5rem 0; }
+
+.arrow-side {
+  display: none; }
+
 /******************************************************************/
 /* OM OSS */
-.person {
+.about-us .box {
   position: relative; }
+
+.about-us img {
+  width: 100%; }
 
 .tag {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem; }
+  bottom: 3rem;
+  left: 4rem; }
 
 .arrow {
   position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  opacity: 1; }
+
+.hover-box {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
   bottom: 2rem;
-  right: 2rem; }
+  background: #FFF;
+  opacity: 0;
+  transition: all 1s ease-in;
+  padding: 2rem; }
+  .hover-box:hover {
+    transition: all 1s ease-out;
+    opacity: 0.8; }
 
 /******************************************************************/
 /* KONTAKT mayhem for y'all.. */
@@ -208,52 +241,23 @@ textarea {
   border-radius: 0.25em;
   resize: none; }
 
-/******************************************************************/
-/* FOOTER */
-.contact-info {
-  margin: 1rem; }
-  .contact-info p {
-    margin: 0;
-    padding: 0;
-    font-family: "Bebas Neue", Georgia;
-    letter-spacing: 0.05rem; }
+/* Medium devices */
+@media screen and (min-width: 543px) and (max-width: 991px) {
+  .box-wrapper {
+    width: 100%;
+    flex-flow: row wrap;
+    margin: auto;
+    /* center */ }
 
-.contact-icones span {
-  padding: 0.7rem; }
+  .about-us .box {
+    min-width: calc(100% / 2); }
 
-/*******************************************************/
-/*css specifikt för projektsidan*/
-.project {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  box-sizing: border-box; }
-
-.left {
-  background: #BEE3DB;
-  /*Skriver över ovan bakgrund!*/ }
-
-.right {
-  background: none;
-  /*Skriver över ovan bakgrund!*/ }
-
-.project-img {
-  /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
-  max-width: 100%;
-  /*skriver över ovan bildstorlek*/ }
-
-.project-text {
-  margin: 0.5rem 2rem 1rem; }
-
-.arrow-down {
-  display: flex;
-  margin: 0.5rem 0; }
-
-.arrow-side {
-  display: none; }
-
-/********************************************************/
-@media screen and (min-width: 700px) {
+  .hover-box {
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem; } }
+@media screen and (min-width: 992px) {
   ul.top-nav-ul {
     display: flex; }
 
@@ -264,16 +268,44 @@ textarea {
     opacity: 0; }
 
   .box-wrapper {
-    width: 80%; }
+    width: 90%;
+    flex-flow: row wrap;
+    margin: auto;
+    /* center */ }
 
-  /* denna stör projektsidan, sätt den istället till en specifik klass?*/
-  /* 
-  .box {
+  /************************************************************/
+  /* PROJEKT */
+  .project-text {
+    font-size: 1.2rem; }
 
+  .project {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border: 0.5px solid #BEE3DB; }
+
+  .right {
+    flex-direction: row-reverse; }
+
+  .project-img {
+    width: 50%;
+    max-width: 60%; }
+
+  .arrow-side {
+    display: flex;
+    align-self: flex-start;
+    margin: 0 0.5rem; }
+
+  .arrow-down {
+    display: none; }
+
+  /***************************************************************/
+  /* OM OSS */
+  .about-us .box {
     min-width: calc(100% / 2); }
 
   /******************************************************************/
-  /* stuff for KONTAKT */
+  /* KONTAKT */
   .box-wrapper-kontakt {
     width: 80%; }
 
@@ -300,37 +332,5 @@ textarea {
     width: 90%;
     flex: 1;
     padding: 0 0 0 0.5rem; } }
-
-  	min-width: calc(100% / 2);
-  }
-  */
-  /************************************************************/
-  /*specifikt för projektsidan*/
-  .project-text {
-    font-size: 1.2rem; }
-
-  .project {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    border: 0.5px solid #BEE3DB; }
-
-  .right {
-    flex-direction: row-reverse; }
-
-  .project-img {
-    width: 50%;
-    max-width: 60%; }
-
-  .arrow-side {
-    display: flex;
-    align-self: flex-start;
-    margin: 0 0.5rem; }
-
-  .arrow-down {
-    display: none; }
-
-  /***************************************************************/ }
-
 
 /*# sourceMappingURL=main.css.map */
