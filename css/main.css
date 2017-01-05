@@ -1,10 +1,17 @@
 @charset "UTF-8";
 /* Transitions */
 /* Fonts */
+/*nedan import funkar inte för mig /nina*/
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*la in denna för att ovan import inte funkar för mig /nina*/
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url("sourcesanspro-regular-webfont.woff2") format("woff2"), url("sourcesanspro-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 /*Colors*/
@@ -22,7 +29,7 @@ header, main, footer {
 */
 /*General*/
 html, body {
-  font: 18px/24px "Source Sans Pro", Georgia;
+  font: 18px/24px "source_sans_proregular", Georgia;
   margin: 0;
   padding: 0; }
 
@@ -62,7 +69,9 @@ h1 {
 
 .bottom-nav {
   background: #BEE3DB;
-  padding: 1rem 0; }
+  padding: 2rem 0;
+  margin: 4rem 0 3rem 0;
+  /*för att skapa avstånd ovan och under/nina*/ }
 
 /* Remove margins and padding from the list, and add background color */
 ul.bottom-nav-ul, ul.top-nav-ul {
@@ -119,11 +128,14 @@ ul.top-nav-ul {
   align-items: center;
   order: 1; }
 
+/* Denna stör projektsidans bilder*/
+/*
 .box img {
-  max-width: 100%;
-  max-height: 275px;
-  overflow: hidden; }
-
+	max-width: 100%;
+	max-height: 275px;
+	overflow: hidden; 
+}
+*/
 /******************************************************************/
 /* OM OSS */
 .person {
@@ -209,6 +221,38 @@ textarea {
 .contact-icones span {
   padding: 0.7rem; }
 
+/*******************************************************/
+/*css specifikt för projektsidan*/
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box; }
+
+.left {
+  background: #BEE3DB;
+  /*Skriver över ovan bakgrund!*/ }
+
+.right {
+  background: none;
+  /*Skriver över ovan bakgrund!*/ }
+
+.project-img {
+  /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
+  max-width: 100%;
+  /*skriver över ovan bildstorlek*/ }
+
+.project-text {
+  margin: 0.5rem 2rem 1rem; }
+
+.arrow-down {
+  display: flex;
+  margin: 0.5rem 0; }
+
+.arrow-side {
+  display: none; }
+
+/********************************************************/
 @media screen and (min-width: 700px) {
   ul.top-nav-ul {
     display: flex; }
@@ -222,7 +266,10 @@ textarea {
   .box-wrapper {
     width: 80%; }
 
+  /* denna stör projektsidan, sätt den istället till en specifik klass?*/
+  /* 
   .box {
+
     min-width: calc(100% / 2); }
 
   /******************************************************************/
@@ -253,5 +300,37 @@ textarea {
     width: 90%;
     flex: 1;
     padding: 0 0 0 0.5rem; } }
+
+  	min-width: calc(100% / 2);
+  }
+  */
+  /************************************************************/
+  /*specifikt för projektsidan*/
+  .project-text {
+    font-size: 1.2rem; }
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border: 0.5px solid #BEE3DB; }
+
+  .right {
+    flex-direction: row-reverse; }
+
+  .project-img {
+    width: 50%;
+    max-width: 60%; }
+
+  .arrow-side {
+    display: flex;
+    align-self: flex-start;
+    margin: 0 0.5rem; }
+
+  .arrow-down {
+    display: none; }
+
+  /***************************************************************/ }
+
 
 /*# sourceMappingURL=main.css.map */
