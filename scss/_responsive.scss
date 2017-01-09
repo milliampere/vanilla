@@ -1,7 +1,28 @@
-@media screen and (min-width: 700px){
+/* Medium devices */ 
+@media screen and (min-width: 543px) and (max-width: 991px) {
+	.box-wrapper {
+	width: 100%;
+	flex-flow: row wrap; 
+	margin: auto; /* center */
+	}
+
+	.about-us .box {
+		min-width: calc(100% / 2);
+	}
+
+	.hover-box {
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+	}
+
+}
+
+@media screen and (min-width: 992px){
 
   
-  ul.top-nav-ul {
+  	ul.top-nav-ul {
 		display: flex;
 	}
 
@@ -14,7 +35,9 @@
 	}
 
 	.box-wrapper {
-		width: 80%;
+	width: 90%;
+	flex-flow: row wrap; 
+	margin: auto; /* center */
 	}
 
 
@@ -51,13 +74,10 @@
 /***************************************************************/
 /* OM OSS */
 
-
-	
-	/* denna stör projektsidan, sätt den istället till en specifik klass?*/
-	/* 
-	.box {
+	.about-us .box {
 		min-width: calc(100% / 2);
 	}
+
   
   
   /******************************************************************/
