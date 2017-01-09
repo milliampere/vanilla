@@ -1,5 +1,12 @@
 @charset "UTF-8";
-/* Transitions */
+/* Transitions in all browsers 
+T ex 
+@include transition(color .3s ease);
+*/
+/* Transform 
+T ex 
+@include transform(scale(1.1));
+*/
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
@@ -9,53 +16,15 @@
   src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 /* Colors */
 /* General */
-
-@font-face {
-  font-family: 'source_sans_proregular';
-  src: url("sourcesanspro-regular-webfont.woff2") format("woff2"), url("sourcesanspro-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-/*@font-face {
-    font-family: 'Pacifico';
-    src: url('Pacifico-Regular-webfont.woff2') format('woff2'), 
-    url('Pacifico-Regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: cursive;
-}*/
-/*Colors*/
-/* ONLY FOR TESTING */
-/*
-header, main, footer {
-	border: 3px solid #9a9a9a;
-	background: #c0c0c0;
-	box-sizing: border-box;
-}
-
-* div, nav, article {
-	border: 1px solid red;
-}
-*/
-/*General*/
-
 html, body {
-  font: 18px/24px "source_sans_proregular", Georgia;
+  font: 16px/24px "Source Sans Pro", Georgia;
   margin: 0 auto;
-  padding: 0; }
-
-body {
-  max-width: 1920px;
-  /*för att innehållet inte ska bli asutdraget på stora skärmar*/ }
-
-  font: 18px/24px "Source Sans Pro", Georgia;
-  margin: 0;
   padding: 0; }
 
 * {
   box-sizing: border-box; }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bebas Neue", Georgia;
@@ -68,22 +37,12 @@ h1 {
   text-align: center; }
 
 /******************************************************************
-/* HEADER / NAVIGATION */
+/* HEADER/NAVIGATION */
 .logo {
-  width: 250px;
+  width: 150px;
   margin-right: 8rem; }
 
-.logo-hem {
-  width: 50%;
-  /*	padding-left: 0.5rem;*/ }
-
 .top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem; }
-
-.top-header-special {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,18 +54,17 @@ h1 {
   justify-content: space-around;
   align-items: center; }
 
-.top-nav {
-  flex-grow: 2; }
-
 .top-nav ul li, .bottom-nav ul li {
   text-align: center;
   flex-grow: 1; }
 
+.top-nav {
+  flex-grow: 2; }
+
 .bottom-nav {
   background: #BEE3DB;
   padding: 2rem 0;
-  margin: 4rem 0 3rem 0;
-  /*för att skapa avstånd ovan och under/nina*/ }
+  margin: 4rem 0 3rem 0; }
 
 /* Remove margins and padding from the list, and add background color */
 ul.bottom-nav-ul, ul.top-nav-ul {
@@ -129,6 +87,28 @@ nav {
   font-family: "Bebas Neue", Georgia;
   font-size: 1.5rem;
   letter-spacing: 0.05rem; }
+  nav li {
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+    nav li:hover {
+      -webkit-transition: all 0.1s ease-out;
+      -moz-transition: all 0.1s ease-out;
+      -ms-transition: all 0.1s ease-out;
+      -o-transition: all 0.1s ease-out;
+      transition: all 0.1s ease-out;
+      -webkit-transform: scaleX(1.05);
+      -moz-transform: scaleX(1.05);
+      -ms-transform: scaleX(1.05);
+      -o-transform: scaleX(1.05);
+      transform: scaleX(1.05); }
 
 /* Hide menu-list */
 ul.top-nav-ul {
@@ -147,193 +127,14 @@ ul.top-nav-ul {
   flex-direction: column;
   margin: auto;
   /* center */
-
   box-sizing: border-box; }
-
 
 .box {
   flex: 1 1 0;
-  /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
   height: 100%;
   justify-content: center;
   align-items: center;
   box-sizing: border-box; }
-  order: 1; }
-
-
-/******************************************************************/
-/* FOOTER */
-.contact-info {
-  margin: 1rem; }
-  .contact-info p {
-    margin: 0;
-    padding: 0;
-    font-family: "Bebas Neue", Georgia;
-    letter-spacing: 0.05rem; }
-
-.contact-icones span {
-  padding: 0.7rem; }
-
-/*******************************************************/
-/* PROJEKT */
-.project {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  box-sizing: border-box; }
-
-.left {
-  background: #BEE3DB;
-  /*Skriver över ovan bakgrund!*/ }
-
-.right {
-  background: none;
-  /*Skriver över ovan bakgrund!*/ }
-
-.project-img {
-  /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
-  max-width: 100%;
-  /*skriver över ovan bildstorlek*/ }
-
-.project-text {
-  margin: 0.5rem 2rem 1rem; }
-
-.arrow-down {
-  display: flex;
-  margin: 0.5rem 0; }
-
-.arrow-side {
-  display: none; }
-
-/******************************************************************/
-/* OM OSS */
-.about-us .box {
-  position: relative; }
-
-.about-us img {
-  width: 100%; }
-
-.tag {
-  position: absolute;
-  bottom: 3rem;
-  left: 4rem; }
-
-.arrow {
-  position: absolute;
-  bottom: 4rem;
-  right: 4rem;
-  opacity: 1; }
-
-.hover-box {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
-  background: #FFF;
-  opacity: 0;
-  transition: all 1s ease-in;
-  padding: 2rem; }
-  .hover-box:hover {
-    transition: all 1s ease-out;
-    opacity: 0.8; }
-
-/******************************************************************/
-/* KONTAKT mayhem for y'all.. */
-.box-wrapper-kontakt {
-  width: 98%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: flex-start;
-  margin: auto;
-  /* center */ }
-
-.box2 {
-  margin-bottom: 2rem; }
-
-.hitta-wrapper p {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto; }
-
-.hitta-box img {
-  width: 99%;
-  padding: 0 0.1rem 0.5rem 0.1rem; }
-
-.hitta-box2 p {
-  padding: 0 0.1rem 0 0.1rem; }
-
-/* KONTAKT form */
-input {
-  width: 100%;
-  padding: 0.8em 0.5em;
-  margin: 0.5em 0;
-  border: 1px solid #ccc;
-  border-radius: 0.25em;
-  box-sizing: border-box; }
-
-.skicka {
-  width: 40%;
-  background-color: #BEE3DB;
-  color: black;
-  padding: 0.4rem;
-  border: none;
-  border-radius: 0.25em;
-  font-size: 1rem;
-  /*    box-shadow: 3px 3px #827191;*/ }
-
-textarea {
-  width: 100%;
-  height: 12em;
-  padding: 0.8em 0.5em;
-  margin: 0.5em 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  color: grey;
-  border-radius: 0.25em;
-  resize: none; }
-
-
-
-/************************************************************/
-/*Vi erbjuder*/
-.erbjuder-ruta {
-  border: 1px solid black;
-  display: flex;
-  padding: 1rem;
-  box-sizing: border-box; }
-  .erbjuder-ruta div {
-    min-width: 25%;
-    padding-right: 1rem;
-    text-align: center; }
-
-.erbjuder-text {
-  align-self: flex-start; }
-
-.green {
-  background: #BEE3DB; }
-
-/* Medium devices */
-@media screen and (min-width: 543px) and (max-width: 991px) {
-  .box-wrapper {
-    width: 100%;
-    flex-flow: row wrap;
-    margin: auto;
-    /* center */ }
-
-  .about-us .box {
-    min-width: calc(100% / 2); }
-
-  .hover-box {
-    top: 0rem;
-    left: 0rem;
-    right: 0rem;
-    bottom: 0rem; } }
-@media screen and (min-width: 992px) {
-
 
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
@@ -386,8 +187,191 @@ textarea {
   font-size: 0.8rem;
   margin: 0.5rem 1rem 1rem; }
 
-@media screen and (min-width: 700px) {
+/************************************************************/
+/*Vi erbjuder*/
+.erbjuder-ruta {
+  border: 1px solid black;
+  display: flex;
+  padding: 1rem;
+  box-sizing: border-box; }
+  .erbjuder-ruta div {
+    min-width: 25%;
+    padding-right: 1rem;
+    text-align: center; }
 
+.erbjuder-text {
+  align-self: flex-start; }
+
+.green {
+  background: #BEE3DB; }
+
+/*******************************************************/
+/* PROJEKT */
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box; }
+
+.left {
+  background: #BEE3DB; }
+
+.right {
+  background: none; }
+
+.project-img {
+  max-width: 100%; }
+
+.project-text {
+  margin: 0.5rem 2rem 1rem; }
+
+.arrow-down {
+  display: flex;
+  margin: 0.5rem 0; }
+
+.arrow-side {
+  display: none; }
+
+/******************************************************************/
+/* OM OSS */
+.about-us .box {
+  position: relative; }
+
+.about-us img {
+  width: 100%; }
+
+.tag {
+  position: absolute;
+  bottom: 3rem;
+  left: 4rem; }
+
+.arrow {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  opacity: 1; }
+
+.hover-box {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  background: #FFF;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  padding: 2rem; }
+  .hover-box:hover {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    opacity: 0.8; }
+
+/******************************************************************/
+/* KONTAKT mayhem for y'all.. */
+.box-wrapper-kontakt {
+  width: 98%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  /* center */ }
+
+.box2 {
+  margin-bottom: 2rem; }
+
+.hitta-wrapper p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto; }
+
+.hitta-box img {
+  width: 99%;
+  padding: 0 0.1rem 0.5rem 0.1rem; }
+
+.hitta-box2 p {
+  padding: 0 0.1rem 0 0.1rem; }
+
+/* KONTAKT form */
+input {
+  width: 100%;
+  padding: 0.8em 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-sizing: border-box; }
+
+.skicka {
+  width: 40%;
+  background-color: #BEE3DB;
+  color: black;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 1rem; }
+
+textarea {
+  width: 100%;
+  height: 12em;
+  padding: 0.8em 0.5em;
+  margin: 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  color: grey;
+  border-radius: 0.25em;
+  resize: none; }
+
+/******************************************************************/
+/* FOOTER */
+.contact-info {
+  margin: 1rem; }
+  .contact-info p {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", Georgia;
+    letter-spacing: 0.05rem; }
+
+.contact-icones span {
+  padding: 0.7rem; }
+  .contact-icones span:hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+
+/************************************************************/
+/* Medium devices */
+@media screen and (min-width: 543px) and (max-width: 991px) {
+  .box-wrapper {
+    width: 100%;
+    flex-flow: row wrap;
+    margin: auto;
+    /* center */ }
+
+  .about-us .box {
+    min-width: calc(100% / 2); }
+
+  .hover-box {
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem; } }
+@media screen and (min-width: 992px) {
   ul.top-nav-ul {
     display: flex; }
 
@@ -408,7 +392,6 @@ textarea {
   .project-text {
     font-size: 1.2rem; }
 
-
   .project {
     display: flex;
     flex-direction: row;
@@ -419,20 +402,6 @@ textarea {
 
   .project-img {
     width: 65%; }
-
-  .project {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    border: 0.5px solid #BEE3DB; }
-
-
-  .right {
-    flex-direction: row-reverse; }
-
-  .project-img {
-    width: 50%;
-    max-width: 60%; }
 
   .arrow-side {
     display: flex;
@@ -448,33 +417,6 @@ textarea {
     min-width: calc(100% / 2); }
 
   /******************************************************************/
-
-  .right {
-    flex-direction: row-reverse; }
-
-  .project-img {
-    width: 50%;
-    max-width: 60%; }
-
-  .arrow-side {
-    display: flex;
-    align-self: flex-start;
-    margin: 0 0.5rem; }
-
-  .arrow-down {
-    display: none; }
-
-  /***************************************************************/
-  /* OM OSS */
-  /* denna stör projektsidan, sätt den istället till en specifik klass?*/
-  	/* 
-  	.box {
-  		min-width: calc(100% / 2);
-  	}
-    
-    
-    /******************************************************************/
-
   /* KONTAKT */
   .box-wrapper-kontakt {
     width: 80%; }
@@ -504,16 +446,6 @@ textarea {
     padding: 0 0 0 0.5rem; }
 
   /******************************************************************/
-  /* Erbjuder */
-  .erbjuder-ruta {
-    min-width: 45%; }
-
-  .erbjuder-reverse {
-    flex-direction: row-reverse; }
-
-  .erbjuder-text {
-    width: 55%; } }
-
   /* INDEX */
   .hem {
     /*	display:flex;*/
@@ -545,6 +477,17 @@ textarea {
 
   .article-text {
     font-size: 0.9rem;
-    margin: 1rem 1rem 1rem 1rem; } }
+    margin: 1rem 1rem 1rem 1rem; }
+
+  /******************************************************************/
+  /* Erbjuder */
+  .erbjuder-ruta {
+    min-width: 45%; }
+
+  .erbjuder-reverse {
+    flex-direction: row-reverse; }
+
+  .erbjuder-text {
+    width: 55%; } }
 
 /*# sourceMappingURL=main.css.map */

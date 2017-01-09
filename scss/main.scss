@@ -3,10 +3,8 @@
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
-
 @import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
-
 
 @font-face {
   font-family: "Bebas Neue";
@@ -16,50 +14,25 @@
   font-style: normal; 
 }
 
-
-@font-face {
-    font-family: 'source_sans_proregular';
-    src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
-         url('sourcesanspro-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*@font-face {
-    font-family: 'Pacifico';
-    src: url('Pacifico-Regular-webfont.woff2') format('woff2'), 
-    url('Pacifico-Regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: cursive;
-}*/
-
 $heading-font: "Bebas Neue", Georgia;
 $paragraf-font: "Source Sans Pro", Georgia;
-
-/* FONTS */
 $special-font:"Pacifico", Georgia;
 $special-font2:"Courgette", Georgia;
 $special-font3:"Baloo Bhaina", Georgia;
 
-/*Colors*/
-$primary-color: #b296b6;
-$secondary-color: #BEE3DB;
-$third-color: hsl(38, 52%, 83%);
+/* Colors */
+$secondary-color: #BEE3DB; 
+
 
 /* General */
 html, body {
-	font: 18px/24px $paragraf-font;
+	font: 16px/24px $paragraf-font;
 	margin: 0 auto;
 	padding: 0;
 }
 
-
-body{
-	max-width: 1920px; /*för att innehållet inte ska bli asutdraget på stora skärmar*/
-
 * {
 	box-sizing: border-box;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,24 +49,13 @@ h1 {
 }
 
 /******************************************************************
-/* HEADER / NAVIGATION */
+/* HEADER/NAVIGATION */
 .logo{
-	width: 250px;
+	width: 150px;
 	margin-right: 8rem;
 } 
 
-.logo-hem{
-	width:50%;
-/*	padding-left: 0.5rem;*/
-}
-
 .top-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
-}
-.top-header-special {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -108,19 +70,20 @@ h1 {
 
 }
 
-.top-nav {	
-	flex-grow: 2;
-}
-
 .top-nav ul li, .bottom-nav ul li {
     text-align: center;
     flex-grow: 1;
 }
 
+
+.top-nav {	
+	flex-grow: 2;
+}
+
 .bottom-nav {
 	background: $secondary-color;
 	padding: 2rem 0;
-	margin: 4rem 0 3rem 0; /*för att skapa avstånd ovan och under/nina*/
+	margin: 4rem 0 3rem 0; 
 }
 
 
@@ -144,6 +107,16 @@ nav {
 	font-family: $heading-font;
 	font-size: 1.5rem;
 	letter-spacing: 0.05rem;
+
+	li {
+		@include transition(all .1s ease-in);
+		@include transform(scale(1));
+
+		&:hover {
+			@include transition(all .1s ease-out);
+			@include transform(scaleX(1.05));
+		}
+	}
 }
 
 
@@ -161,6 +134,8 @@ ul.top-nav-ul {
 
 
 
+
+
 /******************************************************************/
 /* BOXES */
 
@@ -175,7 +150,7 @@ ul.top-nav-ul {
 
 
 .box {
-	flex: 1 1 0;  /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
+	flex: 1 1 0;  
 	height: 100%;
 	justify-content: center;
 	align-items: center;
@@ -183,198 +158,7 @@ ul.top-nav-ul {
 
 }
 
-/******************************************************************/
-/* FOOTER */
-.contact-info  {
-	margin: 1rem;
-	
-	p {
-	margin: 0;
-	padding: 0;
-	font-family: $heading-font;
-	letter-spacing: 0.05rem;
-	}
-}
 
-.contact-icones span {
-	padding: 0.7rem;
-}
-
-
-
-/*******************************************************/
-/* PROJEKT */
-.project{
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
-	box-sizing: border-box;
-}
-
-.left{
-	background: $secondary-color; /*Skriver över ovan bakgrund!*/
-}
-
-.right{
-	background: none; /*Skriver över ovan bakgrund!*/
-}
-
-.project-img { /*kan vi ta bort .box img ovan och istället lägga enegnskaperna på en specifik klass avsett för Om oss sidan */
-	max-width: 100%; /*skriver över ovan bildstorlek*/
-}
-
-.project-text{
-	margin: 0.5rem 2rem 1rem;
-}
-
-.arrow-down{
-	display: flex;
-	margin: 0.5rem 0;
-}
-
-.arrow-side{
-	display: none;
-}
-
-
-
-
-/******************************************************************/
-/* OM OSS */
-
-.about-us .box {
-	position: relative;
-}
-
-.about-us img {
-	width: 100%;
-}
-
-.tag {
-	position: absolute;
-	bottom: 3rem;
-	left: 4rem;
-}
-
-.arrow {
-	position: absolute;
-	bottom: 4rem;
-	right: 4rem;
-	opacity: 1;
-}	
-
-.hover-box {
-	position: absolute;
-	top: 2rem;
-	left: 2rem;
-	right: 2rem;
-	bottom: 2rem;
-	background: #FFF;
-	opacity: 0;
-	transition: all 1s ease-in;
-	padding: 2rem;
-	
-	&:hover {
-		transition: all 1s ease-out;
-		opacity: 0.8;
-	}
-	
-}
-
-
-/******************************************************************/
-/* KONTAKT mayhem for y'all.. */
-
-
-
-
-
-.box-wrapper-kontakt {
-	width: 98%;
-	display: flex;
-		flex-flow: row wrap; 
-	justify-content: center;
-	align-content: flex-start;
-	margin: auto; /* center */
-}
-
-.box2 {
-		margin-bottom: 2rem;
-}
-
-.hitta-wrapper p{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin:0 auto;
-}
-
-.hitta-box img{
-	width:99%;
-	padding:0 0.1rem 0.5rem 0.1rem;
-}
-
-.hitta-box2 p{
-	padding:0 0.1rem 0 0.1rem;
-}
-
-/* KONTAKT form */ 
-
-input{
-	width: 100%;
-    padding: 0.8em 0.5em;
-    margin: 0.5em 0;
-    border: 1px solid #ccc;
-    border-radius: 0.25em;
-    box-sizing: border-box;
-}
-
-.skicka {
-    width: 40%;
-    background-color: $secondary-color;
-    color: black;
-    padding: 0.4rem;
-    border: none;
-    border-radius: 0.25em;
-    font-size: 1rem;
-/*    box-shadow: 3px 3px #827191;*/
-}
-
-textarea {
-    width: 100%;
-    height: 12em;
-    padding: 0.8em 0.5em;
-    margin: 0.5em 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-	color: grey;
-    border-radius: 0.25em;
-    resize: none;
-}
-
-
-/************************************************************/
-/*Vi erbjuder*/
-
-.erbjuder-ruta{
-	border: 1px solid black;
-	display: flex;
-	padding: 1rem;
-	box-sizing: border-box;
-	div{
-		min-width: 25%;
-		padding-right: 1rem;
-		text-align: center;
-	}
-}
-
-.erbjuder-text{
-	align-self: flex-start;
-}
-
-.green{
-	background: $secondary-color;
 
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
@@ -438,6 +222,200 @@ textarea {
 	margin: 0.5rem 1rem 1rem;
 }
 
+/************************************************************/
+/*Vi erbjuder*/
+
+.erbjuder-ruta{
+	border: 1px solid black;
+	display: flex;
+	padding: 1rem;
+	box-sizing: border-box;
+	div{
+		min-width: 25%;
+		padding-right: 1rem;
+		text-align: center;
+	}
+}
+
+.erbjuder-text{
+	align-self: flex-start;
+}
+
+.green{
+	background: $secondary-color;
+}
+
+/*******************************************************/
+/* PROJEKT */
+.project{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.left{
+	background: $secondary-color; 
+}
+
+.right{
+	background: none; 
+}
+
+.project-img { 
+	max-width: 100%; 
+}
+
+.project-text{
+	margin: 0.5rem 2rem 1rem;
+}
+
+.arrow-down{
+	display: flex;
+	margin: 0.5rem 0;
+}
+
+.arrow-side{
+	display: none;
+}
+
+
+
+
+/******************************************************************/
+/* OM OSS */
+
+.about-us .box {
+	position: relative;
+}
+
+.about-us img {
+	width: 100%;
+}
+
+.tag {
+	position: absolute;
+	bottom: 3rem;
+	left: 4rem;
+}
+
+.arrow {
+	position: absolute;
+	bottom: 4rem;
+	right: 4rem;
+	opacity: 1;
+}	
+
+.hover-box {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	right: 2rem;
+	bottom: 2rem;
+	background: #FFF;
+	opacity: 0;
+	@include transition(all 1s ease-in);
+	padding: 2rem;
+	
+	&:hover {
+		@include transition(all 1s ease-out);
+		opacity: 0.8;
+	}
+	
+}
+
+
+/******************************************************************/
+/* KONTAKT mayhem for y'all.. */
+
+.box-wrapper-kontakt {
+	width: 98%;
+	display: flex;
+		flex-flow: row wrap; 
+	justify-content: center;
+	align-content: flex-start;
+	margin: auto; /* center */
+}
+
+.box2 {
+		margin-bottom: 2rem;
+}
+
+.hitta-wrapper p{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin:0 auto;
+}
+
+.hitta-box img{
+	width:99%;
+	padding:0 0.1rem 0.5rem 0.1rem;
+}
+
+.hitta-box2 p{
+	padding:0 0.1rem 0 0.1rem;
+}
+
+/* KONTAKT form */ 
+
+input{
+	width: 100%;
+    padding: 0.8em 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+.skicka {
+    width: 40%;
+    background-color: $secondary-color;
+    color: black;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.25em;
+    font-size: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 12em;
+    padding: 0.8em 0.5em;
+    margin: 0.5em 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+	color: grey;
+    border-radius: 0.25em;
+    resize: none;
+}
+
+
+
+
+/******************************************************************/
+/* FOOTER */
+.contact-info  {
+	margin: 1rem;
+	
+	p {
+	margin: 0;
+	padding: 0;
+	font-family: $heading-font;
+	letter-spacing: 0.05rem;
+	}
+}
+
+.contact-icones span {
+	padding: 0.7rem;
+
+	&:hover {
+		@include transition(all .3s ease);
+		@include transform(scale(1.1));
+	}
+}
 
 /************************************************************/
+
 @import "responsive";
