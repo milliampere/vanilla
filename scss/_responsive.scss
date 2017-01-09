@@ -97,7 +97,53 @@
 		flex:1;
 		padding:0 0 0 0.5rem;
 	}
+  /******************************************************************/
+/* INDEX */
 
+.hem{
+/*	display:flex;*/
+	position:relative;
+	margin: 0 0 0 0;
+
+
+}
+.background-text{
+	position: absolute;
+	margin:2rem 0 0 0;
+
+	left: 3rem;
+	color: white;
+	font-size: 2.7rem;
+	line-height: 3rem;
+}
+
+
+
+.anim{
+	width:40%;
+	position: absolute;
+	top: 3rem;
+	left: 2.5rem;
+	}
+ 
+.indexsidan{
+	display:flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin: 5rem 0 5rem 0;
+
+}
+.article-img{
+	width:50%;
+}
+
+.article-text{
+	font-size: 0.9rem;
+	margin: 1rem 1rem 1rem 1rem;
+
+	}
+
+ 
 
 }
 
