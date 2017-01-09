@@ -50,8 +50,7 @@
 	.project{
 		display:flex;
 		flex-direction: row;
-		padding: 0;
-		border: 0.5px solid $secondary-color;
+		padding: 1rem;
 	}
 
 	.right{
@@ -59,8 +58,7 @@
 	}
 
 	.project-img{
-		width: 50%;
-		max-width: 60%;
+		width: 65%;
 	}
 
 	.arrow-side{
@@ -95,8 +93,7 @@
 		margin-bottom: 2rem;
 	}
 	.skicka{
-		width:40%;
-			
+		width:40%;		
 	}
 
 	.hitta-wrapper {
@@ -107,18 +104,95 @@
 	.hitta-box {
 		width:90%;
 		flex:1;
-
 	}
+
 	.hitta-box img{
 		padding:0 0.5rem 0.5rem 0;
 	}
+
 	.hitta-box2{
 		width:90%;
 		flex:1;
 		padding:0 0 0 0.5rem;
 	}
+  /******************************************************************/
+/* INDEX */
+
+.hem{
+/*	display:flex;*/
+	position:relative;
+	margin: 0 0 0 0;
 
 
 }
+.background-text{
+	position: absolute;
+	margin:2rem 0 0 0;
+
+	left: 3rem;
+	color: white;
+	font-size: 2.7rem;
+	line-height: 3rem;
+}
+
+
+
+.anim{
+	width:40%;
+	position: absolute;
+	top: 3rem;
+	left: 2.5rem;
+	}
+ 
+.indexsidan{
+	display:flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin: 5rem 0 5rem 0;
+
+}
+.article-img{
+	width:50%;
+}
+
+.article-text{
+	font-size: 0.9rem;
+	margin: 1rem 1rem 1rem 1rem;
+
+	}
+
+ 
+
+  /******************************************************************/
+/* Erbjuder */
+
+
+	.erbjuder-ruta{
+		min-width: 45%;
+	}
+
+	.erbjuder-reverse{
+		flex-direction: row-reverse;
+	} 
+
+	.erbjuder-text{
+		width: 55%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
