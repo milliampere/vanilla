@@ -2,13 +2,44 @@
 /* Transitions */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
+@import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 @font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
 /* Colors */
 /* General */
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url("sourcesanspro-regular-webfont.woff2") format("woff2"), url("sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*@font-face {
+    font-family: 'Pacifico';
+    src: url('Pacifico-Regular-webfont.woff2') format('woff2'), 
+    url('Pacifico-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: cursive;
+}*/
+/*Colors*/
+/* ONLY FOR TESTING */
+/*
+header, main, footer {
+	border: 3px solid #9a9a9a;
+	background: #c0c0c0;
+	box-sizing: border-box;
+}
+
+* div, nav, article {
+	border: 1px solid red;
+}
+*/
+/*General*/
+
 html, body {
   font: 18px/24px "Source Sans Pro", Georgia;
   margin: 0;
@@ -33,11 +64,21 @@ h1 {
   width: 250px;
   margin-right: 8rem; }
 
+.logo-hem {
+  width: 50%;
+  /*	padding-left: 0.5rem;*/ }
+
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem; }
+
+.top-header-special {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0.2rem 1rem; }
 
 .top-nav ul, .bottom-nav ul {
   display: flex;
@@ -106,6 +147,8 @@ ul.top-nav-ul {
   justify-content: center;
   align-items: center;
   box-sizing: border-box; }
+  order: 1; }
+
 
 /******************************************************************/
 /* FOOTER */
@@ -189,6 +232,7 @@ ul.top-nav-ul {
 .box-wrapper-kontakt {
   width: 98%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-content: flex-start;
   margin: auto;
@@ -258,6 +302,60 @@ textarea {
     right: 0rem;
     bottom: 0rem; } }
 @media screen and (min-width: 992px) {
+
+/******************************************************************/
+/* INDEX mayhem for y'all.. */
+.box-wrapper-index {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-direction |  flex-wrap */
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start; }
+
+.box-indexsidan {
+  display: flex;
+  position: relative;
+  flex: 1 1 0;
+  /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
+  /*	min-width: 100%; = om vi vill utöka till fullbredd i mobilläge*/ }
+
+.hem {
+  /* 	display: flex;*/
+  position: relative;
+  margin: 0 0 0 0; }
+
+.background {
+  width: 100%; }
+
+.background-text {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5rem; }
+
+.indexsidan {
+  display: flex;
+  flex-direction: column; }
+
+.anim {
+  width: 32%;
+  position: absolute;
+  top: 1.7rem;
+  left: 1rem; }
+
+.article-img {
+  width: 100%; }
+
+.article-text {
+  font-size: 0.8rem;
+  margin: 0.5rem 1rem 1rem; }
+
+@media screen and (min-width: 700px) {
+
   ul.top-nav-ul {
     display: flex; }
 
@@ -284,6 +382,7 @@ textarea {
     padding: 0;
     border: 0.5px solid #BEE3DB; }
 
+
   .right {
     flex-direction: row-reverse; }
 
@@ -305,6 +404,33 @@ textarea {
     min-width: calc(100% / 2); }
 
   /******************************************************************/
+
+  .right {
+    flex-direction: row-reverse; }
+
+  .project-img {
+    width: 50%;
+    max-width: 60%; }
+
+  .arrow-side {
+    display: flex;
+    align-self: flex-start;
+    margin: 0 0.5rem; }
+
+  .arrow-down {
+    display: none; }
+
+  /***************************************************************/
+  /* OM OSS */
+  /* denna stör projektsidan, sätt den istället till en specifik klass?*/
+  	/* 
+  	.box {
+  		min-width: calc(100% / 2);
+  	}
+    
+    
+    /******************************************************************/
+
   /* KONTAKT */
   .box-wrapper-kontakt {
     width: 80%; }
@@ -331,6 +457,40 @@ textarea {
   .hitta-box2 {
     width: 90%;
     flex: 1;
-    padding: 0 0 0 0.5rem; } }
+    padding: 0 0 0 0.5rem; }
+
+  /******************************************************************/
+  /* INDEX */
+  .hem {
+    /*	display:flex;*/
+    position: relative;
+    margin: 0 0 0 0; }
+
+  .background-text {
+    position: absolute;
+    margin: 2rem 0 0 0;
+    left: 3rem;
+    color: white;
+    font-size: 2.7rem;
+    line-height: 3rem; }
+
+  .anim {
+    width: 40%;
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem; }
+
+  .indexsidan {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5rem 0 5rem 0; }
+
+  .article-img {
+    width: 50%; }
+
+  .article-text {
+    font-size: 0.9rem;
+    margin: 1rem 1rem 1rem 1rem; } }
 
 /*# sourceMappingURL=main.css.map */
