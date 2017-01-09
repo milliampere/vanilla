@@ -42,19 +42,24 @@ $special-font2:"Courgette", Georgia;
 $special-font3:"Baloo Bhaina", Georgia;
 
 /*Colors*/
-$primary-color: #827191;
+$primary-color: #b296b6;
 $secondary-color: #BEE3DB;
 $third-color: hsl(38, 52%, 83%);
 
 /* General */
 html, body {
 	font: 18px/24px $paragraf-font;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 }
 
+
+body{
+	max-width: 1920px; /*för att innehållet inte ska bli asutdraget på stora skärmar*/
+
 * {
 	box-sizing: border-box;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -165,6 +170,7 @@ ul.top-nav-ul {
 	flex-direction: column; 
 	margin: auto; /* center */
 	box-sizing: border-box;
+
 }
 
 
@@ -347,6 +353,29 @@ textarea {
     resize: none;
 }
 
+
+/************************************************************/
+/*Vi erbjuder*/
+
+.erbjuder-ruta{
+	border: 1px solid black;
+	display: flex;
+	padding: 1rem;
+	box-sizing: border-box;
+	div{
+		min-width: 25%;
+		padding-right: 1rem;
+		text-align: center;
+	}
+}
+
+.erbjuder-text{
+	align-self: flex-start;
+}
+
+.green{
+	background: $secondary-color;
+
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
 
@@ -384,6 +413,7 @@ textarea {
 	color: white;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
+
 }
 
 
@@ -409,4 +439,5 @@ textarea {
 }
 
 
+/************************************************************/
 @import "responsive";

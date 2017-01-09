@@ -41,12 +41,21 @@ header, main, footer {
 /*General*/
 
 html, body {
+  font: 18px/24px "source_sans_proregular", Georgia;
+  margin: 0 auto;
+  padding: 0; }
+
+body {
+  max-width: 1920px;
+  /*för att innehållet inte ska bli asutdraget på stora skärmar*/ }
+
   font: 18px/24px "Source Sans Pro", Georgia;
   margin: 0;
   padding: 0; }
 
 * {
   box-sizing: border-box; }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bebas Neue", Georgia;
@@ -138,7 +147,9 @@ ul.top-nav-ul {
   flex-direction: column;
   margin: auto;
   /* center */
+
   box-sizing: border-box; }
+
 
 .box {
   flex: 1 1 0;
@@ -285,6 +296,26 @@ textarea {
   border-radius: 0.25em;
   resize: none; }
 
+
+
+/************************************************************/
+/*Vi erbjuder*/
+.erbjuder-ruta {
+  border: 1px solid black;
+  display: flex;
+  padding: 1rem;
+  box-sizing: border-box; }
+  .erbjuder-ruta div {
+    min-width: 25%;
+    padding-right: 1rem;
+    text-align: center; }
+
+.erbjuder-text {
+  align-self: flex-start; }
+
+.green {
+  background: #BEE3DB; }
+
 /* Medium devices */
 @media screen and (min-width: 543px) and (max-width: 991px) {
   .box-wrapper {
@@ -302,6 +333,7 @@ textarea {
     right: 0rem;
     bottom: 0rem; } }
 @media screen and (min-width: 992px) {
+
 
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
@@ -375,6 +407,18 @@ textarea {
   /* PROJEKT */
   .project-text {
     font-size: 1.2rem; }
+
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem; }
+
+  .right {
+    flex-direction: row-reverse; }
+
+  .project-img {
+    width: 65%; }
 
   .project {
     display: flex;
@@ -460,6 +504,16 @@ textarea {
     padding: 0 0 0 0.5rem; }
 
   /******************************************************************/
+  /* Erbjuder */
+  .erbjuder-ruta {
+    min-width: 45%; }
+
+  .erbjuder-reverse {
+    flex-direction: row-reverse; }
+
+  .erbjuder-text {
+    width: 55%; } }
+
   /* INDEX */
   .hem {
     /*	display:flex;*/
