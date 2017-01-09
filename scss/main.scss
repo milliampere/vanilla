@@ -23,7 +23,7 @@ $heading-font: "Bebas Neue", Georgia;
 $paragraf-font: "source_sans_proregular", Georgia;
 
 /*Colors*/
-$primary-color: #827191;
+$primary-color: #b296b6;
 $secondary-color: #BEE3DB;
 $third-color: hsl(38, 52%, 83%);
 
@@ -44,8 +44,12 @@ header, main, footer {
 /*General*/
 html, body {
 	font: 18px/24px $paragraf-font;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+}
+
+body{
+	max-width: 1920px; /*för att innehållet inte ska bli asutdraget på stora skärmar*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,7 +152,7 @@ ul.top-nav-ul {
 	align-items: stretch;
 	align-content: flex-start;
 	margin: auto; /* center */
-	border: 1px solid black;
+	/*border: 1px solid black;*/ /*används denna till någon sida?/nina*/
 }
 
 
@@ -303,10 +307,31 @@ textarea {
     resize: none;
 }
 
+/************************************************************/
+/*Vi erbjuder*/
+
+.erbjuder-ruta{
+	border: 1px solid black;
+	display: flex;
+	padding: 1rem;
+	box-sizing: border-box;
+	div{
+		min-width: 25%;
+		padding-right: 1rem;
+		text-align: center;
+	}
+}
+
+.erbjuder-text{
+	align-self: flex-start;
+}
+
+.green{
+	background: $secondary-color;
+}
 
 
 
 
-
-
+/************************************************************/
 @import "responsive";
