@@ -4,6 +4,21 @@
 /******************************************************************/
 /* Navigation/Header */
 
+.logo{
+	width: 180px;
+}	
+
+.top-nav{
+	font-size: 2rem; /* denna verkar inte funka. ? kolla storleken i de olika lägena!*/
+}
+
+.bottom-nav{
+	font-size: 1.5rem;
+}
+
+.contact-info{
+	background-color: white;
+}
 /******************************************************************/
 /* Boxes */
 
@@ -61,11 +76,32 @@
 		opacity: 0;
 	}
 
+	.logo{
+	width: 220px;
+	}	
+
+	nav {
+		font-size: 3rem;
+	}	
+
+	.active{ 
+	 	text-decoration: underline !important; 
+	 	color: $primary-color !important;
+	}
+
 	.box-wrapper {
 	width: 90%;
 	flex-flow: row wrap; 
 	margin: auto; /* center */
 	}
+
+	.bottom-nav{
+		font-size: 3rem;
+	}
+
+	.contact-info{
+	background: none;
+}
 
 
 /******************************************************************/
@@ -106,8 +142,14 @@
 /******************************************************************/
 /* Erbjuder */
 
+	.erbjuder{
+		max-width: 1300px;
+		display: flex;
+	}
+
 	.erbjuder-ruta{
 		min-width: 45%;
+		min-height: 250px;
 	}
 
 	.erbjuder-reverse{
