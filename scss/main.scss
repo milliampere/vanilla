@@ -33,6 +33,7 @@ html, body {
 
 * {
 	box-sizing: border-box;
+	border: 1px solid red;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,9 +52,10 @@ h1 {
 /******************************************************************
 /* HEADER/NAVIGATION */
 .logo{
-	width: 150px;
+	width: 30%;
 	margin-right: 8rem;
 } 
+
 
 .top-header {
 	display: flex;
@@ -180,9 +182,9 @@ ul.top-nav-ul {
 }
 
 .hem{
-/* 	display: flex;*/
 	position:relative;
 	margin: 0 0 0 0;
+	width: 100%;
 }
 
 .background{
@@ -200,7 +202,6 @@ ul.top-nav-ul {
 
 }
 
-
 .indexsidan{
 	display:flex;
 	flex-direction: column;
@@ -211,7 +212,6 @@ ul.top-nav-ul {
 	top: 1.7rem;
 	left: 1rem;
 	}
-
 
 .article-img{
 	width:100%;

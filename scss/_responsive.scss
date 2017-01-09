@@ -1,10 +1,29 @@
 /* Medium devices */ 
 @media screen and (min-width: 543px) and (max-width: 991px) {
+
+/******************************************************************/
+/* Navigation/Header */
+
+/******************************************************************/
+/* Boxes */
+
 	.box-wrapper {
 	width: 100%;
 	flex-flow: row wrap; 
 	margin: auto; /* center */
 	}
+
+/******************************************************************/
+/* Index */
+
+/******************************************************************/
+/* Erbjuder */
+
+/******************************************************************/
+/* Projekt */
+
+/******************************************************************/
+/* Om oss */
 
 	.about-us .box {
 		min-width: calc(100% / 2);
@@ -17,11 +36,19 @@
 		bottom: 0rem;
 	}
 
-}
+/******************************************************************/
+/* Kontakt */
 
+
+} /* leave me <3 */
+
+
+/* Large devices */ 
 @media screen and (min-width: 992px){
 
-  
+/******************************************************************/
+/* Navigation/Header */
+ 
   	ul.top-nav-ul {
 		display: flex;
 	}
@@ -41,8 +68,59 @@
 	}
 
 
+/******************************************************************/
+/* Index */
+
+}
+.background-text{
+	margin:2rem 0 0 0;
+	left: 3rem;
+	font-size: 2.7rem;
+	line-height: 3rem;
+}
+
+.anim{
+	width:40%;
+	top: 3rem;
+	left: 2.5rem;
+	}
+ 
+.indexsidan{
+	flex-direction: row;
+	align-items: flex-start;
+	margin: 5rem 0 5rem 0;
+
+}
+.article-img{
+	width:50%;
+}
+
+.article-text{
+	font-size: 0.9rem;
+	margin: 1rem 1rem 1rem 1rem;
+
+	}
+
+ 
+
+/******************************************************************/
+/* Erbjuder */
+
+	.erbjuder-ruta{
+		min-width: 45%;
+	}
+
+	.erbjuder-reverse{
+		flex-direction: row-reverse;
+	} 
+
+	.erbjuder-text{
+		width: 55%;
+	}
+
+
 /************************************************************/
-/* PROJEKT */
+/* Projekt */
 	.project-text{
 		font-size: 1.2rem;
 	}
@@ -72,16 +150,14 @@
 	}
   
 /***************************************************************/
-/* OM OSS */
+/* Om oss */
 
 	.about-us .box {
 		min-width: calc(100% / 2);
 	}
 
-  
-  
-  /******************************************************************/
-/* KONTAKT */
+/******************************************************************/
+/* Kontakt */
 
 	.box-wrapper-kontakt {
 		width: 80%;
@@ -115,71 +191,14 @@
 		flex:1;
 		padding:0 0 0 0.5rem;
 	}
-  /******************************************************************/
-/* INDEX */
-
-.hem{
-/*	display:flex;*/
-	position:relative;
-	margin: 0 0 0 0;
-
-
-}
-.background-text{
-	position: absolute;
-	margin:2rem 0 0 0;
-
-	left: 3rem;
-	color: white;
-	font-size: 2.7rem;
-	line-height: 3rem;
-}
-
-
-
-.anim{
-	width:40%;
-	position: absolute;
-	top: 3rem;
-	left: 2.5rem;
-	}
- 
-.indexsidan{
-	display:flex;
-	flex-direction: row;
-	align-items: flex-start;
-	margin: 5rem 0 5rem 0;
-
-}
-.article-img{
-	width:50%;
-}
-
-.article-text{
-	font-size: 0.9rem;
-	margin: 1rem 1rem 1rem 1rem;
-
-	}
-
  
 
-  /******************************************************************/
-/* Erbjuder */
 
 
-	.erbjuder-ruta{
-		min-width: 45%;
-	}
 
-	.erbjuder-reverse{
-		flex-direction: row-reverse;
-	} 
 
-	.erbjuder-text{
-		width: 55%;
-	}
 
-}
+}  /* leave me <3 */
 
 
 
