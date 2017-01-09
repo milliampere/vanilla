@@ -1,0 +1,57 @@
+
+<svg version="1.1" id="vanilla" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 453 296" style="enable-background:new 0 0 453 296;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#ffffff;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{font-family:'BebasNeue';}
+	.st3{font-size:64px;}
+	.st4{letter-spacing:3;}
+	.st5{fill:#ffffff;}
+
+
+<defs>
+	<style>
+
+		.st0{
+		stroke-dasharray:2000;
+		stroke-dashoffset:0;
+		-webkit-animation: dash 4s linear forwards;
+		-o-animation: dash 4s linear forwards;
+		-moz-animation: dash 4s linear forwards;
+		animation: dash 4s linear forwards;
+
+		}
+		@-webkit-keyframes dash{
+			from {
+			stroke-dashoffset:2000;
+			}
+			to{
+			stroke.dashoffset:0;
+			}
+		}
+				.st1{
+		stroke-dasharray:2000;
+		stroke-dashoffset:0;
+		-webkit-animation: dash 4s linear forwards;
+		}
+		@-webkit-keyframe dash{
+			from {
+			stroke-dashoffset:2000;
+			}
+			to{
+			stroke.dashoffset:0;
+			}
+		}
+
+	</style>
+</defs>
+
+</style>
+<polygon class="st0" points="226.639,280.5 441.639,171.5 442.639,97.5 347.639,9.5 103.639,9.5 11.639,97.5 12.639,171.5 "/>
+<polygon class="st1" points="225.5,97.5 103.5,9.5 11.5,97.5 442.5,97.5 347.5,9.5 "/>
+<text transform="matrix(1 0 0 1 24.6818 156.6924)" class="st2 st3 st4 st5">VANILLA WEB DESIGN</text>
+<line class="st0" x1="12.75" y1="171.5" x2="441.75" y2="172"/>
+</svg>
+
+
