@@ -34,7 +34,6 @@ html, body {
 
 * {
 	box-sizing: border-box;
-	border: 1px solid red;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,94 +51,116 @@ h1 {
 
 /******************************************************************
 /* HEADER/NAVIGATION */
-.logo{
-	width: 120px;
-	margin-right: 8rem;
-} 
 
+/* Toppmenyn */
+main {
+	padding-top: 7rem; // För att få ned innehåll
+}
+
+.top-nav {
+	margin: 0 auto;
+	padding: 1rem 1rem 0 1rem;  
+}
 
 .top-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 1rem 3rem 1rem;
+  position: fixed;
+  min-width: 100%;
+  background: #FFF;
 }
 
-.top-nav ul, .bottom-nav ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+.logo {
+  display: inline-block;
+  width: 130px;
 }
-
-.top-nav ul li, .bottom-nav ul li {
-    text-align: center;
-    flex-grow: 1;
-}
-
 
 .top-nav {	
-	flex-grow: 2;
-	font-size: 1.5rem; 
+	// Länkstyling
+	font-family: $heading-font;
+	font-size: 1.5rem;
+	letter-spacing: 0.05rem;
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	// Checkbox som aldrig ska visas
+  	.checkbox-toggle {display: none;}
+  
+	//Menyn i toggle-versionen
+	ul {
+		background-color: $secondary-color;
+		text-align: center;
+		transition: all 1s ease;
+		visibility: hidden;
+		width: 100%;
+		opacity: 0;
+		height: 0;
+		display: block;
+		list-style-type: none;
+		margin: 0;
+	}
+
+	li {
+      border-bottom: 1px solid #FFF;
+      display: block;
+      padding: 1em 0;
+    }
+
+    .checkbox-toggle:checked ~ ul {
+      opacity: 1;
+      height: 400px;
+      visibility: visible;
+    }
+
+    .label-toggle {
+      cursor: pointer;
+      display: block;
+      float: right;
+      margin: 1.5rem 2rem 0 0;
+    }
 }
 
+
+
+/* Bottommenyn */
 .bottom-nav {
 	background: $secondary-color;
 	padding: 2rem 0;
-	margin: 4rem 0 3rem 0; 
-	font-size: 1rem;
-	
+	margin: 2rem 0;
 
-}
-
-.bottom-nav-ul{
-
-}
-
-
-/* Remove margins and padding from the list, and add background color */
-ul.bottom-nav-ul, ul.top-nav-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-	/* Link style */
-	li a {color: #000; text-decoration: none;}
-	/* Change color of links on hover */
-    li a:hover {color: #555;} 
-    /* Side by side */
-	li { display: inline;}   
-}
-
-nav {
+	// Länkstyling
 	font-family: $heading-font;
+	font-size: 1.2rem;
 	letter-spacing: 0.05rem;
+	a {
+		text-decoration: none;
+		color: #000;
+	}
 
-	li {
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		width: 100%;
+
+		//Normalize?
+		-webkit-margin-before: 0em;
+    	-webkit-margin-after: 0em;
+    	-webkit-margin-start: 0px;
+    	-webkit-margin-end: 0px;
+    	-webkit-padding-start: 0px;
+	}
+
+	li  {
 		@include transition(all .1s ease-in);
 		@include transform(scale(1));
 
 		&:hover {
 			@include transition(all .1s ease-out);
 			@include transform(scaleX(1.05));
+			}
 		}
-	}
 }
-
-
-/* Hide menu-list */
-ul.top-nav-ul {
-	display: none;
-}
-
-
-.ham-menu {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-}
-
-
-
-
 
 /******************************************************************/
 /* BOXES */
@@ -405,6 +426,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	font-family: $heading-font;
+	font-size: 1.2rem;
 	letter-spacing: 0.05rem;
 	}
 }

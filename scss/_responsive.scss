@@ -4,16 +4,20 @@
 /******************************************************************/
 /* Navigation/Header */
 
-.logo{
-	width: 180px;
-}	
+main {
+	padding-top: 9rem; // För att få ned innehåll
+	}
+
+.logo {
+  		width: 170px;
+}
 
 .top-nav{
-	font-size: 2rem; /* denna verkar inte funka. ? kolla storleken i de olika lägena!*/
+	font-size: 1.4rem; 
 }
 
 .bottom-nav{
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 
 .contact-info{
@@ -22,11 +26,11 @@
 /******************************************************************/
 /* Boxes */
 
-	.box-wrapper {
-	width: 100%;
-	flex-flow: row wrap; 
-	margin: auto; /* center */
-	}
+.box-wrapper {
+width: 100%;
+flex-flow: row wrap; 
+margin: auto; /* center */
+}
 
 /******************************************************************/
 /* Index */
@@ -40,16 +44,16 @@
 /******************************************************************/
 /* Om oss */
 
-	.about-us .box {
-		min-width: calc(100% / 2);
-	}
+.about-us .box {
+	min-width: calc(100% / 2);
+}
 
-	.hover-box {
-		top: 0rem;
-		left: 0rem;
-		right: 0rem;
-		bottom: 0rem;
-	}
+.hover-box {
+	top: 0rem;
+	left: 0rem;
+	right: 0rem;
+	bottom: 0rem;
+}
 
 /******************************************************************/
 /* Kontakt */
@@ -58,49 +62,98 @@
 } /* leave me <3 */
 
 
+/******************************************************************/
+/* Meny i både medium och large */
+@media screen and (min-width: 543px) {
+// Ej fixerad längst upp som på små skärmar
+.top-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.top-nav {
+	// För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+		visibility: visible;
+		opacity: 1;
+		float: right;
+	}
+
+	li  {
+		display: inline-block;
+		padding: 0;
+		@include transition(all .1s ease-in);
+		@include transform(scale(1));
+
+		&:hover {
+			@include transition(all .1s ease-out);
+			@include transform(scaleX(1.05));
+			}
+		}
+
+	// Göm meny-knapp
+	.label-toggle {display: none;}
+}
+
+
+.bottom-nav{
+	ul {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+} /* Leave me <3 */
+
+
+
+
+
+
 /* Large devices */ 
 @media screen and (min-width: 992px){
 
 /******************************************************************/
+/* Boxes */
+.box-wrapper {
+width: 90%;
+flex-flow: row wrap; 
+margin: auto; 
+}
+
+
+/******************************************************************/
 /* Navigation/Header */
  
-  	ul.top-nav-ul {
-		display: flex;
-	}
+main {
+	padding-top: 10.5rem; // För att få ned innehåll
+}
 
-	.main-header{
-		display: none;
-	}
+.logo {
+		width: 220px;
+}
 
-	.ham-menu{
-		opacity: 0;
-	}
+.top-nav {
+	font-size: 2.5rem;
+}	
 
-	.logo{
-	width: 220px;
-	}	
+.bottom-nav{
+	font-size: 2.5rem;
+}
 
-	nav {
-		font-size: 3rem;
-	}	
+.active{ 
+ 	text-decoration: underline !important; 
+ 	color: $primary-color !important;
+}
 
-	.active{ 
-	 	text-decoration: underline !important; 
-	 	color: $primary-color !important;
-	}
-
-	.box-wrapper {
-	width: 90%;
-	flex-flow: row wrap; 
-	margin: auto; /* center */
-	}
-
-	.bottom-nav{
-		font-size: 3rem;
-	}
-
-	.contact-info{
-	background: none;
 }
 
 
@@ -234,6 +287,11 @@
 		padding:0 0 0 0.5rem;
 	}
  
+
+/******************************************************************/
+/* Footer */
+	.contact-info{
+	background: none;
 
 }  /* leave me <3 */
 
