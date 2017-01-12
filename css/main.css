@@ -293,21 +293,30 @@ div {
 
 .tag {
   position: absolute;
-  bottom: 3rem;
-  left: 4rem; }
+  top: 2rem;
+  right: 2rem; }
+  .tag h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 5px #FFF; }
+  .tag p {
+    margin-top: 0;
+    -webkit-margin-before: 1em; }
 
 .arrow {
   position: absolute;
-  bottom: 4rem;
-  right: 4rem;
+  bottom: 2rem;
+  right: 2rem;
   opacity: 1; }
 
 .hover-box {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
   background: #FFF;
   opacity: 0;
   -webkit-transition: all 1s ease-in;
@@ -315,7 +324,7 @@ div {
   -ms-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in;
-  padding: 2rem; }
+  padding: 1.5rem; }
   .hover-box:hover {
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
@@ -525,12 +534,13 @@ textarea {
     flex-direction: row;
     justify-content: space-around; } }
 /* Leave me <3 */
-/* Large devices */
+/* Stora skärmar */
 @media screen and (min-width: 992px) {
   /******************************************************************/
   /* Boxes */
   .box-wrapper {
-    width: 90%;
+    width: 100%;
+    padding: 0 2%;
     flex-flow: row wrap;
     margin: auto; }
 
