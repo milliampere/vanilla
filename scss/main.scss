@@ -340,31 +340,43 @@ div{
 
 .tag {
 	position: absolute;
-	bottom: 3rem;
-	left: 4rem;
+	top: 2rem;
+	right: 2rem;
+	h3 {
+		font-size: 1.5rem;
+		color: #000;
+		margin: 0;
+		padding: 0;
+		text-shadow: 0 0 5px #FFF;
+	}
 }
 
 .arrow {
 	position: absolute;
-	bottom: 4rem;
-	right: 4rem;
+	bottom: 2rem;
+	right: 2rem;
 	opacity: 1;
 }	
 
 .hover-box {
 	position: absolute;
-	top: 2rem;
-	left: 2rem;
-	right: 2rem;
-	bottom: 2rem;
+	top: 0rem;
+	left: 0rem;
+	right: 0rem;
+	bottom: 0rem;
 	background: #FFF;
 	opacity: 0;
 	@include transition(all 1s ease-in);
-	padding: 2rem;
+	padding: 1.5rem;
 	
 	&:hover {
 		@include transition(all 1s ease-out);
 		opacity: 0.8;
+	}
+
+	p {
+		margin-top: 0;
+		padding-top: 0;
 	}
 	
 }
