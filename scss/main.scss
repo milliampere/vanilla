@@ -34,6 +34,7 @@ html, body {
 
 * {
 	box-sizing: border-box;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -207,7 +208,7 @@ main {
 	display:flex;
 	position: relative;
 	flex: 1 1 0;   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-/*	min-width: 100%; = om vi vill utöka till fullbredd i mobilläge*/ 
+    min-width: 100%; 
 }
 
 .hem{
@@ -370,36 +371,24 @@ div{
 
 
 /******************************************************************/
-/* KONTAKT mayhem for y'all.. */
+/* KONTAKT*/
 
-.box-wrapper-kontakt {
+
+.kontakt {
 	width: 98%;
-	display: flex;
-		flex-flow: row wrap; 
-	justify-content: center;
-	align-content: flex-start;
-	margin: auto; /* center */
 }
 
-.box2 {
-		margin-bottom: 2rem;
-}
-
-.hitta-wrapper p{
+.karta {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin:0 auto;
 }
 
-.hitta-box img{
-	width:99%;
-	padding:0 0.1rem 0.5rem 0.1rem;
-}
-
-.hitta-box2 p{
-	padding:0 0.1rem 0 0.1rem;
+.kontakt-text {
+	p {
+		padding:0 0 0 0.5rem;
+	}
+	h1 {
+		padding:0 0 0 0.5rem;
+	}
 }
 
 /* KONTAKT form */ 

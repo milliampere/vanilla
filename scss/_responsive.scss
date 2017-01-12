@@ -82,6 +82,19 @@
 /******************************************************************/
 /* Kontakt */
 
+	.kontakt{
+		width: 70%;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.kontakt-form{
+ width: 100%;
+
+	}
+	.kontakt-karta{
+	 
+	}
 
 } /* leave me <3 */
 
@@ -278,39 +291,23 @@
 /******************************************************************/
 /* Kontakt */
 
-	.box-wrapper-kontakt {
-		width: 80%;   
+	.kontakt{
+		width: 80%; 
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
 	}
 
-	.box2{
-		min-width: 600px;
-		max-width: 600px;
-		margin-bottom: 2rem;
+	.kontakt-form{
+		flex-basis:50%;
+	}
+	.kontakt-karta{
+		flex-basis:45%;	
+		img{
+			width: 80%;
+		}
 	}
 
-	.skicka{
-		width:40%;		
-	}
-
-	.hitta-wrapper {
-		display:flex;
-		flex-flow: row wrap; 
-	}
-
-	.hitta-box {
-		width:90%;
-		flex:1;
-	}
-
-	.hitta-box img{
-		padding:0 0.5rem 0.5rem 0;
-	}
-
-	.hitta-box2{
-		width:90%;
-		flex:1;
-		padding:0 0 0 0.5rem;
-	}
  
 /******************************************************************/
 /* Footer */
