@@ -347,7 +347,7 @@ div{
 		color: #000;
 		margin: 0;
 		padding: 0;
-		text-shadow: 0 0 5px #FFF;
+		text-shadow: 0 0 5px #555;
 	}
 }
 
@@ -381,6 +381,10 @@ div{
 	
 }
 
+.name {
+	color: $primary-color;
+	font-size: 1.3rem;
+}
 
 /******************************************************************/
 /* KONTAKT*/

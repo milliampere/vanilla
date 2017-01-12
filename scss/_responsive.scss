@@ -289,9 +289,37 @@
 /***************************************************************/
 /* Om oss */
 
-	.about-us .box {
+.about-us .box {
 		min-width: calc(100% / 2);
+}
+
+.tag {
+	top: 4rem;
+	right: 4rem;
+	h3 {
+		font-size: 2rem;
 	}
+}
+
+.arrow {
+	bottom: 4rem;
+	right: 4rem;
+}
+
+.hover-box {
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	padding: 2.5rem;
+
+	p {
+		padding-right: 8rem;
+		font-size: 1.2rem;
+		letter-spacing: 0.05rem;
+	}
+	
+}
 
 /******************************************************************/
 /* Kontakt */
