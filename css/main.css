@@ -45,14 +45,14 @@ main {
 
 .top-nav {
   margin: 0 auto;
-  padding: 1rem 1rem 0 1rem;
   z-index: 999; }
 
 .top-header {
   position: fixed;
   min-width: 100%;
   background: #FFF;
-  z-index: 999; }
+  z-index: 999;
+  padding: 1rem 2%; }
 
 .logo {
   display: inline-block;
@@ -90,7 +90,7 @@ main {
     padding: 1em 0; }
   .top-nav .checkbox-toggle:checked ~ ul {
     opacity: 1;
-    height: 400px;
+    height: 380px;
     visibility: visible; }
   .top-nav .label-toggle {
     cursor: pointer;
@@ -481,8 +481,10 @@ textarea {
     width: 100%; } }
 /* leave me <3 */
 /******************************************************************/
+/* För både mellan och stor */
+/******************************************************************/
 /* Meny i både medium och large */
-@media screen and (min-width: 543px) {
+@media screen and (min-width: 643px) {
   /* Ej fixerad längst upp som på små skärmar*/
   .top-header {
     position: absolute;
@@ -539,9 +541,15 @@ textarea {
 @media screen and (min-width: 992px) {
   /******************************************************************/
   /* Boxes */
+  body > main {
+    margin-top: 2rem; }
+
+  .top-header {
+    padding: 1.5rem 4% 0 4%; }
+
   .box-wrapper {
     width: 100%;
-    padding: 0 2%;
+    padding: 0 4%;
     flex-flow: row wrap;
     margin: auto; }
 

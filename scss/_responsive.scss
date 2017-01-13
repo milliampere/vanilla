@@ -99,10 +99,18 @@
 } /* leave me <3 */
 
 
+/******************************************************************/
+/* För både mellan och stor */
+@media screen and (min-width: 543px) {
+
+
+
+}
+
 
 /******************************************************************/
 /* Meny i både medium och large */
-@media screen and (min-width: 543px) {
+@media screen and (min-width: 643px) {
 	/* Ej fixerad längst upp som på små skärmar*/
 	.top-header {
 		position: absolute;
@@ -170,9 +178,16 @@
 
 /******************************************************************/
 /* Boxes */
+
+	body > main {
+		margin-top: 2rem;
+	}
+	.top-header {
+	padding: 1.5rem 4% 0 4%;
+	}
 	.box-wrapper {
 		width: 100%;
-		padding: 0 2%;
+		padding: 0 4%;
 		flex-flow: row wrap; 
 		margin: auto; 
 	}

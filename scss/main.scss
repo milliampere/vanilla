@@ -59,9 +59,8 @@ main {
 }
 
 .top-nav {
-	margin: 0 auto;
-	padding: 1rem 1rem 0 1rem;  
-	  z-index: 999;
+	margin: 0 auto; 
+	z-index: 999;
 }
 
 .top-header {
@@ -69,6 +68,7 @@ main {
   min-width: 100%;
   background: #FFF;
   z-index: 999;
+  padding: 1rem 2%; 
 }
 
 .logo {
@@ -116,7 +116,7 @@ main {
 
     .checkbox-toggle:checked ~ ul {
       opacity: 1;
-      height: 400px;
+      height: 380px;
       visibility: visible;
     }
 
