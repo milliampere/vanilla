@@ -20,14 +20,6 @@
 		display: none;
 	}
 
-	.bottom-nav{
-		font-size: 1.4rem;
-	}
-
-	.contact-info{
-		background-color: white;
-	}
-
 
 /******************************************************************/
 /* Boxes */
@@ -55,6 +47,7 @@
 		min-height: 350px;
 		div{
 			padding-right: 0;
+			min-height: 75px;
 		}	
 	}
 
@@ -157,12 +150,16 @@
 		}
 	}
 
-
 	.bottom-nav{
+		display: flex;
 		ul {
 			flex-direction: row;
 			justify-content: space-around;
 		}
+	}
+
+	.contact-info{
+		background-color: white;
 	}
 
 } /* Leave me <3 */
@@ -254,12 +251,19 @@
 
 	.erbjuder{
 		max-width: 1300px;
-		flex-flow: row;
+		flex-flow: row; /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
 	}
 
 	.erbjuder-ruta{
+		flex-direction: column;
+		text-align: center;
 		min-width: 50%;
-		min-height: 260px;
+		min-height: 350px;
+		padding: 0 3rem;
+		div{
+			padding-right: 0;
+			min-height: 75px;
+		}	
 	}
 
 	.erbjuder-reverse{
