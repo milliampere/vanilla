@@ -45,12 +45,14 @@ main {
 
 .top-nav {
   margin: 0 auto;
-  padding: 1rem 1rem 0 1rem; }
+  padding: 1rem 1rem 0 1rem;
+  z-index: 999; }
 
 .top-header {
   position: fixed;
   min-width: 100%;
-  background: #FFF; }
+  background: #FFF;
+  z-index: 999; }
 
 .logo {
   display: inline-block;
@@ -70,12 +72,11 @@ main {
     display: none; }
   .top-nav .active {
     text-decoration: underline !important;
-    /*Denna visas inte! why??*/
-    color: #827191 !important; }
+    /*Denna visas inte i mellan/stor skärm! why??*/ }
   .top-nav ul {
     background-color: #BEE3DB;
     text-align: center;
-    transition: all 1s ease;
+    transition: opacity 1s ease, height 1s ease;
     visibility: hidden;
     width: 100%;
     opacity: 0;
@@ -151,13 +152,15 @@ main {
   flex-direction: column;
   margin: auto;
   /* center */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 0; }
 
 .box {
   height: 100%;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 0; }
 
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
@@ -492,6 +495,8 @@ textarea {
     align-items: center;
     justify-content: space-between;
     /* Göm meny-knapp*/ }
+    .top-nav .active {
+      color: #827191 !important; }
     .top-nav ul {
       display: flex;
       justify-content: space-between;

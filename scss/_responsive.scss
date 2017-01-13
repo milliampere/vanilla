@@ -116,6 +116,12 @@
 		align-items: center;
 		justify-content: space-between;
 
+
+		.active { 
+	 		color: $primary-color !important;
+		}
+  
+
 		ul {
 			display: flex;
 			justify-content: space-between;

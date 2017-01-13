@@ -61,12 +61,14 @@ main {
 .top-nav {
 	margin: 0 auto;
 	padding: 1rem 1rem 0 1rem;  
+	  z-index: 999;
 }
 
 .top-header {
   position: fixed;
   min-width: 100%;
   background: #FFF;
+  z-index: 999;
 }
 
 .logo {
@@ -88,15 +90,14 @@ main {
   	.checkbox-toggle {display: none;}
 
   	.active{ 
-	 	text-decoration: underline !important; /*Denna visas inte! why??*/
-	 	color: $primary-color !important;
+	 	text-decoration: underline !important; /*Denna visas inte i mellan/stor skärm! why??*/
 	}
   
 	/*Menyn i toggle-versionen*/
 	ul {
 		background-color: $secondary-color;
 		text-align: center;
-		transition: all 1s ease;
+		transition: opacity 1s ease, height 1s ease;
 		visibility: hidden;
 		width: 100%;
 		opacity: 0;
@@ -178,6 +179,7 @@ main {
 	flex-direction: column; 
 	margin: auto; /* center */
 	box-sizing: border-box;
+	z-index: 0;
 
 }
 
@@ -187,6 +189,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
+		z-index: 0;
 
 }
 
