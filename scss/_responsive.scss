@@ -96,8 +96,15 @@
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
 
-
-
+	.background-skew{
+		background-color: $primary-color;
+		transform: skewY(15deg);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		padding: 2rem;
+		z-index: -2000;
+	}
 }
 
 
@@ -357,9 +364,12 @@
 	}
 
 	.kontakt-form{
+		margin-top: 2.5rem;
 		flex-basis:50%;
 	}
+
 	.kontakt-karta{
+		margin-top: 2.5rem;
 		flex-basis:47%;	
 		img{
 			width: 80%;

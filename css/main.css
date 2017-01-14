@@ -302,10 +302,11 @@ div {
   right: 2rem; }
   .tag h3 {
     font-size: 1.5rem;
-    color: #000;
+    background-color: #827191;
+    color: black;
     margin: 0;
     padding: 0;
-    text-shadow: 0 0 5px #555; }
+    padding: 8px 5px 5px 8px; }
 
 .arrow {
   position: absolute;
@@ -361,8 +362,7 @@ input {
   padding: 0.8em 0.5em;
   margin: 0.5em 0;
   border: 1px solid #ccc;
-  border-radius: 0.25em;
-  box-sizing: border-box; }
+  border-radius: 0.25em; }
 
 .skicka {
   width: 40%;
@@ -378,11 +378,13 @@ textarea {
   height: 12em;
   padding: 0.8em 0.5em;
   margin: 0.5em 0;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   color: grey;
   border-radius: 0.25em;
   resize: none; }
+
+.kontakt-karta a {
+  color: black; }
 
 /******************************************************************/
 /* FOOTER */
@@ -480,6 +482,15 @@ textarea {
 /* leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
+@media screen and (min-width: 543px) {
+  .background-skew {
+    background-color: #827191;
+    transform: skewY(15deg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    z-index: -2000; } }
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
@@ -694,9 +705,11 @@ textarea {
     justify-content: space-between; }
 
   .kontakt-form {
+    margin-top: 2.5rem;
     flex-basis: 50%; }
 
   .kontakt-karta {
+    margin-top: 2.5rem;
     flex-basis: 47%; }
     .kontakt-karta img {
       width: 80%; }

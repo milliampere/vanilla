@@ -347,10 +347,11 @@ div{
 	right: 2rem;
 	h3 {
 		font-size: 1.5rem;
-		color: #000;
+		background-color: $primary-color;
+		color: black;
 		margin: 0;
 		padding: 0;
-		text-shadow: 0 0 5px #555;
+		padding: 8px 5px 5px 8px;
 	}
 }
 
@@ -418,7 +419,6 @@ input{
     margin: 0.5em 0;
     border: 1px solid #ccc;
     border-radius: 0.25em;
-    box-sizing: border-box;
 }
 
 .skicka {
@@ -436,14 +436,17 @@ textarea {
     height: 12em;
     padding: 0.8em 0.5em;
     margin: 0.5em 0;
-    box-sizing: border-box;
     border: 1px solid #ccc;
 	color: grey;
     border-radius: 0.25em;
     resize: none;
 }
 
-
+.kontakt-karta{
+	a{
+		color: black;
+	}
+}
 
 
 /******************************************************************/
