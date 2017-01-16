@@ -38,56 +38,92 @@ h1 {
 
 /******************************************************************
 /* HEADER/NAVIGATION */
-.logo {
-  width: 150px;
-  margin-right: 8rem; }
-
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1rem 0.2rem 1rem; }
-
-.top-nav ul, .bottom-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center; }
-
-.top-nav ul li, .bottom-nav ul li {
-  text-align: center;
-  flex-grow: 1; }
+/* Toppmenyn */
+main {
+  padding-top: 7rem;
+  /* För att få ned innehåll*/ }
 
 .top-nav {
-  flex-grow: 2; }
+  margin: 0 auto;
+  z-index: 999; }
 
-.bottom-nav {
-  background: #BEE3DB;
-  padding: 2rem 0;
-  margin: 4rem 0 3rem 0; }
+.top-header {
+  position: fixed;
+  min-width: 100%;
+  background: #FFF;
+  z-index: 999;
+  padding: 1rem 2%; }
 
-/* Remove margins and padding from the list, and add background color */
-ul.bottom-nav-ul, ul.top-nav-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  /* Link style */
-  /* Change color of links on hover */
-  /* Side by side */ }
-  ul.bottom-nav-ul li a, ul.top-nav-ul li a {
-    color: #000;
-    text-decoration: none; }
-  ul.bottom-nav-ul li a:hover, ul.top-nav-ul li a:hover {
-    color: #555; }
-  ul.bottom-nav-ul li, ul.top-nav-ul li {
-    display: inline; }
+.logo {
+  display: inline-block;
+  width: 130px; }
 
-nav {
+.top-nav {
+  /* Länkstyling*/
   font-family: "Bebas Neue", Georgia;
   font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  /*Checkbox som aldrig ska visas*/
+  /*Menyn i toggle-versionen*/ }
+  .top-nav a {
+    text-decoration: none;
+    color: #000; }
+  .top-nav .checkbox-toggle {
+    display: none; }
+  .top-nav .active {
+    text-decoration: underline !important;
+    /*Denna visas inte i mellan/stor skärm! why??*/ }
+  .top-nav ul {
+    background-color: #BEE3DB;
+    text-align: center;
+    transition: opacity 1s ease, height 1s ease;
+    visibility: hidden;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    display: block;
+    list-style-type: none;
+    margin: 0; }
+  .top-nav li {
+    border-bottom: 1px solid #FFF;
+    display: block;
+    padding: 1em 0; }
+  .top-nav .checkbox-toggle:checked ~ ul {
+    opacity: 1;
+    height: 380px;
+    visibility: visible; }
+  .top-nav .label-toggle {
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin: 1.5rem 2rem 0 0; }
+
+/* Bottommenyn */
+.bottom-nav {
+  display: none;
+  /*ska ej visas i mobilversionen*/
+  background: #BEE3DB;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  /* Länkstyling*/
+  font-family: "Bebas Neue", Georgia;
+  font-size: 1.4rem;
   letter-spacing: 0.05rem; }
-  nav li {
+  .bottom-nav a {
+    text-decoration: none;
+    color: #000; }
+  .bottom-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+    /*Normalize?*/
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px; }
+  .bottom-nav li {
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
     -ms-transition: all 0.1s ease-in;
@@ -98,7 +134,7 @@ nav {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); }
-    nav li:hover {
+    .bottom-nav li:hover {
       -webkit-transition: all 0.1s ease-out;
       -moz-transition: all 0.1s ease-out;
       -ms-transition: all 0.1s ease-out;
@@ -110,15 +146,6 @@ nav {
       -o-transform: scaleX(1.05);
       transform: scaleX(1.05); }
 
-/* Hide menu-list */
-ul.top-nav-ul {
-  display: none; }
-
-.ham-menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem; }
-
 /******************************************************************/
 /* BOXES */
 .box-wrapper {
@@ -127,14 +154,15 @@ ul.top-nav-ul {
   flex-direction: column;
   margin: auto;
   /* center */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 0; }
 
 .box {
-  flex: 1 1 0;
   height: 100%;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 0; }
 
 /******************************************************************/
 /* INDEX mayhem for y'all.. */
@@ -152,12 +180,12 @@ ul.top-nav-ul {
   position: relative;
   flex: 1 1 0;
   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-  /*	min-width: 100%; = om vi vill utöka till fullbredd i mobilläge*/ }
+  min-width: 100%; }
 
 .hem {
-  /* 	display: flex;*/
   position: relative;
-  margin: 0 0 0 0; }
+  margin: 0 0 0 0;
+  width: 100%; }
 
 .background {
   width: 100%; }
@@ -190,20 +218,46 @@ ul.top-nav-ul {
 /************************************************************/
 /*Vi erbjuder*/
 .erbjuder-ruta {
-  border: 1px solid black;
   display: flex;
-  padding: 1rem;
+  padding: 1rem 1.5rem 1rem 1rem;
   box-sizing: border-box; }
   .erbjuder-ruta div {
-    min-width: 25%;
+    min-width: 30%;
     padding-right: 1rem;
     text-align: center; }
+
+div {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+.hover:hover div {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3); }
 
 .erbjuder-text {
   align-self: flex-start; }
 
 .green {
   background: #BEE3DB; }
+
+.border {
+  border: 1px solid black; }
 
 /*******************************************************/
 /* PROJEKT */
@@ -217,7 +271,8 @@ ul.top-nav-ul {
   background: #BEE3DB; }
 
 .right {
-  background: none; }
+  background: none;
+  border: 1px solid black; }
 
 .project-img {
   max-width: 100%; }
@@ -235,28 +290,35 @@ ul.top-nav-ul {
 /******************************************************************/
 /* OM OSS */
 .about-us .box {
-  position: relative; }
+  position: relative;
+  flex: 1 1 0; }
 
 .about-us img {
   width: 100%; }
 
 .tag {
   position: absolute;
-  bottom: 3rem;
-  left: 4rem; }
+  top: 2rem;
+  right: 2rem; }
+  .tag h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 5px #555; }
 
 .arrow {
   position: absolute;
-  bottom: 4rem;
-  right: 4rem;
+  bottom: 2rem;
+  right: 2rem;
   opacity: 1; }
 
 .hover-box {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
   background: #FFF;
   opacity: 0;
   -webkit-transition: all 1s ease-in;
@@ -264,7 +326,7 @@ ul.top-nav-ul {
   -ms-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in;
-  padding: 2rem; }
+  padding: 1.5rem; }
   .hover-box:hover {
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
@@ -272,34 +334,26 @@ ul.top-nav-ul {
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
     opacity: 0.8; }
+  .hover-box p {
+    margin-top: 0;
+    padding-top: 0; }
+
+.name {
+  color: #827191;
+  font-size: 1.3rem; }
 
 /******************************************************************/
-/* KONTAKT mayhem for y'all.. */
-.box-wrapper-kontakt {
-  width: 98%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: flex-start;
-  margin: auto;
-  /* center */ }
+/* KONTAKT*/
+.kontakt {
+  width: 98%; }
 
-.box2 {
-  margin-bottom: 2rem; }
+.karta {
+  width: 100%; }
 
-.hitta-wrapper p {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto; }
-
-.hitta-box img {
-  width: 99%;
-  padding: 0 0.1rem 0.5rem 0.1rem; }
-
-.hitta-box2 p {
-  padding: 0 0.1rem 0 0.1rem; }
+.kontakt-text p {
+  padding: 0 0 0 0.5rem; }
+.kontakt-text h1 {
+  padding: 0 0 0 0.5rem; }
 
 /* KONTAKT form */
 input {
@@ -333,11 +387,13 @@ textarea {
 /******************************************************************/
 /* FOOTER */
 .contact-info {
-  margin: 1rem; }
+  background: #BEE3DB;
+  padding: 1rem 0;
+  margin: 2rem 0 0 0; }
   .contact-info p {
     margin: 0;
-    padding: 0;
     font-family: "Bebas Neue", Georgia;
+    font-size: 1.2rem;
     letter-spacing: 0.05rem; }
 
 .contact-icones span {
@@ -357,12 +413,52 @@ textarea {
 /************************************************************/
 /* Medium devices */
 @media screen and (min-width: 543px) and (max-width: 991px) {
+  /******************************************************************/
+  /* Navigation/Header */
+  main {
+    padding-top: 9rem;
+    /* För att få ned innehåll*/ }
+
+  .logo {
+    width: 170px; }
+
+  .top-nav {
+    font-size: 1.4rem; }
+
+  .main-header {
+    display: none; }
+
+  /******************************************************************/
+  /* Boxes */
   .box-wrapper {
     width: 100%;
     flex-flow: row wrap;
     margin: auto;
     /* center */ }
 
+  /******************************************************************/
+  /* Index */
+  /******************************************************************/
+  /* Erbjuder */
+  .erbjuder {
+    flex-flow: row; }
+
+  .erbjuder-ruta {
+    flex-direction: column;
+    text-align: center;
+    min-width: 50%;
+    min-height: 350px; }
+    .erbjuder-ruta div {
+      padding-right: 0;
+      min-height: 75px; }
+
+  .erbjuder-reverse {
+    flex-direction: row-reverse; }
+
+  /******************************************************************/
+  /* Projekt */
+  /******************************************************************/
+  /* Om oss */
   .about-us .box {
     min-width: calc(100% / 2); }
 
@@ -370,27 +466,179 @@ textarea {
     top: 0rem;
     left: 0rem;
     right: 0rem;
-    bottom: 0rem; } }
-@media screen and (min-width: 992px) {
-  ul.top-nav-ul {
+    bottom: 0rem; }
+
+  /******************************************************************/
+  /* Kontakt */
+  .kontakt {
+    width: 70%;
+    align-items: flex-start;
+    flex-direction: column; }
+
+  .kontakt-form {
+    width: 100%; } }
+/* leave me <3 */
+/******************************************************************/
+/* För både mellan och stor */
+/******************************************************************/
+/* Meny i både medium och large */
+@media screen and (min-width: 643px) {
+  /* Ej fixerad längst upp som på små skärmar*/
+  .top-header {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+  .top-nav {
+    /* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Göm meny-knapp*/ }
+    .top-nav .active {
+      color: #827191 !important; }
+    .top-nav ul {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      visibility: visible;
+      opacity: 1;
+      float: right; }
+    .top-nav li {
+      display: inline-block;
+      padding: 0;
+      -webkit-transition: all 0.1s ease-in;
+      -moz-transition: all 0.1s ease-in;
+      -ms-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+      .top-nav li:hover {
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+        -webkit-transform: scaleX(1.05);
+        -moz-transform: scaleX(1.05);
+        -ms-transform: scaleX(1.05);
+        -o-transform: scaleX(1.05);
+        transform: scaleX(1.05); }
+    .top-nav .label-toggle {
+      display: none; }
+
+  .bottom-nav {
     display: flex; }
+    .bottom-nav ul {
+      flex-direction: row;
+      justify-content: space-around; }
+
+  .contact-info {
+    background-color: white; } }
+/* Leave me <3 */
+/* Stora skärmar */
+@media screen and (min-width: 992px) {
+  /******************************************************************/
+  /* Boxes */
+  body > main {
+    margin-top: 2rem; }
+
+  .top-header {
+    padding: 1.5rem 4% 0 4%; }
+
+  .box-wrapper {
+    width: 100%;
+    padding: 0 4%;
+    flex-flow: row wrap;
+    margin: auto; }
+
+  /******************************************************************/
+  /* Navigation/Header */
+  main {
+    padding-top: 10.5rem;
+    /* För att få ned innehåll*/ }
+
+  .logo {
+    width: 220px; }
+
+  .top-nav {
+    font-size: 2.5rem; }
+
+  .bottom-nav {
+    font-size: 2.5rem; }
 
   .main-header {
     display: none; }
 
-  .ham-menu {
-    opacity: 0; }
+  /******************************************************************/
+  /* Index */
+  .background-text {
+    margin: 2rem 0 0 0;
+    left: 3rem;
+    font-size: 2.7rem;
+    line-height: 3rem; }
 
-  .box-wrapper {
-    width: 90%;
-    flex-flow: row wrap;
-    margin: auto;
-    /* center */ }
+  .anim {
+    width: 40%;
+    top: 3rem;
+    left: 2.5rem; }
+
+  .indexsidan {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5rem 0 5rem 0; }
+
+  .article-img {
+    width: 50%; }
+
+  .article-text {
+    font-size: 0.9rem;
+    margin: 1rem 1rem 1rem 1rem; }
+
+  /******************************************************************/
+  /* Erbjuder */
+  .erbjuder {
+    max-width: 1300px;
+    flex-flow: row;
+    /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/ }
+
+  .erbjuder-ruta {
+    flex-direction: column;
+    text-align: center;
+    min-width: 50%;
+    min-height: 350px;
+    padding: 0 3rem; }
+    .erbjuder-ruta div {
+      padding-right: 0;
+      min-height: 75px; }
+
+  .erbjuder-reverse {
+    flex-direction: row-reverse; }
+
+  .hover:hover div {
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6); }
 
   /************************************************************/
-  /* PROJEKT */
+  /* Projekt */
+  .project-content {
+    width: 100%; }
+
   .project-text {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem; }
 
   .project {
     display: flex;
@@ -412,82 +660,51 @@ textarea {
     display: none; }
 
   /***************************************************************/
-  /* OM OSS */
+  /* Om oss */
   .about-us .box {
     min-width: calc(100% / 2); }
 
-  /******************************************************************/
-  /* KONTAKT */
-  .box-wrapper-kontakt {
-    width: 80%; }
+  .tag {
+    top: 4rem;
+    right: 4rem; }
+    .tag h3 {
+      font-size: 2rem; }
 
-  .box2 {
-    min-width: 600px;
-    max-width: 600px;
-    margin-bottom: 2rem; }
+  .arrow {
+    bottom: 4rem;
+    right: 4rem; }
 
-  .skicka {
-    width: 40%; }
-
-  .hitta-wrapper {
-    display: flex;
-    flex-flow: row wrap; }
-
-  .hitta-box {
-    width: 90%;
-    flex: 1; }
-
-  .hitta-box img {
-    padding: 0 0.5rem 0.5rem 0; }
-
-  .hitta-box2 {
-    width: 90%;
-    flex: 1;
-    padding: 0 0 0 0.5rem; }
+  .hover-box {
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    padding: 2.5rem; }
+    .hover-box p {
+      padding-right: 8rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem; }
 
   /******************************************************************/
-  /* INDEX */
-  .hem {
-    /*	display:flex;*/
-    position: relative;
-    margin: 0 0 0 0; }
-
-  .background-text {
-    position: absolute;
-    margin: 2rem 0 0 0;
-    left: 3rem;
-    color: white;
-    font-size: 2.7rem;
-    line-height: 3rem; }
-
-  .anim {
-    width: 40%;
-    position: absolute;
-    top: 3rem;
-    left: 2.5rem; }
-
-  .indexsidan {
+  /* Kontakt */
+  .kontakt {
+    width: 80%;
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    margin: 5rem 0 5rem 0; }
+    justify-content: space-between; }
 
-  .article-img {
-    width: 50%; }
+  .kontakt-form {
+    flex-basis: 50%; }
 
-  .article-text {
-    font-size: 0.9rem;
-    margin: 1rem 1rem 1rem 1rem; }
+  .kontakt-karta {
+    flex-basis: 47%; }
+    .kontakt-karta img {
+      width: 80%; }
 
   /******************************************************************/
-  /* Erbjuder */
-  .erbjuder-ruta {
-    min-width: 45%; }
-
-  .erbjuder-reverse {
-    flex-direction: row-reverse; }
-
-  .erbjuder-text {
-    width: 55%; } }
+  /* Footer */
+  .contact-info {
+    background: none; } }
+/* leave me <3 */
 
 /*# sourceMappingURL=main.css.map */

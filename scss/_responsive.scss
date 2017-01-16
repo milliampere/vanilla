@@ -1,10 +1,65 @@
 /* Medium devices */ 
 @media screen and (min-width: 543px) and (max-width: 991px) {
-	.box-wrapper {
-	width: 100%;
-	flex-flow: row wrap; 
-	margin: auto; /* center */
+
+/******************************************************************/
+/* Navigation/Header */
+
+	main {
+		padding-top: 9rem; /* För att få ned innehåll*/
 	}
+
+	.logo {
+  		width: 170px;
+	}
+
+	.top-nav{
+		font-size: 1.4rem; 
+	}
+
+	.main-header{
+		display: none;
+	}
+
+
+/******************************************************************/
+/* Boxes */
+
+	.box-wrapper {
+		width: 100%;
+		flex-flow: row wrap; 
+		margin: auto; /* center */
+	}
+
+/******************************************************************/
+/* Index */
+
+/******************************************************************/
+/* Erbjuder */
+
+	.erbjuder{
+		flex-flow: row; 
+	}
+
+	.erbjuder-ruta{
+		flex-direction: column;
+		text-align: center;
+		min-width: 50%;
+		min-height: 350px;
+		div{
+			padding-right: 0;
+			min-height: 75px;
+		}	
+	}
+
+	.erbjuder-reverse{
+		flex-direction: row-reverse;
+	} 
+
+/******************************************************************/
+/* Projekt */
+
+/******************************************************************/
+/* Om oss */
 
 	.about-us .box {
 		min-width: calc(100% / 2);
@@ -17,34 +72,219 @@
 		bottom: 0rem;
 	}
 
+/******************************************************************/
+/* Kontakt */
+
+	.kontakt{
+		width: 70%;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.kontakt-form{
+ width: 100%;
+
+	}
+	.kontakt-karta{
+	 
+	}
+
+} /* leave me <3 */
+
+
+/******************************************************************/
+/* För både mellan och stor */
+@media screen and (min-width: 543px) {
+
+
+
 }
 
+
+/******************************************************************/
+/* Meny i både medium och large */
+@media screen and (min-width: 643px) {
+	/* Ej fixerad längst upp som på små skärmar*/
+	.top-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.top-nav {
+		/* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+
+		.active { 
+	 		color: $primary-color !important;
+		}
+  
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			width: 70%;
+			visibility: visible;
+			opacity: 1;
+			float: right;
+		}
+
+		li  {
+			display: inline-block;
+			padding: 0;
+			@include transition(all .1s ease-in);
+			@include transform(scale(1));
+
+			&:hover {
+				@include transition(all .1s ease-out);
+				@include transform(scaleX(1.05));
+			}
+		}
+
+		/* Göm meny-knapp*/
+		.label-toggle {
+			display: none;
+		}
+	}
+
+	.bottom-nav{
+		display: flex;
+		ul {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+
+	.contact-info{
+		background-color: white;
+	}
+
+} /* Leave me <3 */
+
+
+
+
+
+
+
+/* Stora skärmar */ 
 @media screen and (min-width: 992px){
 
-  
-  	ul.top-nav-ul {
-		display: flex;
+/******************************************************************/
+/* Boxes */
+
+	body > main {
+		margin-top: 2rem;
+	}
+	.top-header {
+	padding: 1.5rem 4% 0 4%;
+	}
+	.box-wrapper {
+		width: 100%;
+		padding: 0 4%;
+		flex-flow: row wrap; 
+		margin: auto; 
+	}
+
+/******************************************************************/
+/* Navigation/Header */
+ 
+	main {
+		padding-top: 10.5rem; /* För att få ned innehåll*/
+	}
+
+	.logo {
+			width: 220px;
+	}
+
+	.top-nav {
+		font-size: 2.5rem;
+	}	
+
+	.bottom-nav{
+		font-size: 2.5rem;
 	}
 
 	.main-header{
 		display: none;
 	}
 
-	.ham-menu{
-		opacity: 0;
+/******************************************************************/
+/* Index */
+
+
+	.background-text{
+		margin:2rem 0 0 0;
+		left: 3rem;
+		font-size: 2.7rem;
+		line-height: 3rem;
 	}
 
-	.box-wrapper {
-	width: 90%;
-	flex-flow: row wrap; 
-	margin: auto; /* center */
+	.anim{
+		width:40%;
+		top: 3rem;
+		left: 2.5rem;
+	}
+	 
+	.indexsidan{
+		flex-direction: row;
+		align-items: flex-start;
+		margin: 5rem 0 5rem 0;
 	}
 
+	.article-img{
+		width:50%;
+	}
+
+	.article-text{
+		font-size: 0.9rem;
+		margin: 1rem 1rem 1rem 1rem;
+	}
+
+ 
+
+/******************************************************************/
+/* Erbjuder */
+
+	.erbjuder{
+		max-width: 1300px;
+		flex-flow: row; /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
+	}
+
+	.erbjuder-ruta{
+		flex-direction: column;
+		text-align: center;
+		min-width: 50%;
+		min-height: 350px;
+		padding: 0 3rem;
+		div{
+			padding-right: 0;
+			min-height: 75px;
+		}	
+	}
+
+	.erbjuder-reverse{
+		flex-direction: row-reverse;
+	} 
+
+	.hover:hover div{
+		@include transition(all .1s ease-out);
+		@include transform(scale(1.6));
+	}
 
 /************************************************************/
-/* PROJEKT */
+/* Projekt */
+
+	.project-content{
+		width: 100% /* kanske är snyggast att ha denna i helskärm ändå? /nina*/
+	}
+
 	.project-text{
 		font-size: 1.2rem;
+		letter-spacing: 0.05rem;
 	}
 
 	.project{
@@ -72,114 +312,68 @@
 	}
   
 /***************************************************************/
-/* OM OSS */
+/* Om oss */
 
-	.about-us .box {
+.about-us .box {
 		min-width: calc(100% / 2);
-	}
-
-  
-  
-  /******************************************************************/
-/* KONTAKT */
-
-	.box-wrapper-kontakt {
-		width: 80%;
-	    
-	}
-	.box2{
-		min-width: 600px;
-		max-width: 600px;
-		margin-bottom: 2rem;
-	}
-	.skicka{
-		width:40%;		
-	}
-
-	.hitta-wrapper {
-		display:flex;
-		flex-flow: row wrap; 
-	}
-
-	.hitta-box {
-		width:90%;
-		flex:1;
-	}
-
-	.hitta-box img{
-		padding:0 0.5rem 0.5rem 0;
-	}
-
-	.hitta-box2{
-		width:90%;
-		flex:1;
-		padding:0 0 0 0.5rem;
-	}
-  /******************************************************************/
-/* INDEX */
-
-.hem{
-/*	display:flex;*/
-	position:relative;
-	margin: 0 0 0 0;
-
-
-}
-.background-text{
-	position: absolute;
-	margin:2rem 0 0 0;
-
-	left: 3rem;
-	color: white;
-	font-size: 2.7rem;
-	line-height: 3rem;
 }
 
-
-
-.anim{
-	width:40%;
-	position: absolute;
-	top: 3rem;
-	left: 2.5rem;
+.tag {
+	top: 4rem;
+	right: 4rem;
+	h3 {
+		font-size: 2rem;
 	}
- 
-.indexsidan{
-	display:flex;
-	flex-direction: row;
-	align-items: flex-start;
-	margin: 5rem 0 5rem 0;
-
-}
-.article-img{
-	width:50%;
 }
 
-.article-text{
-	font-size: 0.9rem;
-	margin: 1rem 1rem 1rem 1rem;
+.arrow {
+	bottom: 4rem;
+	right: 4rem;
+}
 
+.hover-box {
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	padding: 2.5rem;
+
+	p {
+		padding-right: 8rem;
+		font-size: 1.2rem;
+		letter-spacing: 0.05rem;
+	}
+	
+}
+
+/******************************************************************/
+/* Kontakt */
+
+	.kontakt{
+		width: 80%; 
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.kontakt-form{
+		flex-basis:50%;
+	}
+	.kontakt-karta{
+		flex-basis:47%;	
+		img{
+			width: 80%;
+		}
 	}
 
  
-
-  /******************************************************************/
-/* Erbjuder */
-
-
-	.erbjuder-ruta{
-		min-width: 45%;
+/******************************************************************/
+/* Footer */
+	.contact-info{
+		background: none;
 	}
 
-	.erbjuder-reverse{
-		flex-direction: row-reverse;
-	} 
-
-	.erbjuder-text{
-		width: 55%;
-	}
-
-}
+}  /* leave me <3 */
 
 
 

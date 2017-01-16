@@ -5,33 +5,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Vi erbjuder</title>
+	<title>Vanilla - Vi erbjuder</title>
 
 	<!-- ICONS -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- CSS Egna css måste alltid ligga under externa css om man vill att enns egna regler ska sriva över de förinställda -->
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 
 </head>
 <body>
 	
 	<header class="top-header">
-		<div class="logo">
-			<a href="../index.html"><img src="../images/vanilla-logo.png" class="logo"></a>
-		</div>
-		<nav class="top-nav">
-			<div class="ham-menu">Meny
-			<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span>
-			</div>
-			<ul class="top-nav-ul">
-				<li><a href="../index.html">Hem</a></li>
-				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
-				<li><a href="projekt.html">Projekt</a></li>
-				<li><a href="om-oss.html">Om oss</a></li>
-				<li><a href="kontakt.html">Kontakt</a></li>
-			</ul>
-		</nav>
+	  <nav class="top-nav">
+	    <div class="logo"><a href="../index.html"><img src="../images/logo/vanilla-logo.svg" class="logo"></a></div>
+	    <input type="checkbox" id="checkbox-toggle" class="checkbox-toggle">
+	      <label for="checkbox-toggle" class="label-toggle">Meny<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span></label>
+	    </input>
+	    <ul>
+			<a href="../index.html"><li>Hem</li></a>
+			<a href="erbjuder.html" class="active"><li>Vi erbjuder</li></a>
+			<a href="projekt.html"><li>Projekt</li></a>
+			<a href="om-oss.html"><li>Om oss</li></a>
+			<a href="kontakt.html"><li>Kontakt</li></a>
+	    </ul>
+	  </nav>
 	</header>
 
 	<main>
@@ -39,7 +38,7 @@
 			<h1 class="text-center">Vi erbjuder</h1> <!--synlig i mobil bara -->
 		</header>
 		<section class="box-wrapper erbjuder">
-			<article class="box erbjuder-ruta green">
+			<article class="box erbjuder-ruta green hover">
 				<div>
 					<span class="fa fa-heart-o fa-4x" aria-hidden="true"></span>
 				</div>	
@@ -48,10 +47,10 @@
 					<p>Vi lyfter fram ert innehåll och gör det tillgängligt för alla målgrupper. Vi följer WCAG 2.0 standard för att försäkra oss om att såväl bilder, texter som annat innehåll kan ses och användas av så många användare som möjligt.</p>
 				</section>
 			</article>
-			<article class="box erbjuder-ruta">
+			<article class="box erbjuder-ruta border hover">
 				<div>
-					<span class="fa fa-laptop fa-3x" aria-hidden="true"></span>
-					<span class="fa fa-mobile fa-3x" aria-hidden="true"></span>
+					<span class="fa fa-laptop fa-4x" aria-hidden="true"></span>
+					<span class="fa fa-mobile fa-4x" aria-hidden="true"></span>
 				</div>
 				<section class="erbjuder-text">
 					<h3>Responsiv design</h3>
@@ -60,7 +59,7 @@
 			</article>
 		</section>	
 		<section class="box-wrapper erbjuder erbjuder-reverse">
-			<article class="box erbjuder-ruta green">
+			<article class="box erbjuder-ruta green hover">
 				<div>
 					<span class="fa fa-cogs fa-4x" aria-hidden="true"></span>
 				</div>
@@ -69,7 +68,7 @@
 					<p>Vi sätter besökarens upplevelse i fokus. Genom användartester och undersökningar vet vi besökaren behov och önskemål. Vi designar användarvänliga och ändamålsenliga webbplatser! </p>
 				</section>
 			</article>
-			<article class="box erbjuder-ruta">
+			<article class="box erbjuder-ruta border hover">
 				<div>
 					<span class="fa fa-mobile fa-5x" aria-hidden="true"></span>
 				</div>
@@ -82,13 +81,13 @@
 	</main>
 
 	<footer>
-		<nav class="bottom-nav">
-			<ul class="bottom-nav-ul">
-				<li><a href="../index.html">Hem</a></li>
-				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
-				<li><a href="projekt.html">Projekt</a></li>
-				<li><a href="om-oss.html">Om oss</a></li>
-				<li><a href="kontakt.html">Kontakt</a></li>
+		<nav class="bottom-nav text-center">
+			<ul>
+				<a href="../index.html"><li>Hem</li></a>
+				<a href="erbjuder.html" class="active"><li>Vi erbjuder</li></a>
+				<a href="projekt.html"><li>Projekt</li></a>
+				<a href="om-oss.html"><li>Om oss</li></a>
+				<a href="kontakt.html"><li>Kontakt</li></a>
 			</ul>
 		</nav>
 		<section class="contact-info text-center">
@@ -104,6 +103,5 @@
 		</section>
 	</footer>
 
-<script src="../js/main.js"></script>
 </body>
 </html>

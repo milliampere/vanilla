@@ -5,88 +5,87 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Kontakt</title>
-
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<title>Vanilla - Kontakt</title>
 
 	<!-- ICONS -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 
 </head>
 <body>
 	
 	<header class="top-header">
-		<div class="logo">
-			<a href="../index.html"><img src="../images/vanilla-logo.png" class="logo"></a>
-		</div>
-		<nav class="top-nav">
-			<div class="ham-menu">Meny
-			<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span>
-			</div>
-			<ul class="top-nav-ul">
-				<li><a href="../index.html">Hem</a></li>
-				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
-				<li><a href="projekt.html">Projekt</a></li>
-				<li><a href="om-oss.html">Om oss</a></li>
-				<li><a href="kontakt.html">Kontakt</a></li>
-			</ul>
-		</nav>
+	  <nav class="top-nav">
+	    <div class="logo"><a href="../index.html"><img src="../images/logo/vanilla-logo.svg" class="logo"></a></div>
+	    <input type="checkbox" id="checkbox-toggle" class="checkbox-toggle">
+	      <label for="checkbox-toggle" class="label-toggle">Meny<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span></label>
+	    </input>
+	    <ul>
+			<a href="../index.html"><li>Hem</li></a>
+			<a href="erbjuder.html"><li>Vi erbjuder</li></a>
+			<a href="projekt.html"><li>Projekt</li></a>
+			<a href="om-oss.html"><li>Om oss</li></a>
+			<a href="kontakt.html" class="active"><li>Kontakt</li></a>
+	    </ul>
+	  </nav>
 	</header>
 
 	<main>
 		<header class="main-header">
 			<h1 class="text-center">Kontakt</h1>
 		</header>
-		<section class="box-wrapper-kontakt">
-			<article class="box2">
-				<h1>hör av er till oss!</h1>
- 					<form>
+		<section class="box-wrapper kontakt">
+ 
+ 
+			
+ 					<article class="kontakt-form">
+ 						<h1>hör av er till oss!</h1>
 						<label for="namn"> Fyll i ditt namn:</label>
 						<br>
 						<input type="text" name="namn">
-
 						<label for="epost">E-postadress:</label>
 						<br>
 						<input type="email" name="email" required="required">
-
 						<br>
 						<br>
-
 						<label for="vadkanvi">Vad kan vi stå till tjänst med?</label>
 						<br>
-
 						<textarea name="textarea" placeholder="Kära Vanilla Web Design..."></textarea>
 						<input type="submit" class="skicka" value="Skicka!"> 
-					</form>
-
-				<h1>Hitta hit</h1><br>
-			<article class="hitta-wrapper">
-				<div class="hitta-box">
-	 				<img src="../images/karta/karta2.jpg" alt="karta"> 
-				</div>
-				<div class="hitta-box2">
-					<p>Vanilla Webdesign<br>
-					Skånegatan, Stockholm<br>
+					</article>
+	
+		
+ 
+			
+	
+				<article class="kontakt-karta">
+					<h1>Hitta hit</h1>
+	 				<img src="../images/kontakt/karta2.jpg" alt="karta" class="karta"> 
+					<p>Vanilla Web Design<br>
+					Skånegatan 90<br>
+					116 37 Stockholm<br>
 					
 					<br>
-					Tunnelbana: Medborgarplatsen<br>
-					Buss: 66, 3, 53, 76<br>
-					Bil: Från Nytorgsgatan sväng höger in mot Skånegatan
+					<b>Tunnelbana:</b> Medborgarplatsen<br>
+					<b>Buss:</b> 66, 3, 53, 76<br>
+					<b>Vägbeskrivning:</b> <a href="https://www.google.se/maps/dir/''/Sk%C3%A5negatan+90,+Stockholm/@59.3124784,18.0774653,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x465f77f77e4d1e1d:0x307eff513191ebc0!2m2!1d18.0818427!2d59.3124785" target="_blank"> Klicka här</a>
 					</p>
-				</div>	 
-			</article>
+				</article>	 
+		
 		</section>
 	</main>
 
 	<footer>
-		<nav class="bottom-nav">
-			<ul class="bottom-nav-ul">
-				<li><a href="../index.html">Hem</a></li>
-				<li><a href="vi-erbjuder.html">Vi erbjuder</a></li>
-				<li><a href="projekt.html">Projekt</a></li>
-				<li><a href="om-oss.html">Om oss</a></li>
-				<li><a href="kontakt.html">Kontakt</a></li>
+		<nav class="bottom-nav text-center">
+			<ul>
+				<a href="../index.html"><li>Hem</li></a>
+				<a href="erbjuder.html"><li>Vi erbjuder</li></a>
+				<a href="projekt.html"><li>Projekt</li></a>
+				<a href="om-oss.html"><li>Om oss</li></a>
+				<a href="kontakt.html" class="active"><li>Kontakt</li></a>
 			</ul>
 		</nav>
 		<section class="contact-info text-center">
@@ -101,7 +100,5 @@
 			<span class="fa fa-twitter-square fa-2x" aria-hidden="true"></span>
 		</section>
 	</footer>
-
-<script src="../js/main.js"></script>
 </body>
 </html>

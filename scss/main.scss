@@ -21,6 +21,7 @@ $special-font2:"Courgette", Georgia;
 $special-font3:"Baloo Bhaina", Georgia;
 
 /* Colors */
+$primary-color: #827191;
 $secondary-color: #BEE3DB; 
 
 
@@ -33,6 +34,7 @@ html, body {
 
 * {
 	box-sizing: border-box;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,91 +52,124 @@ h1 {
 
 /******************************************************************
 /* HEADER/NAVIGATION */
-.logo{
-	width: 150px;
-	margin-right: 8rem;
-} 
+
+/* Toppmenyn */
+main {
+	padding-top: 7rem; /* För att få ned innehåll*/
+}
+
+.top-nav {
+	margin: 0 auto; 
+	z-index: 999;
+}
 
 .top-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 1rem 0.2rem 1rem;
+  position: fixed;
+  min-width: 100%;
+  background: #FFF;
+  z-index: 999;
+  padding: 1rem 2%; 
 }
 
-.top-nav ul, .bottom-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-
+.logo {
+  display: inline-block;
+  width: 130px;
 }
-
-.top-nav ul li, .bottom-nav ul li {
-    text-align: center;
-    flex-grow: 1;
-}
-
 
 .top-nav {	
-	flex-grow: 2;
-}
-
-.bottom-nav {
-	background: $secondary-color;
-	padding: 2rem 0;
-	margin: 4rem 0 3rem 0; 
-}
-
-
-/* Remove margins and padding from the list, and add background color */
-ul.bottom-nav-ul, ul.top-nav-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-
-	/* Link style */
-	li a {color: #000; text-decoration: none;}
-	/* Change color of links on hover */
-    li a:hover {color: #555;} 
-
-    /* Side by side */
-	li { display: inline;}   
-}
-
-nav {
+	/* Länkstyling*/
 	font-family: $heading-font;
 	font-size: 1.5rem;
 	letter-spacing: 0.05rem;
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	/*Checkbox som aldrig ska visas*/
+  	.checkbox-toggle {display: none;}
+
+  	.active{ 
+	 	text-decoration: underline !important; /*Denna visas inte i mellan/stor skärm! why??*/
+	}
+  
+	/*Menyn i toggle-versionen*/
+	ul {
+		background-color: $secondary-color;
+		text-align: center;
+		transition: opacity 1s ease, height 1s ease;
+		visibility: hidden;
+		width: 100%;
+		opacity: 0;
+		height: 0;
+		display: block;
+		list-style-type: none;
+		margin: 0;
+	}
 
 	li {
+      border-bottom: 1px solid #FFF;
+      display: block;
+      padding: 1em 0;
+
+    }
+
+    .checkbox-toggle:checked ~ ul {
+      opacity: 1;
+      height: 380px;
+      visibility: visible;
+    }
+
+    .label-toggle {
+      cursor: pointer;
+      display: block;
+      float: right;
+      margin: 1.5rem 2rem 0 0;
+    }
+}
+
+
+
+/* Bottommenyn */
+.bottom-nav {
+	display: none; /*ska ej visas i mobilversionen*/ 
+	background: $secondary-color;
+	padding: 2rem 0;
+	margin: 2rem 0;
+
+	/* Länkstyling*/
+	font-family: $heading-font;
+	font-size: 1.4rem;
+	letter-spacing: 0.05rem;
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		width: 100%;
+
+		/*Normalize?*/
+		-webkit-margin-before: 0em;
+    	-webkit-margin-after: 0em;
+    	-webkit-margin-start: 0px;
+    	-webkit-margin-end: 0px;
+    	-webkit-padding-start: 0px;
+	}
+
+	li  {
 		@include transition(all .1s ease-in);
 		@include transform(scale(1));
 
 		&:hover {
 			@include transition(all .1s ease-out);
 			@include transform(scaleX(1.05));
+			}
 		}
-	}
 }
-
-
-/* Hide menu-list */
-ul.top-nav-ul {
-	display: none;
-}
-
-
-.ham-menu {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-}
-
-
-
-
 
 /******************************************************************/
 /* BOXES */
@@ -145,16 +180,16 @@ ul.top-nav-ul {
 	flex-direction: column; 
 	margin: auto; /* center */
 	box-sizing: border-box;
-
+	z-index: 0;
 }
 
 
-.box {
-	flex: 1 1 0;  
+.box { 
 	height: 100%;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
+		z-index: 0;
 
 }
 
@@ -176,13 +211,13 @@ ul.top-nav-ul {
 	display:flex;
 	position: relative;
 	flex: 1 1 0;   /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-/*	min-width: 100%; = om vi vill utöka till fullbredd i mobilläge*/ 
+    min-width: 100%; 
 }
 
 .hem{
-/* 	display: flex;*/
 	position:relative;
 	margin: 0 0 0 0;
+	width: 100%;
 }
 
 .background{
@@ -200,7 +235,6 @@ ul.top-nav-ul {
 
 }
 
-
 .indexsidan{
 	display:flex;
 	flex-direction: column;
@@ -211,7 +245,6 @@ ul.top-nav-ul {
 	top: 1.7rem;
 	left: 1rem;
 	}
-
 
 .article-img{
 	width:100%;
@@ -226,15 +259,24 @@ ul.top-nav-ul {
 /*Vi erbjuder*/
 
 .erbjuder-ruta{
-	border: 1px solid black;
 	display: flex;
-	padding: 1rem;
+	padding: 1rem 1.5rem 1rem 1rem;
 	box-sizing: border-box;
 	div{
-		min-width: 25%;
+		min-width: 30%;
 		padding-right: 1rem;
-		text-align: center;
+		text-align: center;	
 	}
+}
+
+div{
+	@include transition(all .2s ease-in);
+	@include transform(scale(1));
+}
+	
+.hover:hover div{
+	@include transition(all .1s ease-out);
+	@include transform(scale(1.3));
 }
 
 .erbjuder-text{
@@ -243,6 +285,10 @@ ul.top-nav-ul {
 
 .green{
 	background: $secondary-color;
+}
+
+.border{
+	border: 1px solid black;
 }
 
 /*******************************************************/
@@ -260,6 +306,7 @@ ul.top-nav-ul {
 
 .right{
 	background: none; 
+	border: 1px solid black;
 }
 
 .project-img { 
@@ -287,6 +334,7 @@ ul.top-nav-ul {
 
 .about-us .box {
 	position: relative;
+	flex: 1 1 0; 
 }
 
 .about-us img {
@@ -295,67 +343,71 @@ ul.top-nav-ul {
 
 .tag {
 	position: absolute;
-	bottom: 3rem;
-	left: 4rem;
+	top: 2rem;
+	right: 2rem;
+	h3 {
+		font-size: 1.5rem;
+		color: #000;
+		margin: 0;
+		padding: 0;
+		text-shadow: 0 0 5px #555;
+	}
 }
 
 .arrow {
 	position: absolute;
-	bottom: 4rem;
-	right: 4rem;
+	bottom: 2rem;
+	right: 2rem;
 	opacity: 1;
 }	
 
 .hover-box {
 	position: absolute;
-	top: 2rem;
-	left: 2rem;
-	right: 2rem;
-	bottom: 2rem;
+	top: 0rem;
+	left: 0rem;
+	right: 0rem;
+	bottom: 0rem;
 	background: #FFF;
 	opacity: 0;
 	@include transition(all 1s ease-in);
-	padding: 2rem;
+	padding: 1.5rem;
 	
 	&:hover {
 		@include transition(all 1s ease-out);
 		opacity: 0.8;
 	}
+
+	p {
+		margin-top: 0;
+		padding-top: 0;
+	}
 	
 }
 
+.name {
+	color: $primary-color;
+	font-size: 1.3rem;
+}
 
 /******************************************************************/
-/* KONTAKT mayhem for y'all.. */
+/* KONTAKT*/
 
-.box-wrapper-kontakt {
+
+.kontakt {
 	width: 98%;
-	display: flex;
-		flex-flow: row wrap; 
-	justify-content: center;
-	align-content: flex-start;
-	margin: auto; /* center */
 }
 
-.box2 {
-		margin-bottom: 2rem;
-}
-
-.hitta-wrapper p{
+.karta {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin:0 auto;
 }
 
-.hitta-box img{
-	width:99%;
-	padding:0 0.1rem 0.5rem 0.1rem;
-}
-
-.hitta-box2 p{
-	padding:0 0.1rem 0 0.1rem;
+.kontakt-text {
+	p {
+		padding:0 0 0 0.5rem;
+	}
+	h1 {
+		padding:0 0 0 0.5rem;
+	}
 }
 
 /* KONTAKT form */ 
@@ -397,12 +449,13 @@ textarea {
 /******************************************************************/
 /* FOOTER */
 .contact-info  {
-	margin: 1rem;
-	
+	background: $secondary-color;
+	padding: 1rem 0;
+	margin: 2rem 0 0 0;
 	p {
 	margin: 0;
-	padding: 0;
 	font-family: $heading-font;
+	font-size: 1.2rem;
 	letter-spacing: 0.05rem;
 	}
 }
