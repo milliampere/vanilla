@@ -41,6 +41,40 @@
 /******************************************************************/
 /* Index */
 
+	.background-img-sm{
+		display:none;
+	}
+	.background-img{
+		display:block;
+		width: 100%;
+	}
+		.box-indexsidan{
+		width: 100%;
+		align-items: flex-start;
+		display:flex;
+		justify-content: space-between;
+		margin-top:3rem;
+/*		background-color: salmon;*/ 
+	}
+	 
+	.index-left{ 
+		flex-basis:33.3%;	
+		flex-direction: row;
+/*		background-color: yellow;*/
+	}
+
+	.index-middle{
+		flex-basis:33.4%;	
+		flex-flow: row;
+/*		background-color: blue;*/
+	}
+	.index-right{
+		flex-basis:33.3%;	
+		flex-flow: row;
+/*		background-color: green;*/
+/*		margin: 5rem 0 5rem 0;*/
+	}
+
 /******************************************************************/
 /* Erbjuder */
 
