@@ -395,27 +395,43 @@ div{
 
 
 .kontakt {
-	width: 98%;
+	width: 95%;
+}
+
+.kontakt-form{
+	margin: 2rem 0;
+	min-width: 360px;
+}
+
+.kontakt-adress{
+	display: flex;
+	justify-content: space-between;
+	min-width: 360px;
+	p{
+		margin: 0.5rem 0;
+	}
 }
 
 .karta {
 	width: 100%;
 }
 
-.kontakt-text {
-	p {
-		padding:0 0 0 0.5rem;
+.kontakt-karta{
+	min-width: 360px;
+	a{
+		color: black;
 	}
-	h1 {
-		padding:0 0 0 0.5rem;
-	}
+	p{
+		margin-bottom: 0.5rem;
+	}	
 }
+
 
 /* KONTAKT form */ 
 
 input{
 	width: 100%;
-    padding: 0.8em 0.5em;
+    padding: 0.8em 0.5em; /* vad bygger em på här? använd rem ist?*/ 
     margin: 0.5em 0;
     border: 1px solid #ccc;
     border-radius: 0.25em;
@@ -442,11 +458,6 @@ textarea {
     resize: none;
 }
 
-.kontakt-karta{
-	a{
-		color: black;
-	}
-}
 
 
 /******************************************************************/

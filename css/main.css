@@ -346,20 +346,34 @@ div {
 /******************************************************************/
 /* KONTAKT*/
 .kontakt {
-  width: 98%; }
+  width: 95%; }
+
+.kontakt-form {
+  margin: 2rem 0;
+  min-width: 360px; }
+
+.kontakt-adress {
+  display: flex;
+  justify-content: space-between;
+  min-width: 360px; }
+  .kontakt-adress p {
+    margin: 0.5rem 0; }
 
 .karta {
   width: 100%; }
 
-.kontakt-text p {
-  padding: 0 0 0 0.5rem; }
-.kontakt-text h1 {
-  padding: 0 0 0 0.5rem; }
+.kontakt-karta {
+  min-width: 360px; }
+  .kontakt-karta a {
+    color: black; }
+  .kontakt-karta p {
+    margin-bottom: 0.5rem; }
 
 /* KONTAKT form */
 input {
   width: 100%;
   padding: 0.8em 0.5em;
+  /* vad bygger em på här? använd rem ist?*/
   margin: 0.5em 0;
   border: 1px solid #ccc;
   border-radius: 0.25em; }
@@ -382,9 +396,6 @@ textarea {
   color: grey;
   border-radius: 0.25em;
   resize: none; }
-
-.kontakt-karta a {
-  color: black; }
 
 /******************************************************************/
 /* FOOTER */
@@ -699,20 +710,19 @@ textarea {
   /******************************************************************/
   /* Kontakt */
   .kontakt {
-    width: 80%;
+    width: 100%;
     display: flex;
+    flex-flow: row;
     align-items: flex-start;
-    justify-content: space-between; }
+    justify-content: space-around; }
 
   .kontakt-form {
     margin-top: 2.5rem;
-    flex-basis: 50%; }
+    width: 35%; }
 
   .kontakt-karta {
     margin-top: 2.5rem;
-    flex-basis: 47%; }
-    .kontakt-karta img {
-      width: 80%; }
+    width: 35%; }
 
   /******************************************************************/
   /* Footer */

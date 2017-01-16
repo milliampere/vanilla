@@ -357,23 +357,21 @@
 /* Kontakt */
 
 	.kontakt{
-		width: 80%; 
+		width: 100%; 
 		display: flex;
+		flex-flow: row;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.kontakt-form{
 		margin-top: 2.5rem;
-		flex-basis:50%;
+		width: 35%;
 	}
 
 	.kontakt-karta{
 		margin-top: 2.5rem;
-		flex-basis:47%;	
-		img{
-			width: 80%;
-		}
+		width: 35%;	
 	}
 
  
