@@ -160,21 +160,7 @@ main {
   box-sizing: border-box; }
 
 /******************************************************************/
-/* INDEX mayhem for y'all.. */
-.box-indexsidan {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%; }
-
-/*.index-left{ 
-width:70%;
-}
-
-.index-middle{
-	width:70%;
-}*/
+/* Index */
 .hem {
   position: relative;
   margin: 0 0 0 0;
@@ -191,25 +177,26 @@ width:70%;
 .background-img-sm {
   width: 100%; }
 
-.background-text {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1.5rem; }
-
-.indexsidan {
-  display: flex;
-  flex-direction: column; }
-  .indexsidan img {
-    width: 100%; }
-
 .anim {
   width: 32%;
   position: absolute;
   top: 1.7rem;
   left: 1rem; }
+
+/*.background-text{
+	position: absolute;
+	top: 2rem;
+	left: 1rem;
+	color: white;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}*/
+.box-indexsidan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%; }
 
 .article-img {
   width: 100%; }
@@ -454,24 +441,19 @@ textarea {
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
-    /*		background-color: salmon;*/ }
+    margin-top: 3rem; }
 
   .index-left {
     flex-basis: 33.3%;
-    flex-direction: row;
-    /*		background-color: yellow;*/ }
+    flex-direction: row; }
 
   .index-middle {
     flex-basis: 33.4%;
-    flex-flow: row;
-    /*		background-color: blue;*/ }
+    flex-flow: row; }
 
   .index-right {
     flex-basis: 33.3%;
-    flex-flow: row;
-    /*		background-color: green;*/
-    /*		margin: 5rem 0 5rem 0;*/ }
+    flex-flow: row; }
 
   /******************************************************************/
   /* Erbjuder */
