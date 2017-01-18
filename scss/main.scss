@@ -7,14 +7,15 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), 
-  url("bebasneue-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; 
+   font-family: 'bebas_neue';
+   src: url('../fonts/bebas_neue/bebasneue_regular-webfont.woff2') format('woff2'),
+        url('../fonts/bebas_neue/bebasneue_regular-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+
 }
 
-$heading-font: "Bebas Neue", Georgia;
+$heading-font: "bebas_neue", Georgia;
 $paragraf-font: "Source Sans Pro", Georgia;
 $special-font:"Pacifico", Georgia;
 $special-font2:"Courgette", Georgia;

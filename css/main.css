@@ -12,8 +12,8 @@ T ex
 @import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
+  font-family: 'bebas_neue';
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 /* Colors */
@@ -27,7 +27,7 @@ html, body {
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   letter-spacing: 0.2rem; }
 
 h1 {
@@ -60,7 +60,7 @@ main {
 
 .top-nav {
   /* Länkstyling*/
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   /*Checkbox som aldrig ska visas*/
@@ -106,7 +106,7 @@ main {
   padding: 2rem 0;
   margin: 2rem 0;
   /* Länkstyling*/
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   font-size: 1.4rem;
   letter-spacing: 0.05rem; }
   .bottom-nav a {
@@ -392,7 +392,7 @@ textarea {
   margin: 2rem 0 0 0; }
   .contact-info p {
     margin: 0;
-    font-family: "Bebas Neue", Georgia;
+    font-family: "bebas_neue", Georgia;
     font-size: 1.2rem;
     letter-spacing: 0.05rem; }
 
