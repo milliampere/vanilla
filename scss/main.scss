@@ -7,14 +7,14 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), 
-  url("../fonts/bebas_neue/bebasneue-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; 
+   font-family: 'bebas_neue';
+   src: url('../fonts/bebas_neue/bebasneue_regular-webfont.woff2') format('woff2'),
+        url('../fonts/bebas_neue/bebasneue_regular-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
 }
 
-$heading-font: "Bebas Neue", Georgia;
+$heading-font: "bebas_neue", Georgia;
 $paragraf-font: "Source Sans Pro", Georgia;
 $special-font:"Pacifico", Georgia;
 $special-font2:"Courgette", Georgia;
@@ -59,14 +59,16 @@ main {
 }
 
 .top-nav {
-	margin: 0 auto;
-	padding: 1rem 1rem 0 1rem;  
+	margin: 0 auto; 
+	z-index: 999;
 }
 
 .top-header {
   position: fixed;
   min-width: 100%;
   background: #FFF;
+  z-index: 999;
+  padding: 1rem 2%; 
 }
 
 .logo {
@@ -88,15 +90,14 @@ main {
   	.checkbox-toggle {display: none;}
 
   	.active{ 
-	 	text-decoration: underline !important; /*Denna visas inte! why??*/
-	 	color: $primary-color !important;
+	 	text-decoration: underline !important; /*Denna visas inte i mellan/stor skärm! why??*/
 	}
   
 	/*Menyn i toggle-versionen*/
 	ul {
 		background-color: $secondary-color;
 		text-align: center;
-		transition: all 1s ease;
+		transition: opacity 1s ease, height 1s ease;
 		visibility: hidden;
 		width: 100%;
 		opacity: 0;
@@ -115,7 +116,7 @@ main {
 
     .checkbox-toggle:checked ~ ul {
       opacity: 1;
-      height: 400px;
+      height: 380px;
       visibility: visible;
     }
 
@@ -131,13 +132,14 @@ main {
 
 /* Bottommenyn */
 .bottom-nav {
+	display: none; /*ska ej visas i mobilversionen*/ 
 	background: $secondary-color;
 	padding: 2rem 0;
 	margin: 2rem 0;
 
 	/* Länkstyling*/
 	font-family: $heading-font;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	letter-spacing: 0.05rem;
 	a {
 		text-decoration: none;
@@ -178,7 +180,7 @@ main {
 	flex-direction: column; 
 	margin: auto; /* center */
 	box-sizing: border-box;
-
+	z-index: 0;
 }
 
 
@@ -187,6 +189,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
+		z-index: 0;
 
 }
 
@@ -194,8 +197,6 @@ main {
 
 /******************************************************************/
 /* Index */
-
-
 .hem{
 	position:relative;
 	margin: 0 0 0 0;
@@ -220,16 +221,6 @@ main {
 	top: 1.7rem;
 	left: 1rem;
 }
-
-/*.background-text{
-	position: absolute;
-	top: 2rem;
-	left: 1rem;
-	color: white;
-	font-size: 1.5rem;
-	line-height: 1.5rem;
-}*/
-
 .box-indexsidan {
 	display:flex;
 	flex-wrap: wrap;
@@ -341,7 +332,7 @@ div{
 		color: #000;
 		margin: 0;
 		padding: 0;
-		text-shadow: 0 0 5px #FFF;
+		text-shadow: 0 0 5px #555;
 	}
 }
 
@@ -375,6 +366,10 @@ div{
 	
 }
 
+.name {
+	color: $primary-color;
+	font-size: 1.3rem;
+}
 
 /******************************************************************/
 /* KONTAKT*/
@@ -437,9 +432,10 @@ textarea {
 /* FOOTER */
 .contact-info  {
 	background: $secondary-color;
+	padding: 1rem 0;
+	margin: 2rem 0 0 0;
 	p {
 	margin: 0;
-	padding: 0;
 	font-family: $heading-font;
 	font-size: 1.2rem;
 	letter-spacing: 0.05rem;
