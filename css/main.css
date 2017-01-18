@@ -166,7 +166,6 @@ main {
 
 /******************************************************************/
 /* Index */
-
 .hem {
   position: relative;
   margin: 0 0 0 0;
@@ -189,21 +188,6 @@ main {
   top: 1.7rem;
   left: 1rem; }
 
-/*.background-text{
-	position: absolute;
-
-	top: 2rem;
-	left: 1rem;
-	color: white;
-	font-size: 1.5rem;
-	line-height: 1.5rem;
-
-	padding: 15% 0 0 4%;
-	font-size: 2rem;
-	line-height: 2.5rem;
-	color: white;
-
-}*/
 .box-indexsidan {
   display: flex;
   flex-wrap: wrap;
@@ -646,7 +630,7 @@ textarea {
     font-size: 2.7rem;
     line-height: 3rem; }
 
-  .box-wrapper {
+  .index .box-wrapper {
     padding: 0; }
 
   .anim {
@@ -783,7 +767,6 @@ textarea {
   .kontakt-karta {
     margin-top: 2.5rem;
     width: 35%; }
-
 
   /******************************************************************/
   /* Footer */
