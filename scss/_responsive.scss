@@ -33,6 +33,35 @@
 /******************************************************************/
 /* Index */
 
+	.background-img-sm{
+		display:none;
+	}
+	.background-img{
+		display:block;
+		width: 100%;
+	}
+	.box-indexsidan{
+		width: 100%;
+		align-items: flex-start;
+		display:flex;
+		justify-content: space-between;
+		margin-top:3rem;
+	}
+	 
+	.index-left{ 
+		flex-basis:33.3%;	
+		flex-direction: row;
+	}
+
+	.index-middle{
+		flex-basis:33.4%;	
+		flex-flow: row;
+	}
+	.index-right{
+		flex-basis:33.3%;	
+		flex-flow: row;
+	}
+
 /******************************************************************/
 /* Erbjuder */
 
@@ -215,6 +244,20 @@
 /******************************************************************/
 /* Index */
 
+	.hem{
+/*	background-image: url("../images/hem/phoneman_1200px.jpg");
+	height:600px;*/
+		 min-height: 100px;
+		 background-color: salmon;
+	}
+
+	.background-img-sm{
+		display:none;
+	}
+	.background-img{
+		display:block;
+		width: 100%;
+	}
 
 	.background-text{
 		margin:2rem 0 0 0;
@@ -223,28 +266,46 @@
 		line-height: 3rem;
 	}
 
+	.box-wrapper{
+		padding:0;
+	}
+
 	.anim{
 		width:40%;
 		top: 3rem;
 		left: 2.5rem;
 	}
-	 
-	.indexsidan{
-		flex-direction: row;
+
+	.box-indexsidan{
+		width: 100%;
 		align-items: flex-start;
-		margin: 5rem 0 5rem 0;
+		display:flex;
+		justify-content: space-between;
+		margin-top:3rem;
+/*		background-color: salmon;*/ 
+	}
+	 
+	.index-left{ 
+		flex-basis:30%;	
+		flex-direction: row;
+/*		background-color: yellow;*/
 	}
 
-	.article-img{
-		width:50%;
+	.index-middle{
+		flex-basis:30%;	
+		flex-flow: row;
+/*		background-color: blue;*/
 	}
-
-	.article-text{
-		font-size: 0.9rem;
-		margin: 1rem 1rem 1rem 1rem;
+	.index-right{
+		flex-basis:30%;	
+		flex-flow: row;
+/*		background-color: green;*/
+/*		margin: 5rem 0 5rem 0;*/
 	}
-
  
+/*	.article-text{
+		font-size: 0.9rem;
+	}*/
 
 /******************************************************************/
 /* Erbjuder */
@@ -362,7 +423,7 @@
 	.kontakt-karta{
 		flex-basis:47%;	
 		img{
-			width: 80%;
+			width: 100%;
 		}
 	}
 
