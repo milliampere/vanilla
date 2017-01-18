@@ -305,10 +305,11 @@ div {
   right: 2rem; }
   .tag h3 {
     font-size: 1.5rem;
-    color: #000;
+    background-color: #827191;
+    color: black;
     margin: 0;
     padding: 0;
-    text-shadow: 0 0 5px #555; }
+    padding: 8px 5px 5px 8px; }
 
 .arrow {
   position: absolute;
@@ -348,24 +349,37 @@ div {
 /******************************************************************/
 /* KONTAKT*/
 .kontakt {
-  width: 98%; }
+  width: 95%; }
+
+.kontakt-form {
+  margin: 2rem 0;
+  min-width: 360px; }
+
+.kontakt-adress {
+  display: flex;
+  justify-content: space-between;
+  min-width: 360px; }
+  .kontakt-adress p {
+    margin: 0.5rem 0; }
 
 .karta {
   width: 100%; }
 
-.kontakt-text p {
-  padding: 0 0 0 0.5rem; }
-.kontakt-text h1 {
-  padding: 0 0 0 0.5rem; }
+.kontakt-karta {
+  min-width: 360px; }
+  .kontakt-karta a {
+    color: black; }
+  .kontakt-karta p {
+    margin-bottom: 0.5rem; }
 
 /* KONTAKT form */
 input {
   width: 100%;
   padding: 0.8em 0.5em;
+  /* vad bygger em på här? använd rem ist?*/
   margin: 0.5em 0;
   border: 1px solid #ccc;
-  border-radius: 0.25em;
-  box-sizing: border-box; }
+  border-radius: 0.25em; }
 
 .skicka {
   width: 40%;
@@ -381,7 +395,6 @@ textarea {
   height: 12em;
   padding: 0.8em 0.5em;
   margin: 0.5em 0;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   color: grey;
   border-radius: 0.25em;
@@ -509,6 +522,15 @@ textarea {
 /* leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
+@media screen and (min-width: 543px) {
+  .background-skew {
+    background-color: #827191;
+    transform: skewY(15deg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    z-index: -2000; } }
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
@@ -748,18 +770,20 @@ textarea {
   /******************************************************************/
   /* Kontakt */
   .kontakt {
-    width: 80%;
+    width: 100%;
     display: flex;
+    flex-flow: row;
     align-items: flex-start;
-    justify-content: space-between; }
+    justify-content: space-around; }
 
   .kontakt-form {
-    flex-basis: 50%; }
+    margin-top: 2.5rem;
+    width: 35%; }
 
   .kontakt-karta {
-    flex-basis: 47%; }
-    .kontakt-karta img {
-      width: 100%; }
+    margin-top: 2.5rem;
+    width: 35%; }
+
 
   /******************************************************************/
   /* Footer */
