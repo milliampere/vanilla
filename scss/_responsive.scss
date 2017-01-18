@@ -96,8 +96,15 @@
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
 
-
-
+	.background-skew{
+		background-color: $primary-color;
+		transform: skewY(15deg);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		padding: 2rem;
+		z-index: -2000;
+	}
 }
 
 
@@ -350,20 +357,21 @@
 /* Kontakt */
 
 	.kontakt{
-		width: 80%; 
+		width: 100%; 
 		display: flex;
+		flex-flow: row;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.kontakt-form{
-		flex-basis:50%;
+		margin-top: 2.5rem;
+		width: 35%;
 	}
+
 	.kontakt-karta{
-		flex-basis:47%;	
-		img{
-			width: 80%;
-		}
+		margin-top: 2.5rem;
+		width: 35%;	
 	}
 
  
