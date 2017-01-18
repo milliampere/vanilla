@@ -12,8 +12,8 @@ T ex
 @import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
+  font-family: 'bebas_neue';
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 /* Colors */
@@ -27,7 +27,7 @@ html, body {
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   letter-spacing: 0.2rem; }
 
 h1 {
@@ -60,7 +60,7 @@ main {
 
 .top-nav {
   /* Länkstyling*/
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   /*Checkbox som aldrig ska visas*/
@@ -106,7 +106,7 @@ main {
   padding: 2rem 0;
   margin: 2rem 0;
   /* Länkstyling*/
-  font-family: "Bebas Neue", Georgia;
+  font-family: "bebas_neue", Georgia;
   font-size: 1.4rem;
   letter-spacing: 0.05rem; }
   .bottom-nav a {
@@ -165,42 +165,23 @@ main {
   z-index: 0; }
 
 /******************************************************************/
-/* INDEX mayhem for y'all.. */
-.box-wrapper-index {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  /* flex-direction |  flex-wrap */
-  justify-content: center;
-  align-items: stretch;
-  align-content: flex-start; }
-
-.box-indexsidan {
-  display: flex;
-  position: relative;
-  flex: 1 1 0;
-  /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
-  min-width: 100%; }
+/* Index */
 
 .hem {
   position: relative;
   margin: 0 0 0 0;
+  width: 100%;
+  /*	height: 610px;
+  	background-image: url("../images/hem/phoneman_500px_sm.jpg");
+   	background-repeat: no-repeat;
+   	background-color: salmon;
+   	background-size: contain; */ }
+
+.background-img {
+  display: none; }
+
+.background-img-sm {
   width: 100%; }
-
-.background {
-  width: 100%; }
-
-.background-text {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1.5rem; }
-
-.indexsidan {
-  display: flex;
-  flex-direction: column; }
 
 .anim {
   width: 32%;
@@ -208,11 +189,33 @@ main {
   top: 1.7rem;
   left: 1rem; }
 
+/*.background-text{
+	position: absolute;
+
+	top: 2rem;
+	left: 1rem;
+	color: white;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+
+	padding: 15% 0 0 4%;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	color: white;
+
+}*/
+.box-indexsidan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%; }
+
 .article-img {
   width: 100%; }
 
 .article-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 0.5rem 1rem 1rem; }
 
 /************************************************************/
@@ -405,7 +408,7 @@ textarea {
   margin: 2rem 0 0 0; }
   .contact-info p {
     margin: 0;
-    font-family: "Bebas Neue", Georgia;
+    font-family: "bebas_neue", Georgia;
     font-size: 1.2rem;
     letter-spacing: 0.05rem; }
 
@@ -451,6 +454,32 @@ textarea {
 
   /******************************************************************/
   /* Index */
+  .background-img-sm {
+    display: none; }
+
+  .background-img {
+    display: block;
+    width: 100%; }
+
+  .box-indexsidan {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem; }
+
+  .index-left {
+    flex-basis: 33.3%;
+    flex-direction: row; }
+
+  .index-middle {
+    flex-basis: 33.4%;
+    flex-flow: row; }
+
+  .index-right {
+    flex-basis: 33.3%;
+    flex-flow: row; }
+
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
@@ -598,29 +627,60 @@ textarea {
 
   /******************************************************************/
   /* Index */
+  .hem {
+    /*	background-image: url("../images/hem/phoneman_1200px.jpg");
+    	height:600px;*/
+    min-height: 100px;
+    background-color: salmon; }
+
+  .background-img-sm {
+    display: none; }
+
+  .background-img {
+    display: block;
+    width: 100%; }
+
   .background-text {
     margin: 2rem 0 0 0;
     left: 3rem;
     font-size: 2.7rem;
     line-height: 3rem; }
 
+  .box-wrapper {
+    padding: 0; }
+
   .anim {
     width: 40%;
     top: 3rem;
     left: 2.5rem; }
 
-  .indexsidan {
-    flex-direction: row;
+  .box-indexsidan {
+    width: 100%;
     align-items: flex-start;
-    margin: 5rem 0 5rem 0; }
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    /*		background-color: salmon;*/ }
 
-  .article-img {
-    width: 50%; }
+  .index-left {
+    flex-basis: 30%;
+    flex-direction: row;
+    /*		background-color: yellow;*/ }
 
-  .article-text {
-    font-size: 0.9rem;
-    margin: 1rem 1rem 1rem 1rem; }
+  .index-middle {
+    flex-basis: 30%;
+    flex-flow: row;
+    /*		background-color: blue;*/ }
 
+  .index-right {
+    flex-basis: 30%;
+    flex-flow: row;
+    /*		background-color: green;*/
+    /*		margin: 5rem 0 5rem 0;*/ }
+
+  /*	.article-text{
+  		font-size: 0.9rem;
+  	}*/
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
@@ -723,6 +783,7 @@ textarea {
   .kontakt-karta {
     margin-top: 2.5rem;
     width: 35%; }
+
 
   /******************************************************************/
   /* Footer */
