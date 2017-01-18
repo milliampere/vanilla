@@ -20,14 +20,6 @@
 		display: none;
 	}
 
-	.bottom-nav{
-		font-size: 1.4rem;
-	}
-
-	.contact-info{
-		background-color: white;
-	}
-
 
 /******************************************************************/
 /* Boxes */
@@ -84,6 +76,7 @@
 		min-height: 350px;
 		div{
 			padding-right: 0;
+			min-height: 75px;
 		}	
 	}
 
@@ -128,10 +121,18 @@
 } /* leave me <3 */
 
 
+/******************************************************************/
+/* För både mellan och stor */
+@media screen and (min-width: 543px) {
+
+
+
+}
+
 
 /******************************************************************/
 /* Meny i både medium och large */
-@media screen and (min-width: 543px) {
+@media screen and (min-width: 643px) {
 	/* Ej fixerad längst upp som på små skärmar*/
 	.top-header {
 		position: absolute;
@@ -144,6 +145,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+
+		.active { 
+	 		color: $primary-color !important;
+		}
+  
 
 		ul {
 			display: flex;
@@ -172,12 +179,16 @@
 		}
 	}
 
-
 	.bottom-nav{
+		display: flex;
 		ul {
 			flex-direction: row;
 			justify-content: space-around;
 		}
+	}
+
+	.contact-info{
+		background-color: white;
 	}
 
 } /* Leave me <3 */
@@ -193,9 +204,16 @@
 
 /******************************************************************/
 /* Boxes */
+
+	body > main {
+		margin-top: 2rem;
+	}
+	.top-header {
+	padding: 1.5rem 4% 0 4%;
+	}
 	.box-wrapper {
 		width: 100%;
-		padding: 0 2%;
+		padding: 0 4%;
 		flex-flow: row wrap; 
 		margin: auto; 
 	}
@@ -294,12 +312,19 @@
 
 	.erbjuder{
 		max-width: 1300px;
-		flex-flow: row;
+		flex-flow: row; /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
 	}
 
 	.erbjuder-ruta{
+		flex-direction: column;
+		text-align: center;
 		min-width: 50%;
-		min-height: 260px;
+		min-height: 350px;
+		padding: 0 3rem;
+		div{
+			padding-right: 0;
+			min-height: 75px;
+		}	
 	}
 
 	.erbjuder-reverse{
@@ -350,9 +375,37 @@
 /***************************************************************/
 /* Om oss */
 
-	.about-us .box {
+.about-us .box {
 		min-width: calc(100% / 2);
+}
+
+.tag {
+	top: 4rem;
+	right: 4rem;
+	h3 {
+		font-size: 2rem;
 	}
+}
+
+.arrow {
+	bottom: 4rem;
+	right: 4rem;
+}
+
+.hover-box {
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	padding: 2.5rem;
+
+	p {
+		padding-right: 8rem;
+		font-size: 1.2rem;
+		letter-spacing: 0.05rem;
+	}
+	
+}
 
 /******************************************************************/
 /* Kontakt */
