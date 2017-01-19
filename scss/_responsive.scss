@@ -338,6 +338,10 @@
 		}	
 	}
 
+	.project-text{
+		text-align: left;
+	}
+
 	.erbjuder-reverse{
 		flex-direction: row-reverse;
 	} 
@@ -363,6 +367,7 @@
 		display:flex;
 		flex-direction: row;
 		padding: 1rem;
+		min-height: auto; 
 	}
 
 	.right{
