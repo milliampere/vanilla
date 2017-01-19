@@ -26,7 +26,9 @@
 
 	.box-wrapper {
 		width: 100%;
-		flex-flow: row wrap; 
+		//flex-flow: row wrap; 
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
 		margin: auto; /* center */
 	}
 
@@ -153,17 +155,17 @@
 	}
 
 	.top-nav {
-		/* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
+		/* För att få loggan och menyn att ligga horisontellt. 
+		Alternativt kan detta tas bort och en margin-top på ul läggas 
+		till. På mobilversionen är label-toggle lagd med margin.*/
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(space-between);
 
 		.active { 
 	 		color: $primary-color !important;
 		}
   
-
 		ul {
 			display: flex;
 			justify-content: space-between;
@@ -226,7 +228,9 @@
 	.box-wrapper {
 		width: 100%;
 		padding: 0 4%;
-		flex-flow: row wrap; 
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		//flex-flow: row wrap; 
 		margin: auto; 
 	}
 
