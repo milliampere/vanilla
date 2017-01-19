@@ -7,6 +7,15 @@ T ex
 T ex 
 @include transform(scale(1.1));
 */
+/* Flexbox 
+@include flexbox();
+*/
+/*
+@include flex-direction(column);
+*/
+/*
+@include justify-content();
+*/
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
@@ -16,10 +25,15 @@ T ex
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /* Colors */
 /* General */
 html, body {
-  font: 16px/24px "Source Sans Pro", Georgia;
+  font: 16px/24px "source_sans_proregular", Georgia;
   margin: 0 auto;
   padding: 0; }
 
@@ -113,16 +127,18 @@ main {
     text-decoration: none;
     color: #000; }
   .bottom-nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     list-style-type: none;
-    width: 100%;
-    /*Normalize?*/
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px; }
+    width: 100%; }
   .bottom-nav li {
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
@@ -150,7 +166,14 @@ main {
 /* BOXES */
 .box-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: auto;
   /* center */
@@ -159,7 +182,14 @@ main {
 
 .box {
   height: 100%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   box-sizing: border-box;
   z-index: 0; }
@@ -441,7 +471,14 @@ textarea {
   /* Boxes */
   .box-wrapper {
     width: 100%;
-    flex-flow: row wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: auto;
     /* center */ }
 
@@ -536,10 +573,23 @@ textarea {
     left: 0; }
 
   .top-nav {
-    /* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
+    /* För att få loggan och menyn att ligga horisontellt. 
+    Alternativt kan detta tas bort och en margin-top på ul läggas 
+    till. På mobilversionen är label-toggle lagd med margin.*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
     align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
+    -ms-flex-pack: space-between;
     /* Göm meny-knapp*/ }
     .top-nav .active {
       color: #827191 !important; }
@@ -599,7 +649,14 @@ textarea {
   .box-wrapper {
     width: 100%;
     padding: 0 4%;
-    flex-flow: row wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: auto; }
 
   /******************************************************************/

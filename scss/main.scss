@@ -1,6 +1,7 @@
 
 @import "mixins";
 
+
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
 @import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico');
@@ -14,8 +15,17 @@
    font-style: normal;
 }
 
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 $heading-font: "bebas_neue", Georgia;
-$paragraf-font: "Source Sans Pro", Georgia;
+$paragraf-font: "source_sans_proregular", Georgia;
 $special-font:"Pacifico", Georgia;
 $special-font2:"Courgette", Georgia;
 $special-font3:"Baloo Bhaina", Georgia;
@@ -147,17 +157,11 @@ main {
 	}
 
 	ul {
+		@include flexbox();
 		display: flex;
-		flex-direction: column;
+		@include flex-direction(column);
 		list-style-type: none;
 		width: 100%;
-
-		/*Normalize?*/
-		-webkit-margin-before: 0em;
-    	-webkit-margin-after: 0em;
-    	-webkit-margin-start: 0px;
-    	-webkit-margin-end: 0px;
-    	-webkit-padding-start: 0px;
 	}
 
 	li  {
@@ -176,8 +180,8 @@ main {
 
 .box-wrapper {
 	width: 100%;
-	display: flex;
-	flex-direction: column; 
+	@include flexbox();
+	@include flex-direction(column); 
 	margin: auto; /* center */
 	box-sizing: border-box;
 	z-index: 0;
@@ -186,10 +190,10 @@ main {
 
 .box { 
 	height: 100%;
-	justify-content: center;
-	align-items: center;
+	@include justify-content(center);
+	@include align-items(center);
 	box-sizing: border-box;
-		z-index: 0;
+	z-index: 0;
 
 }
 
