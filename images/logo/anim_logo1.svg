@@ -17,6 +17,7 @@
 		-webkit-animation: dash 4s linear forwards;
 		-o-animation: dash 4s linear forwards;
 		-moz-animation: dash 4s linear forwards;
+		-ms-animation: dash 4s linear forwards;
 		animation: dash 4s linear forwards;
 
 		}
@@ -32,6 +33,10 @@
 		stroke-dasharray:2000;
 		stroke-dashoffset:0;
 		-webkit-animation: dash 4s linear forwards;
+		-o-animation: dash 4s linear forwards;
+		-moz-animation: dash 4s linear forwards;
+		-ms-animation: dash 4s linear forwards;
+		animation: dash 4s linear forwards;
 		}
 		@-webkit-keyframe dash{
 			from {
