@@ -91,14 +91,7 @@
 /* Om oss */
 
 	.about-us .box {
-		min-width: calc(100% / 2);
-	}
-
-	.hover-box {
-		top: 0rem;
-		left: 0rem;
-		right: 0rem;
-		bottom: 0rem;
+		min-width: calc(100% / 1);
 	}
 
 /******************************************************************/
@@ -121,6 +114,14 @@
 } /* leave me <3 */
 
 
+/* Om oss med utökad min.width */
+@media screen and (min-width: 730px) and (max-width: 991px) {
+	.about-us .box {
+		min-width: calc(100% / 2);
+	}
+} /* Leave me <3 */ 
+
+
 /******************************************************************/
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
@@ -133,6 +134,10 @@
 		width: 100%;
 		padding: 2rem;
 		z-index: -2000;
+	}
+
+	.molly-sist {
+		order:0;
 	}
 }
 

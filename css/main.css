@@ -330,6 +330,9 @@ div {
   color: #827191;
   font-size: 1.3rem; }
 
+.molly-sist {
+  order: 1; }
+
 /******************************************************************/
 /* KONTAKT*/
 .kontakt {
@@ -486,13 +489,7 @@ textarea {
   /******************************************************************/
   /* Om oss */
   .about-us .box {
-    min-width: calc(100% / 2); }
-
-  .hover-box {
-    top: 0rem;
-    left: 0rem;
-    right: 0rem;
-    bottom: 0rem; }
+    min-width: calc(100% / 1); }
 
   /******************************************************************/
   /* Kontakt */
@@ -504,6 +501,11 @@ textarea {
   .kontakt-form {
     width: 100%; } }
 /* leave me <3 */
+/* Om oss med utökad min.width */
+@media screen and (min-width: 730px) and (max-width: 991px) {
+  .about-us .box {
+    min-width: calc(100% / 2); } }
+/* Leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
@@ -514,7 +516,10 @@ textarea {
     height: 100%;
     width: 100%;
     padding: 2rem;
-    z-index: -2000; } }
+    z-index: -2000; }
+
+  .molly-sist {
+    order: 0; } }
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
