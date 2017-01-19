@@ -237,13 +237,15 @@ main {
 .erbjuder-ruta {
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 250px;
+  /* för att få det att funka i mobil-safari pga bugg*/ }
   .erbjuder-ruta div {
     min-width: 30%;
     padding-right: 1rem;
     text-align: center; }
 
-div {
+.icon-hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -255,7 +257,7 @@ div {
   -o-transform: scale(1);
   transform: scale(1); }
 
-.hover:hover div {
+.hover:hover .icon-hover {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
@@ -282,7 +284,9 @@ div {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 460px;
+  /* för att få det att funka i mobil-safari pga bugg*/ }
 
 .left {
   background: #BEE3DB; }
@@ -295,7 +299,8 @@ div {
   max-width: 100%; }
 
 .project-text {
-  margin: 0.5rem 2rem 1rem; }
+  margin: 0.5rem 2rem 1rem;
+  text-align: center; }
 
 .arrow-down {
   display: flex;
@@ -739,6 +744,9 @@ textarea {
       padding-right: 0;
       min-height: 75px; }
 
+  .project-text {
+    text-align: left; }
+
   .erbjuder-reverse {
     flex-direction: row-reverse; }
 
@@ -766,7 +774,8 @@ textarea {
   .project {
     display: flex;
     flex-direction: row;
-    padding: 1rem; }
+    padding: 1rem;
+    min-height: auto; }
 
   .right {
     flex-direction: row-reverse; }
