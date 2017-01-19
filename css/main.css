@@ -219,8 +219,8 @@ main {
   left: 1rem; }
 
 .anim-fallback {
-  background: url(../images/logo/anim_logo1_fallback.png);
-  width: 100%;
+  background: url(../images/logo/anim_logo1.png);
+  width: 32%;
   position: absolute;
   top: 1.7rem;
   left: 1rem; }
