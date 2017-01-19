@@ -25,10 +25,15 @@ T ex
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /* Colors */
 /* General */
 html, body {
-  font: 16px/24px "Source Sans Pro", Georgia;
+  font: 16px/24px "source_sans_proregular", Georgia;
   margin: 0 auto;
   padding: 0; }
 
