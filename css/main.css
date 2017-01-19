@@ -220,9 +220,7 @@ main {
 
 .anim-fallback {
   background: url(../images/logo/anim_logo1_fallback.png);
-  /*  width: 15em;
-    height: 12em;*/
-  width: 32%;
+  width: 100%;
   position: absolute;
   top: 1.7rem;
   left: 1rem; }
