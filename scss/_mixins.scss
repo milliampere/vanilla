@@ -11,7 +11,6 @@ T ex
 }
 
 /* Transform 
-T ex 
 @include transform(scale(1.1));
 */ 
 @mixin transform($args...) {
@@ -22,9 +21,8 @@ T ex
   transform: $args;
 }
 
-/* Flexbox 
-@include flexbox();
-*/ 
+// Flexbox 
+// @include flexbox();
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -33,9 +31,8 @@ T ex
   display: flex;
 }
 
-/*
-@include flex-direction(column);
-*/
+// Flex direction
+// @include flex-direction(column);
 @mixin flex-direction($direction) {
   -webkit-flex-direction: $direction;
      -moz-flex-direction: $direction;
@@ -43,9 +40,8 @@ T ex
           flex-direction: $direction;
 }
 
-/*
+// Justify content (x)
 @include justify-content();
-*/
 // flex-start | flex-end | center | space-between | space-around 
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
@@ -56,8 +52,7 @@ T ex
 }
 
 
-// Cross-axis Alignment
-// - applies to: flex containers
+// Align-items (y)
 // flex-start | flex-end | center | baseline | stretch 
 @mixin align-items($align) {
   -webkit-align-items: $align;
@@ -67,12 +62,21 @@ T ex
 }
 
 
-// Flex Line Wrapping
-// - applies to: flex containers
+// Flex Wrap
 // nowrap | wrap | wrap-reverse
 @mixin flex-wrap($wrap) {
   -webkit-flex-wrap: $wrap;
      -moz-flex-wrap: $wrap;
       -ms-flex-wrap: $wrap;
           flex-wrap: $wrap;
+}
+
+// Flex Order
+// include order();
+@mixin order($int) {
+  -webkit-box-ordinal-group: $int;  
+     -moz-box-ordinal-group: $int;     
+         -ms-flex-order: $int;     
+          -webkit-order: $int;  
+            order: $int;
 }
