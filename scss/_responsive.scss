@@ -26,22 +26,52 @@
 
 	.box-wrapper {
 		width: 100%;
-		flex-flow: row wrap; 
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
 		margin: auto; /* center */
 	}
 
 /******************************************************************/
 /* Index */
 
+	.background-img-sm{
+		display:none;
+	}
+	.background-img{
+		display:block;
+		width: 100%;
+	}
+	.box-indexsidan{
+		width: 100%;
+		@include align-items(flex-start);
+		@include flexbox();
+		@include justify-content(space-between);
+		margin-top:3rem;
+	}
+	 
+	.index-left{ 
+		@include flex-basis(33.3%);		
+		@include flex-direction(row);
+	}
+
+	.index-middle{
+		@include flex-basis(33.4%);		
+		@include flex-flow(row);
+	}
+	.index-right{
+		@include flex-basis(33.3%);	
+		@include flex-flow(row);
+	}
+
 /******************************************************************/
 /* Erbjuder */
 
 	.erbjuder{
-		flex-flow: row; 
+		@include flex-flow(row); 
 	}
 
 	.erbjuder-ruta{
-		flex-direction: column;
+		@include flex-direction(column);
 		text-align: center;
 		min-width: 50%;
 		min-height: 350px;
@@ -52,7 +82,7 @@
 	}
 
 	.erbjuder-reverse{
-		flex-direction: row-reverse;
+		@include flex-direction(row-reverse);
 	} 
 
 /******************************************************************/
@@ -61,15 +91,8 @@
 /******************************************************************/
 /* Om oss */
 
-	.about-us .box {
-		min-width: calc(100% / 2);
-	}
-
-	.hover-box {
-		top: 0rem;
-		left: 0rem;
-		right: 0rem;
-		bottom: 0rem;
+	.about-us {
+		@include flex-direction(column);
 	}
 
 /******************************************************************/
@@ -77,12 +100,12 @@
 
 	.kontakt{
 		width: 70%;
-		align-items: flex-start;
-		flex-direction: column;
+		@include align-items(flex-start);
+		@include flex-direction(column);
 	}
 
 	.kontakt-form{
- width: 100%;
+ 		width: 100%;
 
 	}
 	.kontakt-karta{
@@ -90,6 +113,14 @@
 	}
 
 } /* leave me <3 */
+
+
+/* Om oss med utökad min.width */
+@media screen and (min-width: 730px) and (max-width: 991px) {
+	.about-us {
+		@include flex-direction(row);
+	}
+} /* Leave me <3 */ 
 
 
 /******************************************************************/
@@ -105,6 +136,12 @@
 		padding: 2rem;
 		z-index: -2000;
 	}
+
+
+	.molly-sist {
+		@include order(0);
+  }
+
 }
 
 
@@ -119,20 +156,18 @@
 	}
 
 	.top-nav {
-		/* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
+		/* För att få loggan och menyn att ligga horisontellt. */
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(space-between);
 
 		.active { 
 	 		color: $primary-color !important;
 		}
   
-
 		ul {
-			display: flex;
-			justify-content: space-between;
+			@include flexbox(); 
+			@include justify-content(space-between);
 			width: 70%;
 			visibility: visible;
 			opacity: 1;
@@ -160,8 +195,8 @@
 	.bottom-nav{
 		display: flex;
 		ul {
-			flex-direction: row;
-			justify-content: space-around;
+			@include flex-direction(row);
+			@include justify-content(space-around);
 		}
 	}
 
@@ -184,7 +219,7 @@
 /* Boxes */
 
 	body > main {
-		margin-top: 2rem;
+		margin-top: 2.5rem;
 	}
 	.top-header {
 	padding: 1.5rem 4% 0 4%;
@@ -192,7 +227,8 @@
 	.box-wrapper {
 		width: 100%;
 		padding: 0 4%;
-		flex-flow: row wrap; 
+		@include flex-direction(row);
+		@include flex-wrap(wrap); 
 		margin: auto; 
 	}
 
@@ -222,6 +258,17 @@
 /******************************************************************/
 /* Index */
 
+	.hem{
+		 min-height: 100px;
+	}
+
+	.background-img-sm{
+		display:none;
+	}
+	.background-img{
+		display:block;
+		width: 100%;
+	}
 
 	.background-text{
 		margin:2rem 0 0 0;
@@ -230,39 +277,55 @@
 		line-height: 3rem;
 	}
 
+	.index .box-wrapper{
+		padding:0;
+	}
+
 	.anim{
 		width:40%;
 		top: 3rem;
 		left: 2.5rem;
 	}
+
+	.box-indexsidan{
+		width: 100%;
+		@include align-items(flex-start);
+		@include flexbox(); 
+		@include justify-content(space-between);
+		margin-top:3rem;
+	}
 	 
-	.indexsidan{
-		flex-direction: row;
-		align-items: flex-start;
-		margin: 5rem 0 5rem 0;
+	.index-left{ 
+		@include flex-basis(30%);	
+		@include flex-direction(row);
+		margin-left: 2rem;
 	}
 
-	.article-img{
-		width:50%;
+	.index-middle{
+		@include flex-basis(30%);	
+		@include flex-direction(row); 
 	}
-
-	.article-text{
-		font-size: 0.9rem;
-		margin: 1rem 1rem 1rem 1rem;
+	.index-right{
+		@include flex-basis(30%);	
+		@include flex-direction(row);
+		margin-right: 2rem;
+/*		margin: 5rem 0 5rem 0;*/
 	}
-
  
+/*	.article-text{
+		font-size: 0.9rem;
+	}*/
 
 /******************************************************************/
 /* Erbjuder */
 
 	.erbjuder{
 		max-width: 1300px;
-		flex-flow: row; /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
+		@include flex-flow(row); /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
 	}
 
 	.erbjuder-ruta{
-		flex-direction: column;
+		@include flex-direction(column);
 		text-align: center;
 		min-width: 50%;
 		min-height: 350px;
@@ -273,8 +336,12 @@
 		}	
 	}
 
+	.project-text{
+		text-align: left;
+	}
+
 	.erbjuder-reverse{
-		flex-direction: row-reverse;
+		@include flex-direction(row-reverse);
 	} 
 
 	.hover:hover div{
@@ -295,13 +362,14 @@
 	}
 
 	.project{
-		display:flex;
-		flex-direction: row;
+		@include flexbox(); 
+		@include flex-direction(row);
 		padding: 1rem;
+		min-height: auto; 
 	}
 
 	.right{
-		flex-direction: row-reverse;
+		@include flex-direction(row-reverse);
 	}
 
 	.project-img{
@@ -309,8 +377,8 @@
 	}
 
 	.arrow-side{
-		display: flex;
-		align-self: flex-start;
+		@include flexbox(); 
+		@include align-self(flex-start);
 		margin: 0 0.5rem;
 	}
 
@@ -321,8 +389,8 @@
 /***************************************************************/
 /* Om oss */
 
-.about-us .box {
-		min-width: calc(100% / 2);
+.about-us {
+	@include flex-direction(row);
 }
 
 .tag {
@@ -358,10 +426,10 @@
 
 	.kontakt{
 		width: 100%; 
-		display: flex;
-		flex-flow: row;
-		align-items: flex-start;
-		justify-content: space-around;
+		@include flexbox(); 
+		@include flex-direction(row);
+		@include align-items(flex-start);
+		@include justify-content(space-around);
 	}
 
 	.kontakt-form{
