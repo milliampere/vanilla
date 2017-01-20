@@ -11,6 +11,7 @@ T ex
 }
 
 /* Transform 
+T ex 
 @include transform(scale(1.1));
 */ 
 @mixin transform($args...) {
@@ -21,91 +22,3 @@ T ex
   transform: $args;
 }
 
-// Flexbox 
-// @include flexbox();
-@mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-// Flex direction
-// @include flex-direction(column);
-@mixin flex-direction($direction) {
-  -webkit-flex-direction: $direction;
-     -moz-flex-direction: $direction;
-      -ms-flex-direction: $direction;
-          flex-direction: $direction;
-}
-
-// Justify content (x)
-//@include justify-content();
-// flex-start | flex-end | center | space-between | space-around 
-@mixin justify-content($justify) {
-  -webkit-justify-content: $justify;
-     -moz-justify-content: $justify;
-      -ms-justify-content: $justify;
-          justify-content: $justify;
-            -ms-flex-pack: $justify;
-}
-
-
-// Align-items (y)
-// flex-start | flex-end | center | baseline | stretch 
-@mixin align-items($align) {
-  -webkit-align-items: $align;
-     -moz-align-items: $align;
-      -ms-align-items: $align;
-          align-items: $align;
-}
-
-
-// Flex Wrap
-// nowrap | wrap | wrap-reverse
-@mixin flex-wrap($wrap) {
-  -webkit-flex-wrap: $wrap;
-     -moz-flex-wrap: $wrap;
-      -ms-flex-wrap: $wrap;
-          flex-wrap: $wrap;
-}
-
-// Flex Order
-// include order();
-@mixin order($int) {
-  -webkit-box-ordinal-group: $int;  
-     -moz-box-ordinal-group: $int;     
-         -ms-flex-order: $int;     
-          -webkit-order: $int;  
-            order: $int;
-}
-
-
-// Flex basis
-// - applies to: flex itemsnitial main size of the flex item
-// <width> 
-@mixin flex-basis($width) {
-  -webkit-flex-basis: $width;
-     -moz-flex-basis: $width;
-      -ms-flex-basis: $width;
-          flex-basis: $width;
-}
-
-// Cross-axis Alignment
-// auto | flex-start | flex-end | center | baseline | stretch 
-@mixin align-self($align) {
-  -webkit-align-self: $align;
-     -moz-align-self: $align;
-      -ms-align-self: $align;
-          align-self: $align;
-}
-
-// Flex Direction and Wrap
-// <flex-direction> || <flex-wrap>
-@mixin flex-flow($flow) {
-  -webkit-flex-flow: $flow;
-     -moz-flex-flow: $flow;
-      -ms-flex-flow: $flow;
-          flex-flow: $flow;
-}

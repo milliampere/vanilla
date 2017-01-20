@@ -4,6 +4,7 @@ T ex
 @include transition(color .3s ease);
 */
 /* Transform 
+T ex 
 @include transform(scale(1.1));
 */
 /* Fonts */
@@ -11,19 +12,14 @@ T ex
 @import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 @font-face {
-  font-family: 'bebas_neue';
-  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'source_sans_proregular';
-  src: url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../fonts/source_sans_pro/sourcesanspro-regular-webfont.woff") format("woff");
+  font-family: "Bebas Neue";
+  src: url("../fonts/bebas_neue/bebasneue-webfont.woff2") format("woff2"), url("bebasneue-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 /* Colors */
 /* General */
 html, body {
-  font: 16px/24px "source_sans_proregular", Georgia;
+  font: 16px/24px "Source Sans Pro", Georgia;
   margin: 0 auto;
   padding: 0; }
 
@@ -31,7 +27,7 @@ html, body {
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "bebas_neue", Georgia;
+  font-family: "Bebas Neue", Georgia;
   letter-spacing: 0.2rem; }
 
 h1 {
@@ -64,7 +60,7 @@ main {
 
 .top-nav {
   /* Länkstyling*/
-  font-family: "bebas_neue", Georgia;
+  font-family: "Bebas Neue", Georgia;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   /*Checkbox som aldrig ska visas*/
@@ -110,24 +106,23 @@ main {
   padding: 2rem 0;
   margin: 2rem 0;
   /* Länkstyling*/
-  font-family: "bebas_neue", Georgia;
+  font-family: "Bebas Neue", Georgia;
   font-size: 1.4rem;
   letter-spacing: 0.05rem; }
   .bottom-nav a {
     text-decoration: none;
     color: #000; }
   .bottom-nav ul {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     list-style-type: none;
-    width: 100%; }
+    width: 100%;
+    /*Normalize?*/
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px; }
   .bottom-nav li {
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
@@ -155,49 +150,57 @@ main {
 /* BOXES */
 .box-wrapper {
   width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin: auto;
   /* center */
+  box-sizing: border-box;
   z-index: 0; }
 
 .box {
   height: 100%;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
   align-items: center;
+  box-sizing: border-box;
   z-index: 0; }
 
 /******************************************************************/
-/* Index */
+/* INDEX mayhem for y'all.. */
+.box-wrapper-index {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-direction |  flex-wrap */
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start; }
+
+.box-indexsidan {
+  display: flex;
+  position: relative;
+  flex: 1 1 0;
+  /* flex-grow | flex-shrink | flex-basis. Default is 0 1 auto. */
+  min-width: 100%; }
+
 .hem {
   position: relative;
   margin: 0 0 0 0;
-  width: 100%;
-  /*	height: 610px;
-  	background-image: url("../images/hem/phoneman_500px_sm.jpg");
-   	background-repeat: no-repeat;
-   	background-color: salmon;
-   	background-size: contain; */ }
-
-.background-img {
-  display: none; }
-
-.background-img-sm {
   width: 100%; }
+
+.background {
+  width: 100%; }
+
+.background-text {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5rem; }
+
+.indexsidan {
+  display: flex;
+  flex-direction: column; }
 
 .anim {
   width: 32%;
@@ -205,39 +208,11 @@ main {
   top: 1.7rem;
   left: 1rem; }
 
-.anim-fallback {
-  background: url(../images/logo/anim_logo1.png);
-  width: 32%;
-  position: absolute;
-  top: 1.7rem;
-  left: 1rem; }
-
-.box-indexsidan {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  width: 100%; }
-
 .article-img {
   width: 100%; }
 
 .article-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0.5rem 1rem 1rem; }
 
 /************************************************************/
@@ -245,14 +220,13 @@ main {
 .erbjuder-ruta {
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
-  min-height: 250px;
-  /* för att få det att funka i mobil-safari pga bugg*/ }
+  box-sizing: border-box; }
   .erbjuder-ruta div {
     min-width: 30%;
     padding-right: 1rem;
     text-align: center; }
 
-.icon-hover {
+div {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -264,8 +238,7 @@ main {
   -o-transform: scale(1);
   transform: scale(1); }
 
-.hover:hover .icon-hover,
-.hover:focus .icon-hover {
+.hover:hover div {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
@@ -278,9 +251,6 @@ main {
   transform: scale(1.3); }
 
 .erbjuder-text {
-  -webkit-align-self: flex-start;
-  -moz-align-self: flex-start;
-  -ms-align-self: flex-start;
   align-self: flex-start; }
 
 .green {
@@ -292,18 +262,10 @@ main {
 /*******************************************************/
 /* PROJEKT */
 .project {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem;
-  min-height: 460px;
-  /* för att få det att funka i mobil-safari pga bugg*/ }
+  box-sizing: border-box; }
 
 .left {
   background: #BEE3DB; }
@@ -316,8 +278,7 @@ main {
   max-width: 100%; }
 
 .project-text {
-  margin: 0.5rem 2rem 1rem;
-  text-align: center; }
+  margin: 0.5rem 2rem 1rem; }
 
 .arrow-down {
   display: flex;
@@ -382,13 +343,6 @@ main {
   color: #827191;
   font-size: 1.3rem; }
 
-.molly-sist {
-  -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
-  -ms-flex-order: 1;
-  -webkit-order: 1;
-  order: 1; }
-
 /******************************************************************/
 /* KONTAKT*/
 .kontakt {
@@ -399,16 +353,6 @@ main {
   min-width: 360px; }
 
 .kontakt-adress {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
   display: flex;
   justify-content: space-between;
   min-width: 360px; }
@@ -461,7 +405,7 @@ textarea {
   margin: 2rem 0 0 0; }
   .contact-info p {
     margin: 0;
-    font-family: "bebas_neue", Georgia;
+    font-family: "Bebas Neue", Georgia;
     font-size: 1.2rem;
     letter-spacing: 0.05rem; }
 
@@ -501,86 +445,18 @@ textarea {
   /* Boxes */
   .box-wrapper {
     width: 100%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin: auto;
     /* center */ }
 
   /******************************************************************/
   /* Index */
-  .background-img-sm {
-    display: none; }
-
-  .background-img {
-    display: block;
-    width: 100%; }
-
-  .box-indexsidan {
-    width: 100%;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: space-between;
-    margin-top: 3rem; }
-
-  .index-left {
-    -webkit-flex-basis: 33.3%;
-    -moz-flex-basis: 33.3%;
-    -ms-flex-basis: 33.3%;
-    flex-basis: 33.3%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row; }
-
-  .index-middle {
-    -webkit-flex-basis: 33.4%;
-    -moz-flex-basis: 33.4%;
-    -ms-flex-basis: 33.4%;
-    flex-basis: 33.4%;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row; }
-
-  .index-right {
-    -webkit-flex-basis: 33.3%;
-    -moz-flex-basis: 33.3%;
-    -ms-flex-basis: 33.3%;
-    flex-basis: 33.3%;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row; }
-
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
 
   .erbjuder-ruta {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     min-width: 50%;
@@ -590,45 +466,31 @@ textarea {
       min-height: 75px; }
 
   .erbjuder-reverse {
-    -webkit-flex-direction: row-reverse;
-    -moz-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   /******************************************************************/
   /* Projekt */
   /******************************************************************/
   /* Om oss */
-  .about-us {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
+  .about-us .box {
+    min-width: calc(100% / 2); }
+
+  .hover-box {
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem; }
 
   /******************************************************************/
   /* Kontakt */
   .kontakt {
     width: 70%;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
     align-items: flex-start;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column; }
 
   .kontakt-form {
     width: 100%; } }
 /* leave me <3 */
-/* Om oss med utökad min.width */
-@media screen and (min-width: 730px) and (max-width: 991px) {
-  .about-us {
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row; } }
-/* Leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
@@ -639,18 +501,7 @@ textarea {
     height: 100%;
     width: 100%;
     padding: 2rem;
-
-    z-index: -2000; }
-
-  .molly-sist {
-    -webkit-box-ordinal-group: 0;
-    -moz-box-ordinal-group: 0;
-    -ms-flex-order: 0;
-    -webkit-order: 0;
-    order: 0; } }
-
     z-index: -2000; } }
-
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
@@ -661,35 +512,16 @@ textarea {
     left: 0; }
 
   .top-nav {
-    /* För att få loggan och menyn att ligga horisontellt. */
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    /* För att få loggan och menyn att ligga horisontellt. Alternativt kan detta tas bort och en margin-top på ul läggas till. På mobilversionen är label-toggle lagd med margin.*/
     display: flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
     align-items: center;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
     justify-content: space-between;
-    -ms-flex-pack: space-between;
     /* Göm meny-knapp*/ }
     .top-nav .active {
       color: #827191 !important; }
     .top-nav ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
       display: flex;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
       justify-content: space-between;
-      -ms-flex-pack: space-between;
       width: 70%;
       visibility: visible;
       opacity: 1;
@@ -724,15 +556,8 @@ textarea {
   .bottom-nav {
     display: flex; }
     .bottom-nav ul {
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      -ms-flex-direction: row;
       flex-direction: row;
-      -webkit-justify-content: space-around;
-      -moz-justify-content: space-around;
-      -ms-justify-content: space-around;
-      justify-content: space-around;
-      -ms-flex-pack: space-around; }
+      justify-content: space-around; }
 
   .contact-info {
     background-color: white; } }
@@ -742,7 +567,7 @@ textarea {
   /******************************************************************/
   /* Boxes */
   body > main {
-    margin-top: 2.5rem; }
+    margin-top: 2rem; }
 
   .top-header {
     padding: 1.5rem 4% 0 4%; }
@@ -750,14 +575,7 @@ textarea {
   .box-wrapper {
     width: 100%;
     padding: 0 4%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin: auto; }
 
   /******************************************************************/
@@ -780,98 +598,37 @@ textarea {
 
   /******************************************************************/
   /* Index */
-  .hem {
-    min-height: 100px; }
-
-  .background-img-sm {
-    display: none; }
-
-  .background-img {
-    display: block;
-    width: 100%; }
-
   .background-text {
     margin: 2rem 0 0 0;
     left: 3rem;
     font-size: 2.7rem;
     line-height: 3rem; }
 
-  .index .box-wrapper {
-    padding: 0; }
-
   .anim {
     width: 40%;
     top: 3rem;
     left: 2.5rem; }
 
-  .box-indexsidan {
-    width: 100%;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
+  .indexsidan {
+    flex-direction: row;
     align-items: flex-start;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: space-between;
-    margin-top: 3rem; }
+    margin: 5rem 0 5rem 0; }
 
-  .index-left {
-    -webkit-flex-basis: 30%;
-    -moz-flex-basis: 30%;
-    -ms-flex-basis: 30%;
-    flex-basis: 30%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-left: 2rem; }
+  .article-img {
+    width: 50%; }
 
-  .index-middle {
-    -webkit-flex-basis: 30%;
-    -moz-flex-basis: 30%;
-    -ms-flex-basis: 30%;
-    flex-basis: 30%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row; }
+  .article-text {
+    font-size: 0.9rem;
+    margin: 1rem 1rem 1rem 1rem; }
 
-  .index-right {
-    -webkit-flex-basis: 30%;
-    -moz-flex-basis: 30%;
-    -ms-flex-basis: 30%;
-    flex-basis: 30%;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-right: 2rem;
-    /*		margin: 5rem 0 5rem 0;*/ }
-
-  /*	.article-text{
-  		font-size: 0.9rem;
-  	}*/
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
     max-width: 1300px;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row;
     /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/ }
 
   .erbjuder-ruta {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     min-width: 50%;
@@ -881,13 +638,7 @@ textarea {
       padding-right: 0;
       min-height: 75px; }
 
-  .project-text {
-    text-align: left; }
-
   .erbjuder-reverse {
-    -webkit-flex-direction: row-reverse;
-    -moz-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   .hover:hover div {
@@ -912,36 +663,18 @@ textarea {
     letter-spacing: 0.05rem; }
 
   .project {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    padding: 1rem;
-    min-height: auto; }
+    padding: 1rem; }
 
   .right {
-    -webkit-flex-direction: row-reverse;
-    -moz-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   .project-img {
     width: 65%; }
 
   .arrow-side {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-align-self: flex-start;
-    -moz-align-self: flex-start;
-    -ms-align-self: flex-start;
     align-self: flex-start;
     margin: 0 0.5rem; }
 
@@ -950,11 +683,8 @@ textarea {
 
   /***************************************************************/
   /* Om oss */
-  .about-us {
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row; }
+  .about-us .box {
+    min-width: calc(100% / 2); }
 
   .tag {
     top: 4rem;
@@ -981,31 +711,10 @@ textarea {
   /* Kontakt */
   .kontakt {
     width: 100%;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around; }
-
     display: flex;
     flex-flow: row;
     align-items: flex-start;
     justify-content: space-around; }
-
 
   .kontakt-form {
     margin-top: 2.5rem;
