@@ -4,17 +4,7 @@ T ex
 @include transition(color .3s ease);
 */
 /* Transform 
-T ex 
 @include transform(scale(1.1));
-*/
-/* Flexbox 
-@include flexbox();
-*/
-/*
-@include flex-direction(column);
-*/
-/*
-@include justify-content();
 */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
@@ -132,7 +122,6 @@ main {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    display: flex;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
@@ -177,7 +166,6 @@ main {
   flex-direction: column;
   margin: auto;
   /* center */
-  box-sizing: border-box;
   z-index: 0; }
 
 .box {
@@ -191,7 +179,6 @@ main {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  box-sizing: border-box;
   z-index: 0; }
 
 /******************************************************************/
@@ -226,10 +213,24 @@ main {
   left: 1rem; }
 
 .box-indexsidan {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
   align-items: flex-start;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
   width: 100%; }
 
 .article-img {
@@ -244,7 +245,6 @@ main {
 .erbjuder-ruta {
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
-  box-sizing: border-box;
   min-height: 250px;
   /* för att få det att funka i mobil-safari pga bugg*/ }
   .erbjuder-ruta div {
@@ -278,6 +278,9 @@ main {
   transform: scale(1.3); }
 
 .erbjuder-text {
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-align-self: flex-start;
   align-self: flex-start; }
 
 .green {
@@ -289,10 +292,16 @@ main {
 /*******************************************************/
 /* PROJEKT */
 .project {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem;
-  box-sizing: border-box;
   min-height: 460px;
   /* för att få det att funka i mobil-safari pga bugg*/ }
 
@@ -374,6 +383,10 @@ main {
   font-size: 1.3rem; }
 
 .molly-sist {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
   order: 1; }
 
 /******************************************************************/
@@ -386,8 +399,16 @@ main {
   min-width: 360px; }
 
 .kontakt-adress {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
   justify-content: space-between;
+  -ms-flex-pack: space-between;
   min-width: 360px; }
   .kontakt-adress p {
     margin: 0.5rem 0; }
@@ -500,29 +521,64 @@ textarea {
 
   .box-indexsidan {
     width: 100%;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
+    -ms-flex-pack: space-between;
     margin-top: 3rem; }
 
   .index-left {
+    -webkit-flex-basis: 33.3%;
+    -moz-flex-basis: 33.3%;
+    -ms-flex-basis: 33.3%;
     flex-basis: 33.3%;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row; }
 
   .index-middle {
+    -webkit-flex-basis: 33.4%;
+    -moz-flex-basis: 33.4%;
+    -ms-flex-basis: 33.4%;
     flex-basis: 33.4%;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row; }
 
   .index-right {
+    -webkit-flex-basis: 33.3%;
+    -moz-flex-basis: 33.3%;
+    -ms-flex-basis: 33.3%;
     flex-basis: 33.3%;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row; }
 
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row; }
 
   .erbjuder-ruta {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     min-width: 50%;
@@ -532,20 +588,32 @@ textarea {
       min-height: 75px; }
 
   .erbjuder-reverse {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   /******************************************************************/
   /* Projekt */
   /******************************************************************/
   /* Om oss */
-  .about-us .box {
-    min-width: calc(100% / 1); }
+  .about-us {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
   /******************************************************************/
   /* Kontakt */
   .kontakt {
     width: 70%;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .kontakt-form {
@@ -553,8 +621,11 @@ textarea {
 /* leave me <3 */
 /* Om oss med utökad min.width */
 @media screen and (min-width: 730px) and (max-width: 991px) {
-  .about-us .box {
-    min-width: calc(100% / 2); } }
+  .about-us {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
 /* Leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
@@ -569,6 +640,10 @@ textarea {
     z-index: -2000; }
 
   .molly-sist {
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    -ms-flex-order: 0;
+    -webkit-order: 0;
     order: 0; } }
 /******************************************************************/
 /* Meny i både medium och large */
@@ -580,9 +655,7 @@ textarea {
     left: 0; }
 
   .top-nav {
-    /* För att få loggan och menyn att ligga horisontellt. 
-    Alternativt kan detta tas bort och en margin-top på ul läggas 
-    till. På mobilversionen är label-toggle lagd med margin.*/
+    /* För att få loggan och menyn att ligga horisontellt. */
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -601,8 +674,16 @@ textarea {
     .top-nav .active {
       color: #827191 !important; }
     .top-nav ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
       justify-content: space-between;
+      -ms-flex-pack: space-between;
       width: 70%;
       visibility: visible;
       opacity: 1;
@@ -637,8 +718,15 @@ textarea {
   .bottom-nav {
     display: flex; }
     .bottom-nav ul {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
       flex-direction: row;
-      justify-content: space-around; }
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; }
 
   .contact-info {
     background-color: white; } }
@@ -648,7 +736,7 @@ textarea {
   /******************************************************************/
   /* Boxes */
   body > main {
-    margin-top: 2rem; }
+    margin-top: 2.5rem; }
 
   .top-header {
     padding: 1.5rem 4% 0 4%; }
@@ -712,23 +800,52 @@ textarea {
 
   .box-indexsidan {
     width: 100%;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
+    -ms-flex-pack: space-between;
     margin-top: 3rem; }
 
   .index-left {
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    -ms-flex-basis: 30%;
     flex-basis: 30%;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin-left: 2rem; }
 
   .index-middle {
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    -ms-flex-basis: 30%;
     flex-basis: 30%;
-    flex-flow: row; }
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
 
   .index-right {
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    -ms-flex-basis: 30%;
     flex-basis: 30%;
-    flex-flow: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-right: 2rem;
     /*		margin: 5rem 0 5rem 0;*/ }
 
@@ -739,10 +856,16 @@ textarea {
   /* Erbjuder */
   .erbjuder {
     max-width: 1300px;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row;
     /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/ }
 
   .erbjuder-ruta {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     min-width: 50%;
@@ -756,6 +879,9 @@ textarea {
     text-align: left; }
 
   .erbjuder-reverse {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   .hover:hover div {
@@ -780,19 +906,36 @@ textarea {
     letter-spacing: 0.05rem; }
 
   .project {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
     padding: 1rem;
     min-height: auto; }
 
   .right {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
 
   .project-img {
     width: 65%; }
 
   .arrow-side {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-self: flex-start;
+    -moz-align-self: flex-start;
+    -ms-align-self: flex-start;
     align-self: flex-start;
     margin: 0 0.5rem; }
 
@@ -801,8 +944,11 @@ textarea {
 
   /***************************************************************/
   /* Om oss */
-  .about-us .box {
-    min-width: calc(100% / 2); }
+  .about-us {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
 
   .tag {
     top: 4rem;
@@ -829,10 +975,24 @@ textarea {
   /* Kontakt */
   .kontakt {
     width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    flex-flow: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
-    justify-content: space-around; }
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around; }
 
   .kontakt-form {
     margin-top: 2.5rem;

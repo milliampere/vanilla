@@ -158,7 +158,6 @@ main {
 
 	ul {
 		@include flexbox();
-		display: flex;
 		@include flex-direction(column);
 		list-style-type: none;
 		width: 100%;
@@ -183,7 +182,6 @@ main {
 	@include flexbox();
 	@include flex-direction(column); 
 	margin: auto; /* center */
-	box-sizing: border-box;
 	z-index: 0;
 }
 
@@ -192,7 +190,6 @@ main {
 	height: 100%;
 	@include justify-content(center);
 	@include align-items(center);
-	box-sizing: border-box;
 	z-index: 0;
 
 }
@@ -235,10 +232,10 @@ main {
 
 }
 .box-indexsidan {
-	display:flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: center;
+	@include flexbox();
+	@include flex-wrap(wrap);
+	@include align-items(flex-start);
+	@include justify-content(center);
 	width:100%;
 }
 
@@ -256,7 +253,6 @@ main {
 .erbjuder-ruta{
 	display: flex;
 	padding: 1rem 1.5rem 1rem 1rem;
-	box-sizing: border-box;
 	min-height: 250px; /* för att få det att funka i mobil-safari pga bugg*/
 	div{
 		min-width: 30%;
@@ -278,7 +274,7 @@ main {
 
 
 .erbjuder-text{
-	align-self: flex-start;
+	@include align-self(flex-start);
 }
 
 .green{
@@ -292,10 +288,9 @@ main {
 /*******************************************************/
 /* PROJEKT */
 .project{
-	display: flex;
-	flex-direction: column;
+	@include flexbox(); 
+	@include flex-direction(column);
 	padding: 1rem;
-	box-sizing: border-box;
 	min-height: 460px; /* för att få det att funka i mobil-safari pga bugg*/
 }
 
@@ -409,8 +404,8 @@ main {
 }
 
 .kontakt-adress{
-	display: flex;
-	justify-content: space-between;
+	@include flexbox();;
+	@include justify-content(space-between);
 	min-width: 360px;
 	p{
 		margin: 0.5rem 0;
