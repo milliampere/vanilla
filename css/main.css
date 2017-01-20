@@ -31,6 +31,7 @@ T ex
   font-weight: normal;
   font-style: normal; }
 /* Colors */
+/*#827191*/
 /* General */
 html, body {
   font: 16px/24px "source_sans_proregular", Georgia;
@@ -331,7 +332,7 @@ main {
   right: 2rem; }
   .tag h3 {
     font-size: 1.5rem;
-    background-color: #827191;
+    background-color: #cf85f1;
     color: black;
     margin: 0;
     padding: 0;
@@ -369,7 +370,7 @@ main {
     padding-top: 0; }
 
 .name {
-  color: #827191;
+  color: #cf85f1;
   font-size: 1.3rem; }
 
 .molly-sist {
@@ -559,7 +560,7 @@ textarea {
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
   .background-skew {
-    background-color: #827191;
+    background-color: #cf85f1;
     transform: skewY(15deg);
     position: absolute;
     height: 100%;
@@ -598,7 +599,7 @@ textarea {
     -ms-flex-pack: space-between;
     /* Göm meny-knapp*/ }
     .top-nav .active {
-      color: #827191 !important; }
+      color: #cf85f1 !important; }
     .top-nav ul {
       display: flex;
       justify-content: space-between;
