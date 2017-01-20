@@ -41,7 +41,6 @@ html, body {
 
 * {
 	box-sizing: border-box;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -228,6 +227,16 @@ main {
 	left: 1rem;
 
 }
+.slogan{
+	height:200px;
+	width: 90%;
+	padding:0.2rem;
+	text-align: center;
+	font-family: $paragraf-font;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	letter-spacing: 0.05rem;
+}
 .box-indexsidan {
 	@include flexbox();
 	@include flex-wrap(wrap);
@@ -238,11 +247,14 @@ main {
 
 .article-img{
 	width:100%;
+	display: block;
+	margin: auto;
 }
 
 .article-text{
-	font-size: 0.9rem;
-	margin: 0.5rem 1rem 1rem;
+	font-size: 1rem;
+	margin: 0.5rem 1rem 2rem 1rem;
+
 }
 /************************************************************/
 /*Vi erbjuder*/

@@ -41,6 +41,16 @@
 		display:block;
 		width: 100%;
 	}
+		.slogan{
+		height:250px;
+		width: 100%;
+		padding:5%;
+		text-align: center;
+		font-family: $paragraf-font;
+		font-size: 2rem;
+		line-height: 4rem;
+		letter-spacing: 0.05rem;
+	}
 	.box-indexsidan{
 		width: 100%;
 		@include align-items(flex-start);
@@ -160,7 +170,13 @@
 		@include justify-content(space-between);
 
 		.active { 
-	 		color: $primary-color !important;
+/*	 		color: black !important;*/
+	 		color: white !important;
+	 		text-decoration: none !important;
+	 		background-color: $secondary-color;
+	 		background-color: black;
+	 		padding:0.2rem 0.3rem 0.2rem 0.3rem;
+	/* 		border-radius: 0.2rem;*/
 		}
   
 		ul {
@@ -286,15 +302,14 @@
 	}
 
 	.slogan{
-		height:500px;
+		height:300px;
 		width: 100%;
-/*		background-color: $tertiary-color;*/
+		padding:5%;
 		text-align: center;
-		font-family: $heading-font;
-		font-size: 4rem;
-		line-height: 7rem;
+		font-family: $paragraf-font;
+		font-size: 2.5rem;
+		line-height: 5rem;
 		letter-spacing: 0.05rem;
-
 	}
 
 	.box-indexsidan{
