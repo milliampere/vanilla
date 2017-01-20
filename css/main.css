@@ -409,6 +409,8 @@ main {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  display: flex;
+  justify-content: space-between;
   min-width: 360px; }
   .kontakt-adress p {
     margin: 0.5rem 0; }
@@ -637,6 +639,7 @@ textarea {
     height: 100%;
     width: 100%;
     padding: 2rem;
+
     z-index: -2000; }
 
   .molly-sist {
@@ -645,6 +648,9 @@ textarea {
     -ms-flex-order: 0;
     -webkit-order: 0;
     order: 0; } }
+
+    z-index: -2000; } }
+
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
@@ -975,6 +981,7 @@ textarea {
   /* Kontakt */
   .kontakt {
     width: 100%;
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -993,6 +1000,12 @@ textarea {
     -ms-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: space-around; }
+
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-around; }
+
 
   .kontakt-form {
     margin-top: 2.5rem;
