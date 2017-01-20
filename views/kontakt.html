@@ -18,16 +18,16 @@
 <body>
 	<header class="top-header">
 	  <nav class="top-nav">
-	    <div class="logo"><a href="../index.html"><img src="../images/logo/vanilla-logo.svg" class="logo" alt="Logga"></a></div>
+	    <div class="logo"><a href="../index.html"><img src="../images/logo/vanilla-logo.svg" class="logo"></a></div>
 	    <input type="checkbox" id="checkbox-toggle" class="checkbox-toggle">
 	      <label for="checkbox-toggle" class="label-toggle">Meny<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span></label>
-
+	    </input>
 	    <ul>
-			<li><a href="../index.html">Hem</a></li>
-			<li><a href="erbjuder.html">Vi erbjuder</a></li>
-			<li><a href="projekt.html">Projekt</a></li>
-			<li><a href="om-oss.html">Om oss</a></li>
-			<li><a href="kontakt.html" class="active">Kontakt</a></li>
+			<a href="../index.html"><li>Hem</li></a>
+			<a href="erbjuder.html"><li>Vi erbjuder</li></a>
+			<a href="projekt.html"><li>Projekt</li></a>
+			<a href="om-oss.html"><li>Om oss</li></a>
+			<a href="kontakt.html" class="active"><li>Kontakt</li></a>
 	    </ul>
 	  </nav>
 	</header>
@@ -40,16 +40,15 @@
 		<section class="box-wrapper kontakt">
 			<article class="kontakt-form">
 				<h1>hör av er till oss!</h1>
-
-				<label> Fyll i ditt namn:</label>
+				<label for="namn"> Fyll i ditt namn:</label>
 				<br>
 				<input type="text" name="namn">
-				<label>E-postadress:</label>
+				<label for="epost">E-postadress:</label>
 				<br>
 				<input type="email" name="email" required="required">
 				<br>
 				<br>
-				<label>Vad kan vi stå till tjänst med?</label>
+				<label for="vadkanvi">Vad kan vi stå till tjänst med?</label>
 				<br>
 				<textarea name="textarea" placeholder="Kära Vanilla Web Design..."></textarea>
 				<input type="submit" class="skicka" value="Skicka!"> 
@@ -75,11 +74,11 @@
 	<footer>
 		<nav class="bottom-nav text-center">
 			<ul>
-			<li><a href="../index.html">Hem</a></li>
-			<li><a href="erbjuder.html">Vi erbjuder</a></li>
-			<li><a href="projekt.html">Projekt</a></li>
-			<li><a href="om-oss.html">Om oss</a></li>
-			<li><a href="kontakt.html" class="active">Kontakt</a></li>
+				<a href="../index.html"><li>Hem</li></a>
+				<a href="erbjuder.html"><li>Vi erbjuder</li></a>
+				<a href="projekt.html"><li>Projekt</li></a>
+				<a href="om-oss.html"><li>Om oss</li></a>
+				<a href="kontakt.html" class="active"><li>Kontakt</li></a>
 			</ul>
 		</nav>
 		<section class="contact-info text-center">

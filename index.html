@@ -18,51 +18,53 @@
 
 	<header class="top-header">
 	  <nav class="top-nav">
-	    <div class="logo"><a href="index.html"><img src="images/logo/vanilla-logo.svg" class="logo" alt="Logga"></a></div>
+	    <div class="logo"><a href="index.html"><img src="images/logo/vanilla-logo.svg" class="logo"></a></div>
 	    <input type="checkbox" id="checkbox-toggle" class="checkbox-toggle">
 	      <label for="checkbox-toggle" class="label-toggle">Meny<span class="fa fa-caret-down fa-1x" aria-hidden="true"></span></label>
+	    </input>
 	    <ul>
-			<li><a href="index.html">Hem</a></li>
-			<li><a href="views/erbjuder.html">Vi erbjuder</a></li>
-			<li><a href="views/projekt.html">Projekt</a></li>
-			<li><a href="views/om-oss.html">Om oss</a></li>
-			<li><a href="views/kontakt.html">Kontakt</a></li>
+			<a href="index.html"><li>Hem</li></a>
+			<a href="views/erbjuder.html"><li>Vi erbjuder</li></a>
+			<a href="views/projekt.html"><li>Projekt</li></a>
+			<a href="views/om-oss.html"><li>Om oss</li></a>
+			<a href="views/kontakt.html"><li>Kontakt</li></a>
 	    </ul>
 	  </nav>
 	</header>
-	<main class="index">
-		<section class="box-wrapper">
-			<article class="hem">
-				<object type="anim_logo1.svg" data="images/logo">
-				<embed src="images/logo/anim_logo1.svg" onerror="this.src='images/logo/anim_logo1.png'; this.onerror=null;" class="anim" /><div class="anim-fallback"></div></object>
-				<img src="images/hem/phoneman_1200px.jpg" class="background-img" alt="Phoneman">
-				<img src="images/hem/phoneman_500px_sm.jpg" class="background-img-sm" alt="Phoneman">
-			</article>
-			<article class="box-indexsidan">
-				<section class="index-left">
-					<img src="images/hem/domore.jpg" class="article-img" alt="Do more">
-					<p class="article-text">Vanilla Web Design är en webb-byrå med höga ambitioner som hjälper våra kunder att synas på nätet!</p>
-				</section>
-				<section class="index-middle">
-					<img src="images/hem/kontoret.jpg" class="article-img" alt="Kontoret">
-					<p class="article-text">Vi har flyttat till nya lokaler på Skånegatan 90. Välkomna förbi så bjuder vi på fika!</p>
-				</section>
 
-				<section class="index-right">
-					<img src="images/hem/newyork.jpg" class="article-img" alt="New work">
-						<p class="article-text">Vanilla Web Design samarbetar med en designbyrå i New York.<br><u>Läs mer</u></p>
-				</section>
+	<main>
+		<section class="box-wrapper-index">
+			<article class="hem">
+			<object><embed src="images/logo/anim_logo1.svg" class="anim"></object>
+				<img src="images/hem/phoneman_sm.jpg" class="background">
+<!-- 				<h1 class="background-text">Vi skapar responsiva
+				webbplatser <br>för det mobila samhället</h1> -->
+
 			</article>
-		</section>	
+			
+			<article class="box-indexsidan indexsidan">
+				<img src="images/hem/domore.jpg" class="article-img">
+
+	
+				<p class="article-text">Lorem Khaled Ipsum is a major key to success. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live rough? How’s business? Boomin. Why live rough? How’s business? Boomin.<br><u>Läs mer</u></p>
+			</article>
+
+			<article class="box-indexsidan indexsidan">
+				<img src="images/hem/newyork.jpg" class="article-img">
+				<p class="article-text">Vanilla Web Design samarbetar med ett designbyrå i New York. <br><u>Läs mer</u></p>
+			</article>
+			
+		</section>
 	</main>
+
 	<footer>
 		<nav class="bottom-nav text-center">
 			<ul>
-				<li><a href="index.html">Hem</a></li>
-				<li><a href="views/erbjuder.html">Vi erbjuder</a></li>
-				<li><a href="views/projekt.html">Projekt</a></li>
-				<li><a href="views/om-oss.html">Om oss</a></li>
-				<li><a href="views/kontakt.html">Kontakt</a></li>
+				<a href="index.html"><li>Hem</li></a>
+				<a href="views/erbjuder.html"><li>Vi erbjuder</li></a>
+				<a href="views/projekt.html"><li>Projekt</li></a>
+				<a href="views/om-oss.html"><li>Om oss</li></a>
+				<a href="views/kontakt.html"><li>Kontakt</li></a>
 			</ul>
 		</nav>
 		<section class="contact-info text-center">
