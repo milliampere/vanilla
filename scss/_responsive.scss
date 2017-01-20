@@ -26,7 +26,6 @@
 
 	.box-wrapper {
 		width: 100%;
-		//flex-flow: row wrap; 
 		@include flex-direction(row);
 		@include flex-wrap(wrap);
 		margin: auto; /* center */
@@ -52,7 +51,7 @@
 	 
 	.index-left{ 
 		flex-basis:33.3%;	
-		flex-direction: row;
+		@include flex-direction(row);
 	}
 
 	.index-middle{
@@ -139,7 +138,7 @@
 	}
 
 	.molly-sist {
-		order:0;
+		@include order(0);
 	}
 }
 
@@ -196,7 +195,7 @@
 	.bottom-nav{
 		display: flex;
 		ul {
-			flex-direction: row;
+			@include flex-direction(row);
 			justify-content: space-around;
 		}
 	}
@@ -299,7 +298,7 @@
 	 
 	.index-left{ 
 		flex-basis:30%;	
-		flex-direction: row;
+		@include flex-direction(row);
 		margin-left: 2rem;
 	}
 
@@ -365,7 +364,7 @@
 
 	.project{
 		display:flex;
-		flex-direction: row;
+		@include flex-direction(row);
 		padding: 1rem;
 		min-height: auto; 
 	}
