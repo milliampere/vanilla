@@ -7,9 +7,6 @@ T ex
 @include transform(scale(1.1));
 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
-@import url("https://fonts.googleapis.com/css?family=Courgette|Pacifico");
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 @font-face {
   font-family: 'bebas_neue';
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff");
@@ -21,7 +18,6 @@ T ex
   font-weight: normal;
   font-style: normal; }
 /* Colors */
-/*#827191*/
 /* General */
 html, body {
   font: 16px/24px "source_sans_proregular", Georgia;
@@ -342,7 +338,7 @@ main {
   right: 2rem; }
   .tag h3 {
     font-size: 1.5rem;
-    background-color: #cf85f1;
+    background-color: #e3bec6;
     color: black;
     margin: 0;
     padding: 0;
@@ -380,7 +376,7 @@ main {
     padding-top: 0; }
 
 .name {
-  color: #cf85f1;
+  color: #827191;
   font-size: 1.3rem; }
 
 .molly-sist {
@@ -477,6 +473,12 @@ textarea {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1); }
+
+.contact-icones p {
+  font-family: "bebas_neue", Georgia;
+  font-size: 1.1rem;
+  margin: 0rem;
+  letter-spacing: 0.05rem; }
 
 /************************************************************/
 /* Medium devices */
@@ -632,12 +634,12 @@ textarea {
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
   .background-skew {
-    background-color: #cf85f1;
-    transform: skewY(15deg);
+    background-color: #e3bec6;
+    transform: skewY(155deg);
     position: absolute;
     height: 100%;
     width: 100%;
-    padding: 2rem;
+    padding: 20rem;
     z-index: -2000; }
 
   .molly-sist {
@@ -673,7 +675,7 @@ textarea {
     -ms-flex-pack: space-between;
     /* Göm meny-knapp*/ }
     .top-nav .active {
-      color: #cf85f1 !important; }
+      color: #827191 !important; }
     .top-nav ul {
       display: -webkit-box;
       display: -moz-box;
@@ -798,6 +800,16 @@ textarea {
     width: 40%;
     top: 3rem;
     left: 2.5rem; }
+
+  .slogan {
+    height: 500px;
+    width: 100%;
+    /*		background-color: $tertiary-color;*/
+    text-align: center;
+    font-family: "bebas_neue", Georgia;
+    font-size: 4rem;
+    line-height: 7rem;
+    letter-spacing: 0.05rem; }
 
   .box-indexsidan {
     width: 100%;

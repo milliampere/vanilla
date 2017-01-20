@@ -3,9 +3,6 @@
 
 
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Source-Sans-Pro");
-@import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 @font-face {
    font-family: 'bebas_neue';
@@ -26,15 +23,13 @@
 
 $heading-font: "bebas_neue", Georgia;
 $paragraf-font: "source_sans_proregular", Georgia;
-$special-font:"Pacifico", Georgia;
-$special-font2:"Courgette", Georgia;
-$special-font3:"Baloo Bhaina", Georgia;
 
 /* Colors */
-$primary-color: #cf85f1; 
+$primary-color: #827191; 
 
-/*#827191*/
 $secondary-color: #BEE3DB; 
+
+$tertiary-color: #e3bec6; 
 
 
 /* General */
@@ -344,7 +339,7 @@ main {
 	right: 2rem;
 	h3 {
 		font-size: 1.5rem;
-		background-color: $primary-color;
+		background-color: $tertiary-color;
 		color: black;
 		margin: 0;
 		padding: 0;
@@ -478,11 +473,17 @@ textarea {
 
 .contact-icones span {
 	padding: 0.7rem;
-
 	&:hover {
 		@include transition(all .3s ease);
 		@include transform(scale(1.1));
 	}
+}
+.contact-icones p {
+	
+		font-family: $heading-font;
+		font-size: 1.1rem;
+		margin: 0rem;
+		letter-spacing: 0.05rem;
 }
 
 /************************************************************/

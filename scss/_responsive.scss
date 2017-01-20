@@ -128,12 +128,12 @@
 @media screen and (min-width: 543px) {
 
 	.background-skew{
-		background-color: $primary-color;
-		transform: skewY(15deg);
+		background-color: $tertiary-color;
+		transform: skewY(155deg);
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		padding: 2rem;
+		padding: 20rem;
 		z-index: -2000;
 	}
 
@@ -283,6 +283,18 @@
 		width:40%;
 		top: 3rem;
 		left: 2.5rem;
+	}
+
+	.slogan{
+		height:500px;
+		width: 100%;
+/*		background-color: $tertiary-color;*/
+		text-align: center;
+		font-family: $heading-font;
+		font-size: 4rem;
+		line-height: 7rem;
+		letter-spacing: 0.05rem;
+
 	}
 
 	.box-indexsidan{
