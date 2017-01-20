@@ -41,7 +41,7 @@ T ex
 }
 
 // Justify content (x)
-@include justify-content();
+//@include justify-content();
 // flex-start | flex-end | center | space-between | space-around 
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
@@ -79,4 +79,33 @@ T ex
          -ms-flex-order: $int;     
           -webkit-order: $int;  
             order: $int;
+}
+
+
+// Flex basis
+// - applies to: flex itemsnitial main size of the flex item
+// <width> 
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Cross-axis Alignment
+// auto | flex-start | flex-end | center | baseline | stretch 
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}
+
+// Flex Direction and Wrap
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
 }
