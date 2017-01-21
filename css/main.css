@@ -197,10 +197,10 @@ main {
   width: 100%; }
 
 .anim {
-  width: 32%;
+  width: 50%;
   position: absolute;
-  top: 1.7rem;
-  left: 1rem; }
+  top: 4rem;
+  left: 0.6rem; }
 
 .anim-fallback {
   background: url(../images/logo/anim_logo1.png);
@@ -211,12 +211,13 @@ main {
 
 .slogan {
   height: 200px;
-  width: 90%;
-  padding: 0.2rem;
+  width: 100%;
+  padding: 1rem;
   text-align: center;
+  vertical-align: middle;
   font-family: "source_sans_proregular", Georgia;
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   letter-spacing: 0.05rem; }
 
 .box-indexsidan {
@@ -541,7 +542,7 @@ textarea {
     text-align: center;
     font-family: "source_sans_proregular", Georgia;
     font-size: 2rem;
-    line-height: 4rem;
+    line-height: 3.8rem;
     letter-spacing: 0.05rem; }
 
   .box-indexsidan {
