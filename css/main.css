@@ -347,10 +347,10 @@ main {
 
 .tag {
   position: absolute;
-  top: 2rem;
-  right: 2rem; }
+  top: 1rem;
+  right: 1rem; }
   .tag h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: #e3bec6;
     color: black;
     margin: 0;
@@ -371,25 +371,25 @@ main {
   bottom: 0rem;
   background: #FFF;
   opacity: 0;
-  -webkit-transition: all 1s ease-in;
-  -moz-transition: all 1s ease-in;
-  -ms-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
-  transition: all 1s ease-in;
+  -webkit-transition: all 0.8s ease-in;
+  -moz-transition: all 0.8s ease-in;
+  -ms-transition: all 0.8s ease-in;
+  -o-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
   padding: 1.5rem; }
   .hover-box:hover {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    opacity: 0.8; }
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    opacity: 0.9; }
   .hover-box p {
     margin-top: 0;
     padding-top: 0; }
 
 .name {
-  color: #827191;
+  color: #000;
   font-size: 1.3rem; }
 
 .molly-sist {
@@ -646,6 +646,13 @@ textarea {
     width: 100%; } }
 /* leave me <3 */
 /* Om oss med utökad min.width */
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .hover-box {
+    top: 4rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    padding: 2.5rem; } }
 @media screen and (min-width: 730px) and (max-width: 991px) {
   .about-us {
     -webkit-flex-direction: row;
@@ -993,24 +1000,19 @@ textarea {
     flex-direction: row; }
 
   .tag {
-    top: 4rem;
-    right: 4rem; }
+    top: 2rem;
+    right: 2rem; }
     .tag h3 {
       font-size: 2rem; }
 
-  .arrow {
-    bottom: 4rem;
-    right: 4rem; }
-
   .hover-box {
-    top: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
+    top: 3rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
     padding: 2.5rem; }
     .hover-box p {
-      padding-right: 8rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       letter-spacing: 0.05rem; }
 
   /******************************************************************/
