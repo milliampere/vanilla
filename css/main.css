@@ -34,11 +34,20 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2rem; }
 
+h1 {
+  font-size: 1.7rem; }
+
+h1 {
+  font-size: 1.5rem; }
+
 .text-center {
   text-align: center; }
 
 /******************************************************************
 /* HEADER/NAVIGATION */
+* {
+  border: 1px solid red; }
+
 /* Toppmenyn */
 main {
   padding-top: 7rem;
@@ -79,12 +88,13 @@ main {
     text-align: center;
     transition: opacity 1s ease, height 1s ease;
     visibility: hidden;
-    width: 100%;
+    width: 98%;
     opacity: 0;
     height: 0;
     display: block;
     list-style-type: none;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   .top-nav li {
     border-bottom: 1px solid #FFF;
     display: block;
