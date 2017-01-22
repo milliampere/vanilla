@@ -25,7 +25,8 @@ html, body {
   padding: 0; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 1px solid red; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "bebas_neue", Georgia;
@@ -346,8 +347,7 @@ main {
 /******************************************************************/
 /* OM OSS */
 .about-us .box {
-  position: relative;
-  flex: 1 1 0; }
+  position: relative; }
 
 .about-us img {
   width: 100%; }
@@ -665,7 +665,13 @@ textarea {
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
-    flex-direction: row; } }
+    flex-direction: row; }
+    .about-us .box {
+      -webkit-flex-basis: 50%;
+      -moz-flex-basis: 50%;
+      -ms-flex-basis: 50%;
+      flex-basis: 50%;
+      /* IE bug */ } }
 /* Leave me <3 */
 /******************************************************************/
 /* För både mellan och stor */
@@ -1005,6 +1011,12 @@ textarea {
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row; }
+    .about-us .box {
+      -webkit-flex-basis: 50%;
+      -moz-flex-basis: 50%;
+      -ms-flex-basis: 50%;
+      flex-basis: 50%;
+      /* IE bug */ }
 
   .tag {
     top: 2rem;

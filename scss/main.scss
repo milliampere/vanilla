@@ -41,6 +41,7 @@ html, body {
 
 * {
 	box-sizing: border-box;
+	border: 1px solid red;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -345,8 +346,7 @@ vertical-align: middle;
 /* OM OSS */
 
 .about-us .box {
-	position: relative;
-	flex: 1 1 0; 
+	position: relative; 
 }
 
 .about-us img {
