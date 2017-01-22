@@ -566,8 +566,7 @@ textarea {
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    -ms-flex-pack: space-between;
-    margin-top: 3rem; }
+    -ms-flex-pack: space-between; }
 
   .index-left {
     -webkit-flex-basis: 33.3%;
@@ -684,6 +683,14 @@ textarea {
     padding: 20rem;
     z-index: -2000; }
 
+  .background-skew-index {
+    background-color: #e3bec6;
+    transform: skewY(170deg);
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    z-index: -2000; }
+
   .molly-sist {
     -webkit-box-ordinal-group: 0;
     -moz-box-ordinal-group: 0;
@@ -717,13 +724,11 @@ textarea {
     -ms-flex-pack: space-between;
     /* Göm meny-knapp*/ }
     .top-nav .active {
-      /*	 		color: black !important;*/
       color: white !important;
       text-decoration: none !important;
       background-color: #BEE3DB;
       background-color: black;
-      padding: 0.2rem 0.3rem 0.2rem 0.3rem;
-      /* 		border-radius: 0.2rem;*/ }
+      padding: 0.2rem 0.3rem 0.2rem 0.3rem; }
     .top-nav ul {
       display: -webkit-box;
       display: -moz-box;
@@ -778,6 +783,12 @@ textarea {
       -ms-justify-content: space-around;
       justify-content: space-around;
       -ms-flex-pack: space-around; }
+    .bottom-nav .active {
+      color: white !important;
+      text-decoration: none !important;
+      background-color: #BEE3DB;
+      background-color: black;
+      padding: 0.2rem 0.3rem 0.2rem 0.3rem; }
 
   .contact-info {
     background-color: white; } }
@@ -874,8 +885,7 @@ textarea {
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    -ms-flex-pack: space-between;
-    margin-top: 3rem; }
+    -ms-flex-pack: space-between; }
 
   .index-left {
     -webkit-flex-basis: 30%;
@@ -907,8 +917,7 @@ textarea {
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-right: 2rem;
-    /*		margin: 5rem 0 5rem 0;*/ }
+    margin-right: 2rem; }
 
   /*	.article-text{
   		font-size: 0.9rem;
