@@ -139,6 +139,10 @@
 @media screen and (min-width: 730px) and (max-width: 991px) {
 	.about-us {
 		@include flex-direction(row);
+
+		.box {
+			@include flex-basis(50%);  /* IE bug */
+		}
 	}
 } /* Leave me <3 */ 
 
@@ -426,6 +430,10 @@
 
 .about-us {
 	@include flex-direction(row);
+
+	.box {
+		@include flex-basis(50%);  /* IE bug */
+	}
 }
 
 .tag {
