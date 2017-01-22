@@ -90,7 +90,7 @@ main {
     height: 0;
     display: block;
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0; }
   .top-nav li {
     border-bottom: 1px solid #FFF;
