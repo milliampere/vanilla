@@ -457,6 +457,9 @@ input {
   border-radius: 0.25em;
   font-size: 1rem; }
 
+.skicka:hover {
+  background-color: #6EB4A5; }
+
 textarea {
   width: 100%;
   height: 12em;
@@ -919,8 +922,8 @@ textarea {
     flex-direction: row;
     margin-right: 2rem; }
 
-  /*	.article-text{
-  		font-size: 0.9rem;
+  /*	.article-img{
+  	border-radius: 2px;
   	}*/
   /******************************************************************/
   /* Erbjuder */
