@@ -34,11 +34,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2rem; }
 
-h1 {
-  font-size: 1.7rem; }
-
-h1 {
+h2 {
   font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.1rem; }
 
 .text-center {
   text-align: center; }
@@ -355,8 +355,7 @@ main {
   position: absolute;
   top: 1rem;
   right: 1rem; }
-  .tag h3 {
-    font-size: 1.3rem;
+  .tag h2 {
     background-color: #e3bec6;
     color: black;
     margin: 0;
@@ -396,7 +395,7 @@ main {
 
 .name {
   color: #000;
-  font-size: 1.3rem; }
+  font-weight: 700; }
 
 .molly-sist {
   -webkit-box-ordinal-group: 1;
@@ -411,7 +410,7 @@ main {
   width: 95%; }
 
 .kontakt-form {
-  margin: 2rem 0;
+  /* margin: 2rem 0; Denna har justerats globalt */
   min-width: 360px; }
 
 .kontakt-adress {
@@ -454,8 +453,7 @@ input {
   color: black;
   padding: 0.4rem;
   border: none;
-  border-radius: 0.25em;
-  font-size: 1rem; }
+  border-radius: 0.25em; }
 
 textarea {
   width: 100%;
@@ -495,11 +493,24 @@ textarea {
 
 .contact-icones p {
   font-family: "bebas_neue", Georgia;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 0rem;
   letter-spacing: 0.05rem; }
 
 /************************************************************/
+@media screen and (min-width: 543px) {
+  h1 {
+    font-size: 2rem; }
+
+  h2 {
+    font-size: 1.8rem; }
+
+  h3 {
+    font-size: 1.5rem; }
+
+  p, label, input {
+    font-size: 1.1rem;
+    letter-spacing: 0.03rem; } }
 /* Medium devices */
 @media screen and (min-width: 543px) and (max-width: 991px) {
   /******************************************************************/
@@ -743,7 +754,8 @@ textarea {
       width: 70%;
       visibility: visible;
       opacity: 1;
-      float: right; }
+      float: right;
+      margin: 0; }
     .top-nav li {
       display: inline-block;
       padding: 0;
@@ -826,10 +838,10 @@ textarea {
     width: 220px; }
 
   .top-nav {
-    font-size: 2.5rem; }
+    font-size: 2.3rem; }
 
   .bottom-nav {
-    font-size: 2.5rem; }
+    font-size: 2.3rem; }
 
   .main-header {
     display: none; }
@@ -971,10 +983,10 @@ textarea {
   .project-content {
     width: 100%; }
 
-  .project-text {
-    font-size: 1.2rem;
-    letter-spacing: 0.05rem; }
-
+  /*.project-text{
+  	font-size: 1.2rem;
+  	letter-spacing: 0.05rem;
+  } Gemensam storlek på brödtext? */
   .project {
     display: -webkit-box;
     display: -moz-box;
@@ -1029,8 +1041,6 @@ textarea {
   .tag {
     top: 2rem;
     right: 2rem; }
-    .tag h3 {
-      font-size: 2rem; }
 
   .hover-box {
     top: 3rem;
@@ -1038,9 +1048,6 @@ textarea {
     right: 0rem;
     bottom: 0rem;
     padding: 2.5rem; }
-    .hover-box p {
-      font-size: 1.1rem;
-      letter-spacing: 0.05rem; }
 
   /******************************************************************/
   /* Kontakt */
@@ -1066,17 +1073,20 @@ textarea {
     -ms-flex-pack: space-around; }
 
   .kontakt-form {
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; Denna har justerats globalt*/
     width: 35%; }
 
   .kontakt-karta {
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; Denna har justerats globalt */
     width: 35%; }
 
   /******************************************************************/
   /* Footer */
   .contact-info {
-    background: none; } }
+    background: none; }
+
+  .contact-info p, .contact-icones p {
+    font-size: 1.3rem; } }
 /* leave me <3 */
 
 /*# sourceMappingURL=main.css.map */

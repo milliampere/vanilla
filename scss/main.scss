@@ -51,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 2rem;
 }
-h1 {
-	font-size: 1.7rem;
-}
-h1 {
+h2 {
 	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.1rem;
 }
 
 .text-center {
@@ -356,8 +356,7 @@ vertical-align: middle;
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-	h3 {
-		font-size: 1.3rem;
+	h2 {
 		background-color: $tertiary-color;
 		color: black;
 		margin: 0;
@@ -398,7 +397,7 @@ vertical-align: middle;
 
 .name {
 	color: #000;
-	font-size: 1.3rem;
+	font-weight: 700;
 }
 
 //Molly visas sist i mobilt läge
@@ -415,7 +414,7 @@ vertical-align: middle;
 }
 
 .kontakt-form{
-	margin: 2rem 0;
+	/* margin: 2rem 0; Denna har justerats globalt */
 	min-width: 360px;
 }
 
@@ -460,7 +459,6 @@ input{
     padding: 0.4rem;
     border: none;
     border-radius: 0.25em;
-    font-size: 1rem;
 }
 
 textarea {
@@ -500,7 +498,7 @@ textarea {
 .contact-icones p {
 	
 		font-family: $heading-font;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		margin: 0rem;
 		letter-spacing: 0.05rem;
 }

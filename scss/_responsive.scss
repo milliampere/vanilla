@@ -1,3 +1,21 @@
+@media screen and (min-width: 543px) {
+
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p, label, input {
+		font-size: 1.1rem;
+		letter-spacing: 0.03rem;
+	}
+}
+
 /* Medium devices */ 
 @media screen and (min-width: 543px) and (max-width: 991px) {
 
@@ -205,6 +223,7 @@
 			visibility: visible;
 			opacity: 1;
 			float: right;
+			margin: 0;
 		}
 
 		li  {
@@ -284,11 +303,11 @@
 	}
 
 	.top-nav {
-		font-size: 2.5rem;
+		font-size: 2.3rem;
 	}	
 
 	.bottom-nav{
-		font-size: 2.5rem;
+		font-size: 2.3rem;
 	}
 
 	.main-header{
@@ -405,10 +424,10 @@
 		width: 100% /* kanske är snyggast att ha denna i helskärm ändå? /nina*/
 	}
 
-	.project-text{
+	/*.project-text{
 		font-size: 1.2rem;
 		letter-spacing: 0.05rem;
-	}
+	} Gemensam storlek på brödtext? */ 
 
 	.project{
 		@include flexbox(); 
@@ -449,9 +468,6 @@
 .tag {
 	top: 2rem;
 	right: 2rem;
-	h3 {
-		font-size: 2rem;
-	}
 }
 
 .hover-box {
@@ -460,11 +476,6 @@
 	right: 0rem;
 	bottom: 0rem;
 	padding: 2.5rem;
-
-	p {
-		font-size: 1.1rem;
-		letter-spacing: 0.05rem;
-	}
 }
 
 /******************************************************************/
@@ -479,12 +490,12 @@
 	}
 
 	.kontakt-form{
-		margin-top: 2.5rem;
+		/* margin-top: 2.5rem; Denna har justerats globalt*/
 		width: 35%;
 	}
 
 	.kontakt-karta{
-		margin-top: 2.5rem;
+		/* margin-top: 2.5rem; Denna har justerats globalt */
 		width: 35%;	
 	}
 
@@ -493,6 +504,13 @@
 /* Footer */
 	.contact-info{
 		background: none;
+	}
+
+	.contact-info, .contact-icones { 
+
+	p {
+			font-size: 1.3rem;
+		}
 	}
 
 }  /* leave me <3 */
