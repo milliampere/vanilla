@@ -28,6 +28,7 @@ $paragraf-font: "source_sans_proregular", Georgia;
 $primary-color: #827191; 
 
 $secondary-color: #BEE3DB; 
+$secondary-hover-color: #6EB4A5;
 
 $tertiary-color: #e3bec6; 
 
@@ -459,6 +460,9 @@ input{
     padding: 0.4rem;
     border: none;
     border-radius: 0.25em;
+}
+.skicka:hover{
+    background-color: $secondary-hover-color;
 }
 
 textarea {
