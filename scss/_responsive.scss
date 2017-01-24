@@ -438,6 +438,7 @@
 		@include flexbox();
 		@include flex-direction(column);
 		text-align: center;
+		max-width: 35%; /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/
 		p{
 			margin: 0rem 1rem;
 		}

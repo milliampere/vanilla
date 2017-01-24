@@ -1019,7 +1019,9 @@ textarea {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    text-align: center; }
+    text-align: center;
+    max-width: 35%;
+    /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/ }
     .project-text p {
       margin: 0rem 1rem; }
 
