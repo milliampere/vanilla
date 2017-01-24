@@ -55,10 +55,12 @@
 	.background-img-sm{
 		display:none;
 	}
+
 	.background-img{
 		display:block;
 		width: 100%;
 	}
+
 	.slogan{
 		height:250px;
 		width: 100%;
@@ -69,6 +71,7 @@
 		line-height: 3.8rem;
 		letter-spacing: 0.05rem;
 	}
+
 	.box-indexsidan{
 		width: 100%;
 		@include align-items(flex-start);
@@ -85,6 +88,7 @@
 		@include flex-basis(33.4%);		
 		@include flex-flow(row);
 	}
+
 	.index-right{
 		@include flex-basis(33.3%);	
 		@include flex-flow(row);
@@ -134,10 +138,6 @@
 
 	.kontakt-form{
  		width: 100%;
-
-	}
-	.kontakt-karta{
-	 
 	}
 
 } /* leave me <3 */
@@ -153,6 +153,7 @@
 		padding: 2.5rem;
 	}
 }
+
 @media screen and (min-width: 730px) and (max-width: 991px) {
 	.about-us {
 		@include flex-direction(row);
@@ -267,10 +268,6 @@
 
 
 
-
-
-
-
 /* Stora skärmar */ 
 @media screen and (min-width: 992px){
 
@@ -280,9 +277,11 @@
 	body > main {
 		margin-top: 2.5rem;
 	}
+
 	.top-header {
-	padding: 1.5rem 4% 0 4%;
+		padding: 1.5rem 4% 0 4%;
 	}
+
 	.box-wrapper {
 		width: 100%;
 		padding: 0 4%;
@@ -299,7 +298,7 @@
 	}
 
 	.logo {
-			width: 220px;
+		width: 220px;
 	}
 
 	.top-nav {
@@ -367,6 +366,7 @@
 		@include flex-basis(30%);	
 		@include flex-direction(row); 
 	}
+
 	.index-right{
 		@include flex-basis(30%);	
 		@include flex-direction(row);
@@ -377,7 +377,6 @@
 /* Erbjuder */
 
 	.erbjuder{
-		max-width: 1300px;
 		@include flex-flow(row); 
 	}
 
@@ -391,10 +390,6 @@
 			padding-right: 0;
 			min-height: 75px;
 		}	
-	}
-
-	.project-text{
-		text-align: left;
 	}
 
 	.erbjuder-reverse{
@@ -437,7 +432,6 @@
 	.project-text{
 		@include flexbox();
 		@include flex-direction(column);
-		text-align: center;
 		max-width: 35%; /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/
 		p{
 			margin: 0rem 1rem;
@@ -447,26 +441,26 @@
 /***************************************************************/
 /* Om oss */
 
-.about-us {
-	@include flex-direction(row);
+	.about-us {
+		@include flex-direction(row);
 
-	.box {
-		@include flex-basis(50%);  /* IE bug */
+		.box {
+			@include flex-basis(50%);  /* IE bug */
+		}
 	}
-}
 
-.tag {
-	top: 2rem;
-	right: 2rem;
-}
+	.tag {
+		top: 2rem;
+		right: 2rem;
+	}
 
-.hover-box {
-	top: 3rem;
-	left: 0rem;
-	right: 0rem;
-	bottom: 0rem;
-	padding: 2.5rem;
-}
+	.hover-box {
+		top: 3rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+		padding: 2.5rem;
+	}
 
 /******************************************************************/
 /* Kontakt */
@@ -497,8 +491,7 @@
 	}
 
 	.contact-info, .contact-icones { 
-
-	p {
+		p {
 			font-size: 1.3rem;
 		}
 	}
