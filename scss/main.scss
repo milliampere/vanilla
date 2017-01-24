@@ -310,7 +310,7 @@ vertical-align: middle;
 	@include flexbox(); 
 	@include flex-direction(column);
 	padding: 1rem;
-	min-height: 460px; /* för att få det att funka i mobil-safari pga bugg*/
+	min-height: 500px; /* för att få det att funka i mobil-safari pga bugg*/
 }
 
 .left{
@@ -327,9 +327,8 @@ vertical-align: middle;
 }
 
 .project-text{
-	margin: 0.5rem 2rem 1rem;
 	text-align: center;
-}
+}	
 
 .arrow-down{
 	display: flex;
@@ -339,9 +338,6 @@ vertical-align: middle;
 .arrow-side{
 	display: none;
 }
-
-
-
 
 /******************************************************************/
 /* OM OSS */

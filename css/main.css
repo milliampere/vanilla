@@ -319,7 +319,7 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem;
-  min-height: 460px;
+  min-height: 500px;
   /* för att få det att funka i mobil-safari pga bugg*/ }
 
 .left {
@@ -333,7 +333,6 @@ main {
   max-width: 100%; }
 
 .project-text {
-  margin: 0.5rem 2rem 1rem;
   text-align: center; }
 
 .arrow-down {
@@ -935,8 +934,7 @@ textarea {
     -webkit-flex-flow: row;
     -moz-flex-flow: row;
     -ms-flex-flow: row;
-    flex-flow: row;
-    /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/ }
+    flex-flow: row; }
 
   .erbjuder-ruta {
     -webkit-flex-direction: column;
@@ -974,13 +972,6 @@ textarea {
 
   /************************************************************/
   /* Projekt */
-  .project-content {
-    width: 100%; }
-
-  /*.project-text{
-  	font-size: 1.2rem;
-  	letter-spacing: 0.05rem;
-  } Gemensam storlek på brödtext? */
   .project {
     display: -webkit-box;
     display: -moz-box;
@@ -1017,6 +1008,20 @@ textarea {
 
   .arrow-down {
     display: none; }
+
+  .project-text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+    .project-text p {
+      margin: 0rem 1rem; }
 
   /***************************************************************/
   /* Om oss */
