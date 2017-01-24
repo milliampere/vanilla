@@ -378,7 +378,7 @@
 
 	.erbjuder{
 		max-width: 1300px;
-		@include flex-flow(row); /* skriver över box-wrapper flex-flow: row wrap;  ovanför, kan därför inte lägga in allt på samlad skärmstorlek*/
+		@include flex-flow(row); 
 	}
 
 	.erbjuder-ruta{
@@ -409,15 +409,6 @@
 /************************************************************/
 /* Projekt */
 
-	.project-content{
-		width: 100% /* kanske är snyggast att ha denna i helskärm ändå? /nina*/
-	}
-
-	/*.project-text{
-		font-size: 1.2rem;
-		letter-spacing: 0.05rem;
-	} Gemensam storlek på brödtext? */ 
-
 	.project{
 		@include flexbox(); 
 		@include flex-direction(row);
@@ -441,6 +432,15 @@
 
 	.arrow-down{
 		display: none;
+	}
+
+	.project-text{
+		@include flexbox();
+		@include flex-direction(column);
+		text-align: center;
+		p{
+			margin: 0rem 1rem;
+		}
 	}
   
 /***************************************************************/
