@@ -48,7 +48,10 @@ h3 {
 /* Toppmenyn */
 main {
   padding-top: 7rem;
-  /* För att få ned innehåll*/ }
+  /* För att få ned innehåll*/
+  max-width: 1500px;
+  /* För att innehållet inte ska bli alltför brett i stora skärmar*/
+  margin: auto; }
 
 .top-nav {
   margin: 0 auto;
@@ -56,7 +59,7 @@ main {
 
 .top-header {
   position: fixed;
-  min-width: 100%;
+  width: 100%;
   background: #FFF;
   z-index: 999;
   padding: 1rem 2%; }
@@ -321,13 +324,6 @@ main {
   padding: 1rem;
   min-height: 500px;
   /* för att få det att funka i mobil-safari pga bugg*/ }
-
-.left {
-  background: #BEE3DB; }
-
-.right {
-  background: none;
-  border: 1px solid black; }
 
 .project-img {
   max-width: 100%; }
@@ -930,7 +926,6 @@ textarea {
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
-    max-width: 1300px;
     -webkit-flex-flow: row;
     -moz-flex-flow: row;
     -ms-flex-flow: row;
@@ -948,9 +943,6 @@ textarea {
     .erbjuder-ruta div {
       padding-right: 0;
       min-height: 75px; }
-
-  .project-text {
-    text-align: left; }
 
   .erbjuder-reverse {
     -webkit-flex-direction: row-reverse;
@@ -1019,7 +1011,6 @@ textarea {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    text-align: center;
     max-width: 35%;
     /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/ }
     .project-text p {
