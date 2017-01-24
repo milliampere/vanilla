@@ -329,13 +329,6 @@
 		width: 100%;
 	}
 
-	.background-text{
-		margin:2rem 0 0 0;
-		left: 3rem;
-		font-size: 2.7rem;
-		line-height: 3rem;
-	}
-
 	.index .box-wrapper{
 		padding:0;
 	}
@@ -379,10 +372,6 @@
 		@include flex-direction(row);
 		margin-right: 2rem;
 	}
- 
-/*	.article-img{
-	border-radius: 2px;
-	}*/
 
 /******************************************************************/
 /* Erbjuder */
