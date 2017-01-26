@@ -225,16 +225,13 @@ att läsa in den första bakgrundsbilden - png.
   	position: absolute;
 	width:220px;
 	height:275px;
- 	margin: 3rem 0 0 0.2rem;
+ 	margin: 2.5rem 0 0 0.2rem;
  	background-repeat: no-repeat;
 }
 .slogan{
 	height:200px;
 	width: 100%;
-		padding-top: 2rem;
-/*		padding-left:2rem;
-		padding-bottom: 5rem;
-		padding-right: 2rem;*/
+	padding-top: 2rem;
 	text-align: center;
 	vertical-align: middle;
 	font-family: $paragraf-font;
