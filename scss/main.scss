@@ -265,7 +265,7 @@ att läsa in den första bakgrundsbilden - png.
 .erbjuder-ruta{
 	display: flex;
 	padding: 1rem 1.5rem 1rem 1rem;
-	min-height: 250px; /* för att få det att funka i mobil-safari pga bugg*/
+	min-height: 250px; /* för att fixa mobil-safari bugg */
 	div{
 		min-width: 30%;
 		padding-right: 1rem;
@@ -302,7 +302,7 @@ att läsa in den första bakgrundsbilden - png.
 	@include flexbox(); 
 	@include flex-direction(column);
 	padding: 1rem;
-	min-height: 500px; /* för att få det att funka i mobil-safari pga bugg*/
+	min-height: 500px; /* för att fixa mobil-safari bugg */
 }
 
 .project-img { 

@@ -395,12 +395,16 @@
 		@include flex-direction(column);
 		text-align: center;
 		min-width: 50%;
-		min-height: 350px;
+		height: 350px; 
 		padding: 0 3rem;
 		div{
 			padding-right: 0;
 			min-height: 75px;
 		}	
+	}
+
+	.erbjuder-text{
+		width: 100%; /* för att fixa flexbox-bugg ie */
 	}
 
 	.erbjuder-reverse{
@@ -443,7 +447,7 @@
 	.project-text{
 		@include flexbox();
 		@include flex-direction(column);
-		max-width: 35%; /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/
+		max-width: 35%; /* för att fixa flexbox-bug ie och firefox */
 		p{
 			margin: 0rem 1rem;
 		}
