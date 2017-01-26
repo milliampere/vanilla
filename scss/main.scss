@@ -231,7 +231,10 @@ att läsa in den första bakgrundsbilden - png.
 .slogan{
 	height:200px;
 	width: 100%;
-	padding:6%;
+		padding-top: 2rem;
+/*		padding-left:2rem;
+		padding-bottom: 5rem;
+		padding-right: 2rem;*/
 	text-align: center;
 	vertical-align: middle;
 	font-family: $paragraf-font;

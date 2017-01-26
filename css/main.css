@@ -221,7 +221,10 @@ att läsa in den första bakgrundsbilden - png.
 .slogan {
   height: 200px;
   width: 100%;
-  padding: 6%;
+  padding-top: 2rem;
+  /*		padding-left:2rem;
+  		padding-bottom: 5rem;
+  		padding-right: 2rem;*/
   text-align: center;
   vertical-align: middle;
   font-family: "source_sans_proregular", Georgia;
@@ -551,10 +554,9 @@ textarea {
 
   .slogan {
     height: 250px;
-    width: 100%;
-    padding: 6%;
-    text-align: center;
-    font-family: "source_sans_proregular", Georgia;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 2rem;
     line-height: 3.8rem;
     letter-spacing: 0.05rem; }
@@ -802,7 +804,7 @@ textarea {
   .contact-info {
     background-color: white; } }
 /* Leave me <3 */
-/* Index anim-logo ligger i en bakgrund tvungen att ändrad min-width */
+/* Index - andra medium och large-sizes för att anpassa anim-logo till bakgrundsbilden */
 @media screen and (min-width: 640px) {
   .anim {
     width: 300px;
@@ -814,6 +816,7 @@ textarea {
     height: 370px;
     margin: 2rem 0 0 1.5rem; } }
  /* Leave me <3  
+
 
 /* Stora skärmar */
 @media screen and (min-width: 992px) {
@@ -873,10 +876,7 @@ textarea {
 
   .slogan {
     height: 300px;
-    width: 100%;
-    padding: 6%;
-    text-align: center;
-    font-family: "source_sans_proregular", Georgia;
+    padding-top: 5rem;
     font-size: 2.4rem;
     line-height: 5rem;
     letter-spacing: 0.05rem; }
