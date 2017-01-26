@@ -265,7 +265,7 @@ att läsa in den första bakgrundsbilden - png.
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
   min-height: 250px;
-  /* för att få det att funka i mobil-safari pga bugg*/ }
+  /* för att fixa mobil-safari bugg */ }
   .erbjuder-ruta div {
     min-width: 30%;
     padding-right: 1rem;
@@ -322,7 +322,7 @@ att läsa in den första bakgrundsbilden - png.
   flex-direction: column;
   padding: 1rem;
   min-height: 500px;
-  /* för att få det att funka i mobil-safari pga bugg*/ }
+  /* för att fixa mobil-safari bugg */ }
 
 .project-img {
   max-width: 100%; }
@@ -948,11 +948,15 @@ textarea {
     flex-direction: column;
     text-align: center;
     min-width: 50%;
-    min-height: 350px;
+    height: 350px;
     padding: 0 3rem; }
     .erbjuder-ruta div {
       padding-right: 0;
       min-height: 75px; }
+
+  .erbjuder-text {
+    width: 100%;
+    /* för att fixa flexbox-bugg ie */ }
 
   .erbjuder-reverse {
     -webkit-flex-direction: row-reverse;
@@ -1022,7 +1026,7 @@ textarea {
     -ms-flex-direction: column;
     flex-direction: column;
     max-width: 35%;
-    /* för att få texten att inte bli en lång rad i internet-explorer och inte ta över i firefox*/ }
+    /* för att fixa flexbox-bug ie och firefox */ }
     .project-text p {
       margin: 0rem 1rem; }
 
