@@ -206,18 +206,17 @@ main {
 .background-img-sm {
   width: 100%; }
 
+/* FALLBACK SVG, om webbläsaren inte stödjer multipla bakgrunder kommer den 
+att läsa in den första bakgrundsbilden - png.
+*/
 .anim {
-  width: 50%;
+  background: url("../images/logo/fallback@0.3x.png");
+  background-image: url("../images/logo/anim_logo1.svg"), none;
   position: absolute;
-  top: 4rem;
-  left: 0.6rem; }
-
-.anim-fallback {
-  background: url(../images/logo/anim_logo1.png);
-  width: 32%;
-  position: absolute;
-  top: 1.7rem;
-  left: 1rem; }
+  width: 220px;
+  height: 275px;
+  margin: 3rem 0 0 0.2rem;
+  background-repeat: no-repeat; }
 
 .slogan {
   height: 200px;
@@ -689,7 +688,6 @@ textarea {
     position: absolute;
     height: 100%;
     width: 100%;
-    /*		padding: 20rem;*/
     z-index: -2000; }
 
   .background-skew-index {
@@ -706,6 +704,7 @@ textarea {
     -ms-flex-order: 0;
     -webkit-order: 0;
     order: 0; } }
+/* Leave me <3 */
 /******************************************************************/
 /* Meny i både medium och large */
 @media screen and (min-width: 643px) {
@@ -803,6 +802,19 @@ textarea {
   .contact-info {
     background-color: white; } }
 /* Leave me <3 */
+/* Index anim-logo ligger i en bakgrund tvungen att ändrad min-width */
+@media screen and (min-width: 640px) {
+  .anim {
+    width: 300px;
+    height: 275px;
+    margin: 3.5rem 0 0 0.4rem; } }
+@media screen and (min-width: 1150px) {
+  .anim {
+    width: 500px;
+    height: 370px;
+    margin: 2rem 0 0 1.5rem; } }
+ /* Leave me <3  
+
 /* Stora skärmar */
 @media screen and (min-width: 992px) {
   /******************************************************************/
@@ -858,11 +870,6 @@ textarea {
 
   .index .box-wrapper {
     padding: 0; }
-
-  .anim {
-    width: 40%;
-    top: 3rem;
-    left: 2.5rem; }
 
   .slogan {
     height: 300px;

@@ -175,7 +175,6 @@
 		position: absolute;
 		height: 100%;
 		width: 100%;
-/*		padding: 20rem;*/
 		z-index: -2000;
 	}
 	.background-skew-index{
@@ -190,8 +189,7 @@
 	.molly-sist {
 		@include order(0);
 	}
-}
-
+} /* Leave me <3 */
 
 /******************************************************************/
 /* Meny i både medium och large */
@@ -266,6 +264,21 @@
 
 } /* Leave me <3 */
 
+/* Index anim-logo ligger i en bakgrund tvungen att ändrad min-width */
+@media screen and (min-width: 640px){
+	.anim{
+		width:300px;
+		height:275px;
+	 	margin: 3.5rem 0 0 0.4rem;
+    }
+}
+@media screen and (min-width: 1150px) {
+	.anim{ 
+		width:500px;
+		height:370px;
+		margin: 2rem 0 0 1.5rem;
+    }
+}/* Leave me <3  
 
 /* Stora skärmar */ 
 @media screen and (min-width: 992px){
@@ -329,12 +342,6 @@
 
 	.index .box-wrapper{
 		padding:0;
-	}
-
-	.anim{
-		width:40%;
-		top: 3rem;
-		left: 2.5rem;
 	}
 
 	.slogan{
