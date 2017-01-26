@@ -923,6 +923,9 @@ textarea {
     flex-direction: row;
     margin-right: 2rem; }
 
+  .article-img {
+    width: 100%; }
+
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
