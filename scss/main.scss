@@ -200,11 +200,7 @@ main {
 	position:relative;
 	margin: 0 0 0 0;
 	width:100%;
-/*	height: 610px;
-	background-image: url("../images/hem/phoneman_500px_sm.jpg");
- 	background-repeat: no-repeat;
- 	background-color: salmon;
- 	background-size: contain; */
+	height: 100%;
 }
 
 .background-img{
@@ -238,7 +234,7 @@ att läsa in den första bakgrundsbilden - png.
 .slogan{
 	height:200px;
 	width: 100%;
-	padding-top: 2rem;
+	padding: 2rem 1rem 0 1rem;
 	text-align: center;
 	vertical-align: middle;
 	font-family: $paragraf-font;
@@ -246,7 +242,6 @@ att läsa in den första bakgrundsbilden - png.
 	line-height: 2.5rem;
 	letter-spacing: 0.05rem;
 }
-
 .box-indexsidan {
 	@include flexbox();
 	@include flex-wrap(wrap);
