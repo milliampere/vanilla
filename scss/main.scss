@@ -412,7 +412,7 @@ att läsa in den första bakgrundsbilden - png.
 }
 
 .gatubild {
-	min-width: 360px;
+	max-width:100%;
 	@include border-radius(0.1rem);
 }
 

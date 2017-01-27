@@ -431,7 +431,7 @@ att läsa in den första bakgrundsbilden - png.
     margin: 0.5rem 0; }
 
 .gatubild {
-  min-width: 360px;
+  max-width: 100%;
   -webkit-border-radius: 0.1rem;
   -moz-border-radius: 0.1rem;
   -ms-border-radius: 0.1rem;
