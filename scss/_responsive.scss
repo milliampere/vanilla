@@ -265,7 +265,7 @@
 } /* Leave me <3 */
 
 /* Index - andra medium och large-sizes för att anpassa anim-logo till bakgrundsbilden */
-@media screen and (min-width: 640px){
+/*@media screen and (min-width: 640px){
 	.anim{
 		width:300px;
 		height:275px;
@@ -278,7 +278,7 @@
 		height:370px;
 		margin: 2rem 0 0 1.5rem;
     }
-}/* Leave me <3  
+}*//* Leave me <3  
 
 
 /* Stora skärmar */ 
@@ -344,6 +344,12 @@
 		width: 100%;
 	}
 
+	.anim{
+		width:40%;
+		top: 3rem;
+		left: 2.5rem;
+	}
+	
 	.index .box-wrapper{
 		padding:0;
 	}

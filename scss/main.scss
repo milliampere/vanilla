@@ -218,7 +218,7 @@ main {
 /* FALLBACK SVG, om webbläsaren inte stödjer multipla bakgrunder kommer den 
 att läsa in den första bakgrundsbilden - png.
 */
-.anim{
+/*.anim{
 
 	background: url("../images/logo/fallback@0.3x.png");
 	background-image: url("../images/logo/anim_logo1.svg"), none;
@@ -227,6 +227,13 @@ att läsa in den första bakgrundsbilden - png.
 	height:275px;
  	margin: 2.5rem 0 0 0.2rem;
  	background-repeat: no-repeat;
+}
+*/
+.anim{
+	width:32%;
+	position:absolute;
+	top: 1.7rem;
+	left: 1rem;
 }
 .slogan{
 	height:200px;
