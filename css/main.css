@@ -431,7 +431,7 @@ att läsa in den första bakgrundsbilden - png.
     margin: 0.5rem 0; }
 
 .gatubild {
-  width: 100%;
+  max-width: 100%;
   -webkit-border-radius: 0.1rem;
   -moz-border-radius: 0.1rem;
   -ms-border-radius: 0.1rem;
@@ -952,11 +952,7 @@ textarea {
     margin-right: 2rem; }
 
   .article-img {
-    width: 100%;
-    -webkit-border-radius: 0.1rem;
-    -moz-border-radius: 0.1rem;
-    -ms-border-radius: 0.1rem;
-    border-radius: 0.1rem; }
+    width: 100%; }
 
   /******************************************************************/
   /* Erbjuder */
@@ -1110,13 +1106,6 @@ textarea {
   .kontakt-karta {
     /* margin-top: 2.5rem; Denna har justerats globalt */
     width: 35%; }
-
-  .cirkel {
-    height: 100%;
-    width: 100%;
-    /*    -moz-border-radius: 50px;
-        -webkit-border-radius: 50px;*/
-    border-radius: 0.2rem; }
 
   /******************************************************************/
   /* Footer */

@@ -387,7 +387,6 @@
 
 	.article-img{
 		width:100%;
-		@include border-radius(0.1rem);
 	}
 
 /******************************************************************/
@@ -504,15 +503,6 @@
 		width: 35%;	
 	}
 
-.cirkel {
-height: 100%;
-width:100%;
-/*    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;*/
-    border-radius: 0.2rem;
-}
-
- 
 /******************************************************************/
 /* Footer */
 	.contact-info{
