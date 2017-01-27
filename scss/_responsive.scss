@@ -91,9 +91,8 @@
 
 	.index-right{
 		@include flex-basis(33.3%);	
-		@include flex-flow(row);
+		@include flex-flow(row);	
 	}
-
 /******************************************************************/
 /* Erbjuder */
 
