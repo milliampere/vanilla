@@ -221,10 +221,10 @@ att läsa in den första bakgrundsbilden - png.
 }
 */
 .anim {
-  width: 32%;
+  width: 50%;
   position: absolute;
-  top: 1.7rem;
-  left: 1rem; }
+  padding-top: 3rem;
+  padding-left: 0.7rem; }
 
 .slogan {
   height: 200px;
@@ -884,9 +884,9 @@ textarea {
     width: 100%; }
 
   .anim {
-    width: 40%;
-    top: 3rem;
-    left: 2.5rem; }
+    width: 45%;
+    top: 2.5rem;
+    left: 1.5rem; }
 
   .index .box-wrapper {
     padding: 0; }
