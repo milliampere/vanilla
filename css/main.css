@@ -257,18 +257,16 @@ att läsa in den första bakgrundsbilden - png.
 .article-img {
   width: 100%;
   display: block;
-  margin: auto; }
+  margin: auto;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  border-radius: 0.1rem; }
 
 .article-text {
   font-size: 1rem;
   margin: 0.2rem 1rem 2rem 1rem; }
 
-/*.arrow-down2{
-	width:100%;
-	font-size: 2rem;
-	vertical-align: middle;
-	text-align:center;
-}*/
 /************************************************************/
 /*Vi erbjuder*/
 .erbjuder-ruta {
@@ -432,8 +430,12 @@ att läsa in den första bakgrundsbilden - png.
   .kontakt-adress p {
     margin: 0.5rem 0; }
 
-.karta {
-  width: 100%; }
+.gatubild {
+  width: 100%;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  border-radius: 0.1rem; }
 
 .kontakt-karta {
   min-width: 360px; }
@@ -950,7 +952,11 @@ textarea {
     margin-right: 2rem; }
 
   .article-img {
-    width: 100%; }
+    width: 100%;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    border-radius: 0.1rem; }
 
   /******************************************************************/
   /* Erbjuder */
@@ -1104,6 +1110,13 @@ textarea {
   .kontakt-karta {
     /* margin-top: 2.5rem; Denna har justerats globalt */
     width: 35%; }
+
+  .cirkel {
+    height: 100%;
+    width: 100%;
+    /*    -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;*/
+    border-radius: 0.2rem; }
 
   /******************************************************************/
   /* Footer */

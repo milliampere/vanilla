@@ -254,19 +254,13 @@ att läsa in den första bakgrundsbilden - png.
 	width:100%;
 	display: block;
 	margin: auto;
+	@include border-radius(0.1rem);
 }
 
 .article-text{
 	font-size: 1rem;
 	margin: 0.2rem 1rem 2rem 1rem;
 }
-
-/*.arrow-down2{
-	width:100%;
-	font-size: 2rem;
-	vertical-align: middle;
-	text-align:center;
-}*/
 
 /************************************************************/
 /*Vi erbjuder*/
@@ -417,8 +411,9 @@ att läsa in den första bakgrundsbilden - png.
 	}
 }
 
-.karta {
+.gatubild {
 	width: 100%;
+	@include border-radius(0.1rem);
 }
 
 .kontakt-karta{
