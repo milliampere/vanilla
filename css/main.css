@@ -267,6 +267,9 @@ att läsa in den första bakgrundsbilden - png.
   font-size: 1rem;
   margin: 0.2rem 1rem 2rem 1rem; }
 
+.triangel {
+  width: 100%; }
+
 /************************************************************/
 /*Vi erbjuder*/
 .erbjuder-ruta {
@@ -617,6 +620,9 @@ textarea {
     -ms-flex-flow: row;
     flex-flow: row; }
 
+  .triangel {
+    display: none; }
+
   /******************************************************************/
   /* Erbjuder */
   .erbjuder {
@@ -953,6 +959,9 @@ textarea {
 
   .article-img {
     width: 100%; }
+
+  .triangel {
+    display: none; }
 
   /******************************************************************/
   /* Erbjuder */
