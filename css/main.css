@@ -399,6 +399,7 @@ att läsa in den första bakgrundsbilden - png.
   color: #000;
   font-weight: 700; }
 
+/*Molly visas sist i mobilt läge*/
 .molly-sist {
   -webkit-box-ordinal-group: 1;
   -moz-box-ordinal-group: 1;
@@ -408,12 +409,10 @@ att läsa in den första bakgrundsbilden - png.
 
 /******************************************************************/
 /* KONTAKT*/
-.kontakt {
-  width: 95%; }
-
 .kontakt-form {
   /* margin: 2rem 0; Denna har justerats globalt */
-  min-width: 360px; }
+  min-width: 360px;
+  padding: 1rem; }
 
 .kontakt-adress {
   display: -webkit-box;
@@ -686,14 +685,6 @@ textarea {
 /******************************************************************/
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
-  .background-skew {
-    background-color: #e3bec6;
-    transform: skewY(155deg);
-    position: absolute;
-    height: 550px;
-    width: 100%;
-    z-index: -2000; }
-
   .background-skew-index {
     background-color: #e3bec6;
     transform: skewY(170deg);
@@ -806,24 +797,6 @@ textarea {
   .contact-info {
     background-color: white; } }
 /* Leave me <3 */
-/* Index - andra medium och large-sizes för att anpassa anim-logo till bakgrundsbilden */
-/*@media screen and (min-width: 640px){
-	.anim{
-		width:300px;
-		height:275px;
-	 	margin: 3.5rem 0 0 0.4rem;
-    }
-}
-@media screen and (min-width: 1150px) {
-	.anim{ 
-		width:500px;
-		height:370px;
-		margin: 2rem 0 0 1.5rem;
-    }
-}*/
-   /* Leave me <3  
-
-
 /* Stora skärmar */
 @media screen and (min-width: 992px) {
   /******************************************************************/

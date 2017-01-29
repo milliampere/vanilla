@@ -166,14 +166,6 @@
 /* För både mellan och stor */
 @media screen and (min-width: 543px) {
 
-	.background-skew{
-		background-color: $tertiary-color;
-		transform: skewY(155deg);
-		position: absolute;
-		height: 550px;
-		width: 100%;
-		z-index: -2000;
-	}
 	.background-skew-index{
 		background-color: $tertiary-color;
 		transform: skewY(170deg);
@@ -260,23 +252,6 @@
 	}
 
 } /* Leave me <3 */
-
-/* Index - andra medium och large-sizes för att anpassa anim-logo till bakgrundsbilden */
-/*@media screen and (min-width: 640px){
-	.anim{
-		width:300px;
-		height:275px;
-	 	margin: 3.5rem 0 0 0.4rem;
-    }
-}
-@media screen and (min-width: 1150px) {
-	.anim{ 
-		width:500px;
-		height:370px;
-		margin: 2rem 0 0 1.5rem;
-    }
-}*//* Leave me <3  
-
 
 /* Stora skärmar */ 
 @media screen and (min-width: 992px){

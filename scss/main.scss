@@ -383,7 +383,7 @@ att läsa in den första bakgrundsbilden - png.
 	font-weight: 700;
 }
 
-//Molly visas sist i mobilt läge
+/*Molly visas sist i mobilt läge*/
 .molly-sist {
 	@include order(1);
 }
@@ -391,18 +391,14 @@ att läsa in den första bakgrundsbilden - png.
 /******************************************************************/
 /* KONTAKT*/
 
-
-.kontakt {
-	width: 95%;
-}
-
 .kontakt-form{
 	/* margin: 2rem 0; Denna har justerats globalt */
 	min-width: 360px;
+	padding: 1rem;
 }
 
 .kontakt-adress{
-	@include flexbox();;
+	@include flexbox();
 	@include justify-content(space-between);
 	min-width: 360px;
 	p{
