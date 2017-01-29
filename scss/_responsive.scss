@@ -130,9 +130,7 @@
 /* Kontakt */
 
 	.kontakt{
-		width: 70%;
-		@include align-items(flex-start);
-		@include flex-direction(column);
+		width: 70%; 
 	}
 
 	.kontakt-form{
@@ -488,18 +486,22 @@
 		width: 100%; 
 		@include flexbox(); 
 		@include flex-direction(row);
-		@include align-items(flex-start);
+		@include align-items(flex-stretch);
 		@include justify-content(space-around);
 	}
 
 	.kontakt-form{
 		/* margin-top: 2.5rem; Denna har justerats globalt*/
-		width: 45%;
+		width: 50%;
+		border: 1px solid black;
+		padding: 0 2rem;
 	}
 
 	.kontakt-karta{
 		/* margin-top: 2.5rem; Denna har justerats globalt */
-		width: 45%;	
+		width: 50%;	
+		background-color: $secondary-color;
+		padding: 0 2rem 1rem 2rem;
 	}
 
 /******************************************************************/

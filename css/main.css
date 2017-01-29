@@ -438,7 +438,8 @@ att läsa in den första bakgrundsbilden - png.
   border-radius: 0.1rem; }
 
 .kontakt-karta {
-  min-width: 360px; }
+  min-width: 360px;
+  padding: 1rem; }
   .kontakt-karta a {
     color: black; }
   .kontakt-karta p {
@@ -656,15 +657,7 @@ textarea {
   /******************************************************************/
   /* Kontakt */
   .kontakt {
-    width: 70%;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
+    width: 70%; }
 
   .kontakt-form {
     width: 100%; } }
@@ -1089,10 +1082,10 @@ textarea {
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
+    -webkit-align-items: flex-stretch;
+    -moz-align-items: flex-stretch;
+    -ms-align-items: flex-stretch;
+    align-items: flex-stretch;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     -ms-justify-content: space-around;
@@ -1101,11 +1094,15 @@ textarea {
 
   .kontakt-form {
     /* margin-top: 2.5rem; Denna har justerats globalt*/
-    width: 45%; }
+    width: 50%;
+    border: 1px solid black;
+    padding: 0 2rem; }
 
   .kontakt-karta {
     /* margin-top: 2.5rem; Denna har justerats globalt */
-    width: 45%; }
+    width: 50%;
+    background-color: #BEE3DB;
+    padding: 0 2rem 1rem 2rem; }
 
   /******************************************************************/
   /* Footer */
