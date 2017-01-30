@@ -231,6 +231,7 @@ att läsa in den första bakgrundsbilden - png.
 	padding-top: 3rem;
 	padding-left: 0.7rem;
 }
+
 .slogan{
 	height:200px;
 	width: 100%;
@@ -242,12 +243,14 @@ att läsa in den första bakgrundsbilden - png.
 	line-height: 2.5rem;
 	letter-spacing: 0.05rem;
 }
+
 .box-indexsidan {
 	@include flexbox();
 	@include flex-wrap(wrap);
 	@include align-items(flex-start);
-	@include justify-content(center);
+	@include justify-content(flex-start);
 	width:100%;
+	min-height: 75rem; /* för att fixa mobil-safari bugg */
 }
 
 .article-img{
@@ -267,7 +270,7 @@ att läsa in den första bakgrundsbilden - png.
 .erbjuder-ruta{
 	display: flex;
 	padding: 1rem 1.5rem 1rem 1rem;
-	min-height: 250px; /* för att fixa mobil-safari bugg */
+	min-height: 20rem; /* för att fixa mobil-safari bugg */
 	div{
 		min-width: 30%;
 		padding-right: 1rem;
@@ -304,7 +307,7 @@ att läsa in den första bakgrundsbilden - png.
 	@include flexbox(); 
 	@include flex-direction(column);
 	padding: 1rem;
-	min-height: 500px; /* för att fixa mobil-safari bugg */
+	min-height: 32rem; /* för att fixa mobil-safari bugg */
 }
 
 .project-img { 
@@ -375,7 +378,6 @@ att läsa in den första bakgrundsbilden - png.
 		margin-top: 0;
 		padding-top: 0;
 	}
-	
 }
 
 .name {
@@ -383,7 +385,7 @@ att läsa in den första bakgrundsbilden - png.
 	font-weight: 700;
 }
 
-/*Molly visas sist i mobilt läge*/
+//Molly visas sist i mobilt läge
 .molly-sist {
 	@include order(1);
 }
@@ -391,14 +393,18 @@ att läsa in den första bakgrundsbilden - png.
 /******************************************************************/
 /* KONTAKT*/
 
+
+.kontakt {
+	width: 95%;
+}
+
 .kontakt-form{
 	/* margin: 2rem 0; Denna har justerats globalt */
 	min-width: 360px;
-	padding: 1rem;
 }
 
 .kontakt-adress{
-	@include flexbox();
+	@include flexbox();;
 	@include justify-content(space-between);
 	min-width: 360px;
 	p{
@@ -413,7 +419,6 @@ att läsa in den första bakgrundsbilden - png.
 
 .kontakt-karta{
 	min-width: 360px;
-	padding: 1rem;
 	a{
 		color: black;
 	}

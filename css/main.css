@@ -247,12 +247,14 @@ att läsa in den första bakgrundsbilden - png.
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
   align-items: flex-start;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  width: 100%; }
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  width: 100%;
+  min-height: 75rem;
+  /* för att fixa mobil-safari bugg */ }
 
 .article-img {
   width: 100%;
@@ -272,7 +274,7 @@ att läsa in den första bakgrundsbilden - png.
 .erbjuder-ruta {
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
-  min-height: 250px;
+  min-height: 20rem;
   /* för att fixa mobil-safari bugg */ }
   .erbjuder-ruta div {
     min-width: 30%;
@@ -329,7 +331,7 @@ att läsa in den första bakgrundsbilden - png.
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem;
-  min-height: 500px;
+  min-height: 32rem;
   /* för att fixa mobil-safari bugg */ }
 
 .project-img {
@@ -399,7 +401,6 @@ att läsa in den första bakgrundsbilden - png.
   color: #000;
   font-weight: 700; }
 
-/*Molly visas sist i mobilt läge*/
 .molly-sist {
   -webkit-box-ordinal-group: 1;
   -moz-box-ordinal-group: 1;
@@ -409,10 +410,12 @@ att läsa in den första bakgrundsbilden - png.
 
 /******************************************************************/
 /* KONTAKT*/
+.kontakt {
+  width: 95%; }
+
 .kontakt-form {
   /* margin: 2rem 0; Denna har justerats globalt */
-  min-width: 360px;
-  padding: 1rem; }
+  min-width: 360px; }
 
 .kontakt-adress {
   display: -webkit-box;
@@ -437,8 +440,7 @@ att läsa in den första bakgrundsbilden - png.
   border-radius: 0.1rem; }
 
 .kontakt-karta {
-  min-width: 360px;
-  padding: 1rem; }
+  min-width: 360px; }
   .kontakt-karta a {
     color: black; }
   .kontakt-karta p {
@@ -519,7 +521,10 @@ textarea {
 
   p, label, input {
     font-size: 1.1rem;
-    letter-spacing: 0.03rem; } }
+    letter-spacing: 0.03rem; }
+
+  .box-indexsidan {
+    min-height: 0; } }
 /* Medium devices */
 @media screen and (min-width: 543px) and (max-width: 991px) {
   /******************************************************************/
